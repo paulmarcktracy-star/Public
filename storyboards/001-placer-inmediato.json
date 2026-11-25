@@ -1,0 +1,1176 @@
+{
+  "id": "001-placer-inmediato",
+  "title": "¿Por qué tu cerebro prefiere el placer inmediato antes que tus objetivos a largo plazo?",
+  "pillar": 1,
+  "format": "secondPerson",
+  "evidenceLevel": "solid",
+  "sources": [
+    {
+      "citation": "Frederick, S., Loewenstein, G., & O'Donoghue, T. (2002). Time discounting and time preference: A critical review. Journal of Economic Literature, 40(2), 351–401.",
+      "doi": "10.1257/002205102320161311",
+      "supports": "Las personas suelen aceptar recompensas menores con tal de recibirlas antes (descuento temporal)."
+    },
+    {
+      "citation": "Kirby, K. N., & Herrnstein, R. J. (1995). Preference reversals due to myopic discounting of delayed reward. Psychological Science, 6(2), 83–89.",
+      "doi": "10.1111/j.1467-9280.1995.tb00311.x",
+      "supports": "Inversión de preferencias: con la misma diferencia de espera, se elige lo pequeño si está cerca y lo grande si ambas opciones están lejos; la caída de valor es más brusca cerca del presente."
+    },
+    {
+      "citation": "McClure, S. M., Laibson, D. I., Loewenstein, G., & Cohen, J. D. (2004). Separate neural systems value immediate and delayed monetary rewards. Science, 306(5695), 503–507.",
+      "doi": "10.1126/science.1100907",
+      "supports": "Áreas límbicas de recompensa más activas cuando hay un premio inmediato; mayor actividad fronto-parietal relativa al elegir la opción a más largo plazo."
+    },
+    {
+      "citation": "Kable, J. W., & Glimcher, P. W. (2007). The neural correlates of subjective value during intertemporal choice. Nature Neuroscience, 10, 1625–1633.",
+      "doi": "10.1038/nn2007",
+      "supports": "Cuestiona el modelo de dos sistemas (nota en pantalla: aún se debate si son uno o dos)."
+    },
+    {
+      "citation": "Rung, J. M., & Madden, G. J. (2018). Experimental reductions of delay discounting and impulsive choice: A systematic review and meta-analysis. Journal of Experimental Psychology: General, 147(9), 1349–1381.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6112163",
+      "supports": "El pensamiento episódico futuro reduce el descuento temporal (metaanálisis 1)."
+    },
+    {
+      "citation": "Rösch, S. A., Stramaccia, D. F., & Benoit, R. G. (2022). Promoting farsighted decisions via episodic future thinking: A meta-analysis. Journal of Experimental Psychology: General, 151(7), 1606–1635.",
+      "doi": "10.1037/xge0001148",
+      "supports": "Imaginar el futuro con detalle favorece decisiones con visión de largo plazo (metaanálisis 2)."
+    },
+    {
+      "citation": "Duckworth, A. L., Gendler, T. S., & Gross, J. J. (2016). Situational strategies for self-control. Perspectives on Psychological Science, 11(1), 35–55.",
+      "doi": "10.1177/1745691615623247",
+      "supports": "Modificar la situación antes de la tentación (p. ej., alejar el celular) es una estrategia de autocontrol."
+    },
+    {
+      "citation": "Ariely, D., & Wertenbroch, K. (2002). Procrastination, deadlines, and performance: Self-control by precommitment. Psychological Science, 13(3), 219–224.",
+      "doi": "10.1111/1467-9280.00441",
+      "supports": "Comprometerse por adelantado (precompromiso) ayuda a controlar la impulsividad."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "A",
+      "beat": "hook",
+      "narration": "Tu cerebro decide por ti. Y casi nunca elige a tu yo del futuro.",
+      "shots": [
+        {
+          "text": "Tu cerebro decide por ti.",
+          "sfx": "impact",
+          "visual": {
+            "type": "stage",
+            "spotlight": {
+              "x": 540,
+              "snap": true
+            },
+            "figure": {
+              "pose": "stand",
+              "x": 540
+            },
+            "props": [
+              {
+                "kind": "brain",
+                "x": 540,
+                "y": 640,
+                "size": 150,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop",
+                "delay": 0.2
+              }
+            ],
+            "texts": [
+              {
+                "content": "Tu cerebro decide por ti",
+                "y": 360,
+                "size": 86,
+                "emphasis": [
+                  "cerebro"
+                ]
+              }
+            ],
+            "camera": {
+              "fromZoom": 1,
+              "toZoom": 1.12,
+              "x": 540,
+              "y": 760,
+              "panX": 0
+            }
+          }
+        },
+        {
+          "text": "Y casi nunca elige a tu yo del futuro.",
+          "sfx": "whoosh",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "walk",
+              "from": "stand",
+              "x": 560,
+              "toX": 450,
+              "facing": -1
+            },
+            "props": [
+              {
+                "kind": "door",
+                "x": 260,
+                "y": 840,
+                "size": 260,
+                "accent": "gold",
+                "state": "open",
+                "label": "AHORA",
+                "enter": "pop"
+              },
+              {
+                "kind": "door",
+                "x": 860,
+                "y": 760,
+                "size": 120,
+                "state": "closed",
+                "label": "FUTURO",
+                "enter": "fade",
+                "delay": 0.3,
+                "to": {
+                  "state": "dim",
+                  "at": 0.55
+                }
+              }
+            ],
+            "camera": {
+              "fromZoom": 1.06,
+              "toZoom": 1,
+              "x": 540,
+              "y": 800,
+              "panX": -20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "beat": "question",
+      "narration": "Haz esta prueba: ¿cien dólares hoy, o ciento veinte en un mes? En estudios, mucha gente acepta menos por cobrar antes.",
+      "shots": [
+        {
+          "text": "Haz esta prueba:",
+          "sfx": "pop",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "question",
+                "x": 540,
+                "y": 780,
+                "size": 220,
+                "accent": "gold",
+                "enter": "pop",
+                "delay": 0.1
+              }
+            ],
+            "texts": [
+              {
+                "content": "Haz esta prueba",
+                "y": 430,
+                "size": 96,
+                "emphasis": [
+                  "prueba"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "¿cien dólares hoy,",
+          "sfx": "cash",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "bill",
+                "x": 290,
+                "y": 780,
+                "size": 190,
+                "accent": "gold",
+                "label": "HOY",
+                "enter": "slideLeft"
+              }
+            ],
+            "counters": [
+              {
+                "from": 0,
+                "to": 100,
+                "prefix": "$",
+                "x": 290,
+                "y": 590,
+                "size": 130,
+                "accent": "gold",
+                "seconds": 0.7
+              }
+            ]
+          }
+        },
+        {
+          "text": "o ciento veinte en un mes?",
+          "sfx": "tick",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "bill",
+                "x": 290,
+                "y": 780,
+                "size": 190,
+                "accent": "gold",
+                "label": "HOY",
+                "enter": "none"
+              },
+              {
+                "kind": "calendar",
+                "x": 790,
+                "y": 790,
+                "size": 170,
+                "label": "+1 MES",
+                "enter": "slideRight"
+              },
+              {
+                "kind": "question",
+                "x": 540,
+                "y": 1010,
+                "size": 120,
+                "accent": "gold",
+                "enter": "pop",
+                "delay": 0.8
+              }
+            ],
+            "counters": [
+              {
+                "from": 100,
+                "to": 100,
+                "prefix": "$",
+                "x": 290,
+                "y": 590,
+                "size": 130,
+                "accent": "gold",
+                "seconds": 0.1
+              },
+              {
+                "from": 0,
+                "to": 120,
+                "prefix": "$",
+                "x": 790,
+                "y": 590,
+                "size": 130,
+                "accent": "white",
+                "seconds": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "text": "En estudios, mucha gente acepta menos por cobrar antes.",
+          "sfx": "whoosh",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "reach",
+              "from": "stand",
+              "x": 560,
+              "toX": 450,
+              "facing": -1
+            },
+            "props": [
+              {
+                "kind": "bill",
+                "x": 250,
+                "y": 760,
+                "size": 190,
+                "accent": "gold",
+                "state": "glow",
+                "label": "HOY",
+                "enter": "none",
+                "mark": "check",
+                "markAt": 0.5
+              },
+              {
+                "kind": "calendar",
+                "x": 840,
+                "y": 760,
+                "size": 150,
+                "label": "+1 MES",
+                "enter": "none",
+                "to": {
+                  "state": "dim",
+                  "at": 0.45
+                }
+              }
+            ],
+            "counters": [
+              {
+                "from": 100,
+                "to": 100,
+                "prefix": "$",
+                "x": 250,
+                "y": 570,
+                "size": 110,
+                "accent": "green",
+                "seconds": 0.1
+              },
+              {
+                "from": 120,
+                "to": 120,
+                "prefix": "$",
+                "x": 840,
+                "y": 570,
+                "size": 90,
+                "accent": "white",
+                "seconds": 0.1
+              }
+            ],
+            "camera": {
+              "fromZoom": 1,
+              "toZoom": 1.08,
+              "x": 360,
+              "y": 780,
+              "panX": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "beat": "retention",
+      "narration": "Ahora cambia la pregunta: ¿cien en un año, o ciento veinte en un año y un mes? De pronto, esperar parece fácil. Es el mismo mes. Solo cambió la distancia.",
+      "shots": [
+        {
+          "text": "Ahora cambia la pregunta:",
+          "sfx": "riser",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "clock",
+                "x": 540,
+                "y": 800,
+                "size": 240,
+                "state": "spin",
+                "accent": "white",
+                "enter": "draw"
+              }
+            ],
+            "texts": [
+              {
+                "content": "Cambia la pregunta",
+                "y": 430,
+                "size": 92,
+                "emphasis": [
+                  "Cambia"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "¿cien en un año, o ciento veinte en un año y un mes?",
+          "sfx": "tick",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "calendar",
+                "x": 290,
+                "y": 800,
+                "size": 160,
+                "label": "12 MESES",
+                "enter": "slideRight"
+              },
+              {
+                "kind": "calendar",
+                "x": 790,
+                "y": 800,
+                "size": 160,
+                "label": "13 MESES",
+                "enter": "slideRight",
+                "delay": 1.4
+              }
+            ],
+            "counters": [
+              {
+                "from": 0,
+                "to": 100,
+                "prefix": "$",
+                "x": 290,
+                "y": 600,
+                "size": 110,
+                "accent": "gold",
+                "seconds": 0.6
+              },
+              {
+                "from": 0,
+                "to": 120,
+                "prefix": "$",
+                "x": 790,
+                "y": 600,
+                "size": 110,
+                "accent": "white",
+                "delay": 1.4,
+                "seconds": 0.6
+              }
+            ],
+            "camera": {
+              "fromZoom": 1.12,
+              "toZoom": 1,
+              "x": 540,
+              "y": 760,
+              "panX": 0
+            }
+          }
+        },
+        {
+          "text": "De pronto, esperar parece fácil.",
+          "sfx": "shimmer",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "point",
+              "from": "stand",
+              "x": 470,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "calendar",
+                "x": 220,
+                "y": 760,
+                "size": 140,
+                "label": "12 MESES",
+                "enter": "none",
+                "to": {
+                  "state": "dim",
+                  "at": 0.3
+                }
+              },
+              {
+                "kind": "calendar",
+                "x": 820,
+                "y": 740,
+                "size": 170,
+                "label": "13 MESES",
+                "accent": "green",
+                "enter": "none",
+                "mark": "check",
+                "markAt": 0.4
+              }
+            ],
+            "counters": [
+              {
+                "from": 100,
+                "to": 100,
+                "prefix": "$",
+                "x": 220,
+                "y": 570,
+                "size": 90,
+                "accent": "white",
+                "seconds": 0.1
+              },
+              {
+                "from": 120,
+                "to": 120,
+                "prefix": "$",
+                "x": 820,
+                "y": 560,
+                "size": 120,
+                "accent": "green",
+                "seconds": 0.1
+              }
+            ]
+          }
+        },
+        {
+          "text": "Es el mismo mes. Solo cambió la distancia.",
+          "sfx": "whoosh",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "lookUp",
+              "from": "point",
+              "x": 300,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "door",
+                "x": 680,
+                "y": 820,
+                "size": 210,
+                "label": "FUTURO",
+                "enter": "pop",
+                "to": {
+                  "x": 900,
+                  "y": 760,
+                  "size": 100,
+                  "at": 0.45
+                }
+              }
+            ],
+            "texts": [
+              {
+                "content": "Mismo mes",
+                "y": 360,
+                "size": 88,
+                "emphasis": [
+                  "mismo"
+                ]
+              },
+              {
+                "content": "otra distancia",
+                "y": 470,
+                "size": 72,
+                "accent": "gold",
+                "family": "display",
+                "delay": 1.3
+              }
+            ],
+            "camera": {
+              "fromZoom": 1,
+              "toZoom": 1.05,
+              "x": 540,
+              "y": 760,
+              "panX": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "beat": "mechanism",
+      "narration": "Se llama descuento temporal. Lo lejano pierde valor. Lo cercano pesa más.",
+      "shots": [
+        {
+          "text": "Se llama descuento temporal.",
+          "sfx": "impact",
+          "visual": {
+            "type": "kineticTitle",
+            "kicker": "Se llama",
+            "lines": [
+              "Descuento",
+              "temporal"
+            ],
+            "emphasis": [
+              "temporal"
+            ]
+          }
+        },
+        {
+          "text": "Lo lejano pierde valor. Lo cercano pesa más.",
+          "sfx": "riser",
+          "visual": {
+            "type": "discountCurve",
+            "xLabel": "tiempo",
+            "yLabel": "valor que sientes",
+            "nowLabel": "cerca",
+            "laterLabel": "lejos",
+            "note": "Desde hoy, lo cercano pesa más"
+          }
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "beat": "mechanism",
+      "narration": "En un estudio con resonancia, zonas del sistema de recompensa se activaron más ante premios inmediatos. Y al elegir esperar, se activaron más zonas prefrontales.",
+      "shots": [
+        {
+          "text": "En un estudio con resonancia,",
+          "sfx": "whoosh",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "brain",
+                "x": 540,
+                "y": 790,
+                "size": 300,
+                "accent": "white",
+                "enter": "draw"
+              }
+            ],
+            "texts": [
+              {
+                "content": "Estudio con resonancia magnética",
+                "y": 400,
+                "size": 68,
+                "family": "sans",
+                "emphasis": [
+                  "resonancia"
+                ]
+              }
+            ],
+            "note": "McClure et al., 2004 · Science"
+          }
+        },
+        {
+          "text": "zonas del sistema de recompensa se activaron más ante premios inmediatos.",
+          "sfx": "shimmer",
+          "visual": {
+            "type": "brain3d",
+            "highlight": [
+              "reward"
+            ],
+            "labels": [
+              {
+                "region": "reward",
+                "text": "Sistema de recompensa"
+              }
+            ],
+            "camera": "orbit",
+            "pulses": true
+          }
+        },
+        {
+          "text": "Y al elegir esperar, se activaron más zonas prefrontales.",
+          "sfx": "pulse",
+          "visual": {
+            "type": "brain3d",
+            "highlight": [
+              "prefrontal"
+            ],
+            "labels": [
+              {
+                "region": "prefrontal",
+                "text": "Corteza prefrontal"
+              }
+            ],
+            "camera": "pushIn",
+            "pulses": true,
+            "note": "La ciencia aún debate si el cerebro usa uno o dos sistemas para valorar el tiempo."
+          }
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "beat": "demonstration",
+      "narration": "Por eso el celular le gana al libro, el antojo a la dieta, y la compra de hoy a tus ahorros.",
+      "shots": [
+        {
+          "text": "Por eso el celular le gana al libro,",
+          "sfx": "pop",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "phone",
+                "x": 320,
+                "y": 740,
+                "size": 210,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop"
+              },
+              {
+                "kind": "book",
+                "x": 770,
+                "y": 760,
+                "size": 190,
+                "enter": "pop",
+                "delay": 0.2,
+                "to": {
+                  "state": "dim",
+                  "at": 0.5
+                },
+                "mark": "cross",
+                "markAt": 0.6
+              }
+            ],
+            "texts": [
+              {
+                "content": "Celular vs. libro",
+                "y": 400,
+                "size": 72,
+                "family": "sans",
+                "emphasis": [
+                  "Celular"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "el antojo a la dieta,",
+          "sfx": "pop",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "donut",
+                "x": 320,
+                "y": 740,
+                "size": 200,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop"
+              },
+              {
+                "kind": "apple",
+                "x": 770,
+                "y": 760,
+                "size": 180,
+                "enter": "pop",
+                "delay": 0.15,
+                "to": {
+                  "state": "dim",
+                  "at": 0.45
+                },
+                "mark": "cross",
+                "markAt": 0.55
+              }
+            ],
+            "texts": [
+              {
+                "content": "Antojo vs. dieta",
+                "y": 400,
+                "size": 72,
+                "family": "sans",
+                "emphasis": [
+                  "Antojo"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "y la compra de hoy a tus ahorros.",
+          "sfx": "cash",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "cart",
+                "x": 320,
+                "y": 740,
+                "size": 210,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop"
+              },
+              {
+                "kind": "piggy",
+                "x": 770,
+                "y": 760,
+                "size": 190,
+                "enter": "pop",
+                "delay": 0.15,
+                "to": {
+                  "state": "dim",
+                  "at": 0.45
+                },
+                "mark": "cross",
+                "markAt": 0.55
+              }
+            ],
+            "texts": [
+              {
+                "content": "Compra vs. ahorro",
+                "y": 400,
+                "size": 72,
+                "family": "sans",
+                "emphasis": [
+                  "Compra"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "beat": "action",
+      "narration": "¿Estás condenado? No. Primero: imagina con detalle un momento concreto de tu futuro. Varios metaanálisis muestran que esto reduce las elecciones impulsivas.",
+      "shots": [
+        {
+          "text": "¿Estás condenado? No.",
+          "sfx": "impact",
+          "visual": {
+            "type": "stage",
+            "spotlight": {
+              "x": 540,
+              "snap": true
+            },
+            "figure": {
+              "pose": "lookUp",
+              "from": "slump",
+              "x": 540
+            },
+            "texts": [
+              {
+                "content": "¿Condenado?",
+                "y": 400,
+                "size": 92
+              },
+              {
+                "content": "No.",
+                "y": 540,
+                "size": 120,
+                "accent": "gold",
+                "delay": 0.8
+              }
+            ]
+          }
+        },
+        {
+          "text": "Primero: imagina con detalle un momento concreto de tu futuro.",
+          "sfx": "shimmer",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "think",
+              "from": "lookUp",
+              "x": 330,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "door",
+                "x": 860,
+                "y": 760,
+                "size": 110,
+                "label": "FUTURO",
+                "enter": "fade",
+                "to": {
+                  "x": 760,
+                  "y": 820,
+                  "size": 250,
+                  "state": "open",
+                  "accent": "gold",
+                  "at": 0.3
+                }
+              },
+              {
+                "kind": "lightbulb",
+                "x": 330,
+                "y": 640,
+                "size": 90,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop",
+                "delay": 0.6
+              }
+            ],
+            "texts": [
+              {
+                "content": "1 · Acerca el futuro",
+                "y": 360,
+                "size": 72,
+                "family": "sans",
+                "emphasis": [
+                  "futuro"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "Varios metaanálisis muestran que esto reduce las elecciones impulsivas.",
+          "sfx": "tick",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "chart",
+                "x": 540,
+                "y": 800,
+                "size": 300,
+                "accent": "green",
+                "state": "down",
+                "enter": "draw",
+                "label": "elecciones impulsivas"
+              }
+            ],
+            "texts": [
+              {
+                "content": "Varios metaanálisis",
+                "y": 400,
+                "size": 76,
+                "emphasis": [
+                  "metaanálisis"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "beat": "action",
+      "narration": "Segundo: decide antes de la tentación. Deja el celular en otra habitación.",
+      "shots": [
+        {
+          "text": "Segundo: decide antes de la tentación.",
+          "sfx": "pop",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "reach",
+              "from": "stand",
+              "x": 360,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "phone",
+                "x": 720,
+                "y": 760,
+                "size": 200,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "pop"
+              }
+            ],
+            "texts": [
+              {
+                "content": "2 · Decide antes",
+                "y": 360,
+                "size": 72,
+                "family": "sans",
+                "emphasis": [
+                  "antes"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "Deja el celular en otra habitación.",
+          "sfx": "whoosh",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "celebrate",
+              "from": "reach",
+              "x": 330,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "phone",
+                "x": 600,
+                "y": 760,
+                "size": 150,
+                "accent": "gold",
+                "state": "glow",
+                "enter": "none",
+                "to": {
+                  "x": 790,
+                  "y": 800,
+                  "size": 60,
+                  "state": "dim",
+                  "at": 0.15
+                }
+              },
+              {
+                "kind": "door",
+                "x": 790,
+                "y": 800,
+                "size": 240,
+                "state": "closed",
+                "enter": "pop",
+                "mark": "check",
+                "markAt": 0.6
+              },
+              {
+                "kind": "lock",
+                "x": 790,
+                "y": 560,
+                "size": 90,
+                "accent": "green",
+                "enter": "drop",
+                "delay": 1.0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "beat": "closer",
+      "narration": "Tu cerebro siempre preferirá el ahora. Tu trabajo es acercar el futuro.",
+      "shots": [
+        {
+          "text": "Tu cerebro siempre preferirá el ahora.",
+          "sfx": "pulse",
+          "visual": {
+            "type": "stage",
+            "spotlight": {
+              "x": 540,
+              "accent": "gold"
+            },
+            "figure": {
+              "pose": "stand",
+              "x": 540
+            },
+            "props": [
+              {
+                "kind": "door",
+                "x": 250,
+                "y": 840,
+                "size": 240,
+                "accent": "gold",
+                "state": "open",
+                "label": "AHORA",
+                "enter": "pop"
+              },
+              {
+                "kind": "door",
+                "x": 860,
+                "y": 760,
+                "size": 110,
+                "label": "FUTURO",
+                "enter": "fade",
+                "delay": 0.2
+              }
+            ]
+          }
+        },
+        {
+          "text": "Tu trabajo es acercar el futuro.",
+          "sfx": "shimmer",
+          "visual": {
+            "type": "stage",
+            "figure": {
+              "pose": "walk",
+              "from": "stand",
+              "x": 540,
+              "toX": 640,
+              "facing": 1
+            },
+            "props": [
+              {
+                "kind": "door",
+                "x": 250,
+                "y": 840,
+                "size": 240,
+                "accent": "gold",
+                "state": "open",
+                "label": "AHORA",
+                "enter": "none",
+                "to": {
+                  "state": "dim",
+                  "accent": "white",
+                  "at": 0.25
+                }
+              },
+              {
+                "kind": "door",
+                "x": 860,
+                "y": 760,
+                "size": 110,
+                "label": "FUTURO",
+                "enter": "none",
+                "to": {
+                  "x": 820,
+                  "y": 830,
+                  "size": 260,
+                  "state": "open",
+                  "accent": "gold",
+                  "at": 0.2
+                }
+              }
+            ],
+            "texts": [
+              {
+                "content": "Acerca el futuro",
+                "y": 360,
+                "size": 92,
+                "emphasis": [
+                  "futuro"
+                ]
+              }
+            ],
+            "note": "Fuentes: Kirby y Herrnstein, 1995 · McClure et al., 2004 · Rung y Madden, 2018"
+          }
+        }
+      ]
+    },
+    {
+      "id": "J",
+      "beat": "cta",
+      "narration": "¿Qué es lo que más te cuesta esperar? Cuéntamelo en los comentarios.",
+      "shots": [
+        {
+          "text": "¿Qué es lo que más te cuesta esperar?",
+          "sfx": "tick",
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "hourglass",
+                "x": 540,
+                "y": 820,
+                "size": 230,
+                "accent": "gold",
+                "enter": "draw"
+              }
+            ],
+            "texts": [
+              {
+                "content": "¿Qué te cuesta esperar?",
+                "y": 400,
+                "size": 84,
+                "emphasis": [
+                  "esperar"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "text": "Cuéntamelo en los comentarios.",
+          "sfx": "pop",
+          "minSeconds": 3.2,
+          "visual": {
+            "type": "stage",
+            "props": [
+              {
+                "kind": "bubble",
+                "x": 540,
+                "y": 800,
+                "size": 280,
+                "accent": "gold",
+                "state": "typing",
+                "enter": "pop"
+              }
+            ],
+            "texts": [
+              {
+                "content": "Cuéntamelo en los comentarios",
+                "y": 420,
+                "size": 70,
+                "family": "sans",
+                "emphasis": [
+                  "comentarios"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "music": "intimo",
+  "social": {
+    "caption": "¿100 dólares hoy o 120 en un mes? Tu respuesta dice mucho de cómo funciona tu cerebro 🧠 Fuentes en el primer comentario.",
+    "hashtags": [
+      "#psicologia",
+      "#cerebro",
+      "#autocontrol",
+      "#habitos",
+      "#neurociencia",
+      "#aprendeentiktok"
+    ],
+    "aiLabel": true
+  }
+}
