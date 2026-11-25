@@ -37,9 +37,10 @@ export const Video: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
       <Background />
       {timeline.shots.map((s, i) => {
         const isLast = i === timeline.shots.length - 1;
-        const dur = s.durationInFrames + (isLast ? 0 : overlap);
+        const lead = i === 0 ? VIDEO.hookLeadFrames : 0; // hook: already on screen at frame 0
+        const dur = s.durationInFrames + (isLast ? 0 : overlap) + lead;
         return (
-          <Sequence key={s.id} name={`${s.beat}:${s.visual.type}`} from={s.startFrame} durationInFrames={dur}>
+          <Sequence key={s.id} name={`${s.beat}:${s.visual.type}`} from={s.startFrame - lead} durationInFrames={dur}>
             <SceneFrame durationInFrames={dur} first={i === 0}>
               {s.visual.type === "stage" ? (
                 renderVisual({ ...s, durationInFrames: dur })

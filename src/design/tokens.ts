@@ -29,6 +29,7 @@ export const VIDEO = {
   safe: { top: 170, bottom: 360, left: 72, right: 150 },
   captionY: 1270,
   sceneOverlapFrames: 10,
+  hookLeadFrames: 12, // first shot starts pre-rolled so frame 0 is already legible (owner hook rule)
 };
 
 export const TYPE = {

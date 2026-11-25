@@ -33,10 +33,14 @@ def master(src: Path, dst: Path) -> dict:
         f"loudnorm=I={TARGET_LUFS}:TP=-1.5:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
         f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true"
     )
+    vs = next(x for x in probe(src)["streams"] if x["codec_type"] == "video")
+    # Remotion may hand over full-range (yuvj420p / pc) or already limited-range video:
+    # convert only what needs converting, or black turns grey (B&W identity rule).
+    in_range = "full" if vs.get("pix_fmt", "").startswith("yuvj") or vs.get("color_range") == "pc" else "tv"
     run(
         "ffmpeg", "-y", "-hide_banner", "-i", str(src),
-        "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-maxrate", "16M", "-bufsize", "32M",
-        "-vf", "scale=in_range=full:out_range=tv,format=yuv420p", "-color_range", "tv", "-colorspace", "bt709",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-maxrate", "16M", "-bufsize", "32M",
+        "-vf", f"scale=in_range={in_range}:out_range=tv,format=yuv420p", "-color_range", "tv", "-colorspace", "bt709",
         "-color_primaries", "bt709", "-color_trc", "bt709", "-profile:v", "high", "-level", "4.2",
         "-af", af, "-ar", "48000", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(dst),
     )
@@ -94,6 +98,16 @@ def main() -> None:
         ("every script word captioned", len(captions) == script_words, f"{len(captions)}/{script_words}", True),
         ("file size < 287 MB (TikTok upload)", final.stat().st_size < 287e6, f"{final.stat().st_size / 1e6:.1f} MB", True),
     ]
+    # B&W identity: the backdrop must decode as near-black (#050505 grid), never grey
+    run("ffmpeg", "-y", "-ss", str(dur / 2), "-i", str(final), "-frames:v", "1", str(build / "qc_mid.png"))
+    from PIL import Image
+    px = Image.open(build / "qc_mid.png").convert("L").getpixel((12, 12))
+    checks.append(("background near-black (≤ 9/255)", px <= 9, f"{px}/255", True))
+    # hook legible on frame 0: something bright on screen besides captions
+    run("ffmpeg", "-y", "-i", str(final), "-frames:v", "1", str(build / "qc_f0.png"))
+    f0 = Image.open(build / "qc_f0.png").convert("L").crop((0, 170, 1080, 1180))
+    lit = sum(1 for v_ in f0.getdata() if v_ > 180)
+    checks.append(("hook visible on frame 0", lit > 1500, f"{lit} bright px", True))
     for s in sb["sources"]:
         if s.get("doi"):
             ok = check_doi(s["doi"])

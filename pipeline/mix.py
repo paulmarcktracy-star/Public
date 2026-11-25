@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 FPS = 30
 OVERLAP = 10  # VIDEO.sceneOverlapFrames
+HOOK_LEAD = 12  # VIDEO.hookLeadFrames: the first shot is pre-rolled
 WALK_PERIOD = 4.2  # Stage.tsx: ph = sin(frame / 4.2)
 
 
@@ -283,7 +284,7 @@ def events_for_shot(shot, eff_dur, scene_first: bool, is_first: bool, reveal_sta
     for c in v.get("counters", []):
         start = round(c.get("delay", 0) * FPS)
         frames = max(1, round(c.get("seconds", 0.9) * FPS))
-        steps = min(14, abs(int(c["to"]) - int(c["from"])) or 1)
+        steps = min(8, abs(int(c["to"]) - int(c["from"])) or 1)
         for i in range(steps):
             ev.append((start + frames * (1 - (1 - i / steps) ** 2), "tick", {"i": i}))  # eased like the number
         ev.append((start + frames, "pop", {}))
@@ -345,7 +346,8 @@ def main() -> None:
     seen_reveal = False
     for i, s in enumerate(shots):
         scene = s["id"].split("-")[0]
-        eff = s["durationInFrames"] + (0 if i == len(shots) - 1 else OVERLAP)
+        lead = HOOK_LEAD if i == 0 else 0
+        eff = s["durationInFrames"] + (0 if i == len(shots) - 1 else OVERLAP) + lead
         reveal_start = s.get("beat") == "reveal" and not seen_reveal
         seen_reveal = seen_reveal or reveal_start
         evs = events_for_shot(s, eff, scene != prev_scene, i == 0, reveal_start)
@@ -353,7 +355,9 @@ def main() -> None:
         fig = s["visual"].get("figure") or {}
         fx_x = (fig.get("x", 540) - 540) / 540
         for f, kind, par in evs:
-            g = s["startFrame"] + f
+            g = s["startFrame"] + (f if kind == "hook" else f - lead)
+            if g < 0:
+                continue  # happened during the pre-roll, before the video starts
             counts[kind] = counts.get(kind, 0) + 1
             if kind == "step":
                 step_side = -step_side
