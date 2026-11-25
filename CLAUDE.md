@@ -58,6 +58,17 @@ Se mantiene en todos los vídeos salvo que el propietario pida explícitamente u
 - Personajes con movimiento natural, cámara cinematográfica fluida, motion graphics sincronizados con la narración, transiciones limpias, partículas blancas discretas.
 - Objetivo: personajes 3D que caminan. El motor actual usa figuras blancas 2D con cinemática; la migración a un personaje 3D procedural es el siguiente paso técnico y debe respetar este mismo lenguaje (blanco, minimalista, camino discontinuo).
 
+### Cámara cinematográfica inteligente (propietario, 2026-11-25; vídeos producidos desde entonces)
+
+Implementada en `src/camera/Camera.tsx` (`planCamera` + `CameraRig`), aplicada a toda la capa de escenas; la cuadrícula de puntos y los subtítulos nunca se mueven.
+
+- **Apertura:** el vídeo empieza en primer plano (110 %), mantiene el primer plano durante el hook y, al terminar el hook, retrocede suavemente al 100 % (curva cinematográfica, nunca lineal).
+- **Zoom inteligente por jerarquía visual:** en cada plano la cámara elige el elemento más importante (cifra > elemento `reward` > objeto con marca o transformación > personaje que camina > texto con énfasis) y se acerca a él justo cuando aparece (103–112 %; la revelación llega a ~110–111 %).
+- **Variedad:** push-in, pull-out, travelling que sigue al personaje, focus, paneos lentos; nunca el mismo movimiento dos veces seguidas. El título cinético hace un push-in lento; el cierre, un push-in deliberado; el CTA vuelve a 100 %.
+- **Transiciones:** en cada cambio de plano la cámara vuelve suavemente a un encuadre tranquilo; cada movimiento empieza exactamente donde terminó el anterior (sin saltos).
+- **Seguridad de encuadre:** zoom alrededor del centro de contenido (540, 760), recentrado parcial y limitado (±70 px / ±46 px) para que nada importante se corte ni entre en las zonas inseguras. Si el plano ya tiene un zoom interno fuerte, la cámara global se modera.
+- Los vídeos hechos antes de esta regla (1, 2, 4, 12, 19) llevan `"cameraStyle": "classic"` y se publican tal cual.
+
 ### Sistema de storytelling y retención (obligatorio en cada vídeo)
 
 Inspirado en las técnicas de retención de los grandes creadores de YouTube; sin copiar su contenido ni su marca.
