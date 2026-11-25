@@ -1,0 +1,112 @@
+{
+  "id": "002-procrastinacion",
+  "title": "¿Por qué procrastinas incluso cuando sabes exactamente lo que tienes que hacer?",
+  "pillar": 2,
+  "format": "behaviorLoop",
+  "evidenceLevel": "solid",
+  "sources": [
+    {
+      "citation": "Sirois, F., & Pychyl, T. (2013). Procrastination and the priority of short-term mood regulation: Consequences for future self. Social and Personality Psychology Compass, 7(2), 115–127.",
+      "doi": "10.1111/spc3.12011",
+      "supports": "La procrastinación prioriza reparar el ánimo a corto plazo por sobre el objetivo a largo plazo."
+    },
+    {
+      "citation": "Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94.",
+      "doi": "10.1037/0033-2909.133.1.65",
+      "supports": "Las tareas desagradables (aversión a la tarea) se postergan más."
+    },
+    {
+      "citation": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119.",
+      "doi": "10.1016/S0065-2601(06)38002-1",
+      "supports": "Planes «si… entonces» (cuándo y dónde) aumentan la probabilidad de actuar."
+    },
+    {
+      "citation": "Wohl, M. J. A., Pychyl, T. A., & Bennett, S. H. (2010). I forgive myself, now I can study: How self-forgiveness for procrastinating can reduce future procrastination. Personality and Individual Differences, 48(7), 803–808.",
+      "doi": "10.1016/j.paid.2010.01.029",
+      "supports": "Entre estudiantes que más postergaron el primer examen, perdonarse se asoció con menos procrastinación antes del segundo."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "beat": "hook",
+      "narration": "Tienes la tarea frente a ti. Sabes exactamente qué hacer. Y aun así, abres otra pestaña. ¿Por qué?",
+      "visual": { "type": "kineticTitle", "kicker": "Procrastinación", "lines": ["Sabes qué hacer.", "Y aun así,", "no lo haces."], "emphasis": ["no", "haces"] },
+      "camera": "Tipografía cinética con foco",
+      "sfx": "impact"
+    },
+    {
+      "id": "s2",
+      "beat": "question",
+      "narration": "Porque procrastinar no es un problema de tiempo ni de pereza. Para los investigadores Fuschia Sirois y Timothy Pychyl, es un problema de emociones.",
+      "visual": {
+        "type": "twoForces",
+        "left": { "label": "La tarea", "sublabel": "incómoda", "kind": "task" },
+        "right": { "label": "Algo que alivia", "sublabel": "ahora mismo", "kind": "reward" },
+        "winner": "right"
+      },
+      "camera": "La figura se aleja de la tarea y se inclina al alivio",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "s3",
+      "beat": "mechanism",
+      "narration": "Cuando miras la tarea, aparece una incomodidad. Aburrimiento, inseguridad, miedo a hacerlo mal. Evitarla te da alivio inmediato. Y ese alivio funciona como recompensa.",
+      "visual": {
+        "type": "emotionWave",
+        "title": "Lo que sientes",
+        "yLabel": "malestar",
+        "events": [
+          { "at": 0.22, "label": "Abres la tarea", "tone": "spike" },
+          { "at": 0.42, "label": "La evitas: alivio", "tone": "relief" },
+          { "at": 0.8, "label": "Vuelve más fuerte", "tone": "spike" }
+        ]
+      },
+      "camera": "La línea de malestar se dibuja en tiempo real",
+      "sfx": "riser"
+    },
+    {
+      "id": "s4",
+      "beat": "demonstration",
+      "narration": "Así se forma el ciclo. Incomodidad, distracción, alivio. Se repite, y la tarea pesa cada vez más. Eliges sentirte bien ahora, a costa de tu objetivo.",
+      "visual": {
+        "type": "behaviorLoop",
+        "steps": ["Tarea", "Incomodidad", "Distracción", "Alivio"],
+        "breakAt": 1,
+        "center": "El ciclo"
+      },
+      "camera": "Un cometa dorado recorre el ciclo; al final, el corte",
+      "sfx": "pulse"
+    },
+    {
+      "id": "s5",
+      "beat": "action",
+      "narration": "Para cortarlo, trabaja con la emoción. Decide cuándo y dónde empezarás: si son las nueve, abro el documento. Y si ya postergaste, perdónate. En un estudio, los estudiantes que más habían postergado y se perdonaron, postergaron menos en el siguiente examen.",
+      "visual": {
+        "type": "actionSteps",
+        "title": "Cómo cortar el ciclo",
+        "steps": ["Decide cuándo y dónde: «si son las 9, abro el documento»", "Perdónate el retraso y vuelve a empezar"]
+      },
+      "camera": "Tarjetas que se encienden",
+      "sfx": "tick"
+    },
+    {
+      "id": "s6",
+      "beat": "closer",
+      "narration": "No procrastinas por flojera. Procrastinas para dejar de sentirte mal.",
+      "visual": {
+        "type": "closer",
+        "line": "No es flojera. Es buscar alivio.",
+        "emphasis": ["alivio"],
+        "source": "Sirois y Pychyl, 2013 · Wohl et al., 2010"
+      },
+      "sfx": "pulse",
+      "minSeconds": 4
+    }
+  ],
+  "social": {
+    "caption": "Procrastinar no es pereza: es una forma de escapar de una emoción incómoda. Así funciona el ciclo y cómo cortarlo 🧠 Fuentes en el primer comentario.",
+    "hashtags": ["#psicologia", "#procrastinacion", "#productividad", "#emociones", "#habitos", "#aprendeentiktok"],
+    "aiLabel": true
+  }
+}

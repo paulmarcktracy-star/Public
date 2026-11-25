@@ -1,0 +1,118 @@
+name: Produce videos
+
+# Runs when Claude (or you) pushes a new/changed storyboard, or manually.
+on:
+  push:
+    branches: [main]
+    paths: ["storyboards/*.json"]
+  workflow_dispatch:
+    inputs:
+      storyboards:
+        description: "Storyboard files (space separated). Empty = all changed in last commit"
+        required: false
+        default: ""
+      engine:
+        description: "Voice engine"
+        type: choice
+        options: [kokoro, piper, elevenlabs, estimate]
+        default: kokoro
+
+permissions:
+  contents: write # to publish finished videos as private release assets
+
+concurrency:
+  group: produce-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      VOICE_ENGINE: ${{ inputs.engine || vars.VOICE_ENGINE || 'kokoro' }}
+      KOKORO_VOICE: ${{ vars.KOKORO_VOICE || 'ef_dora+af_heart' }}
+      PIPER_VOICE: ${{ vars.PIPER_VOICE || 'es_MX-claude-high' }}
+      ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+      # The ElevenLabs secret is only exposed to the Produce step, never echoed.
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Pick storyboards
+        id: pick
+        run: |
+          if [ -n "${{ inputs.storyboards }}" ]; then
+            FILES="${{ inputs.storyboards }}"
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- 'storyboards/*.json' || true)
+          fi
+          echo "files=$(echo $FILES | xargs)" >> "$GITHUB_OUTPUT"
+          echo "Storyboards: $FILES"
+
+      - uses: actions/setup-node@v4
+        if: steps.pick.outputs.files != ''
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        if: steps.pick.outputs.files != ''
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Cache voice + whisper models
+        if: steps.pick.outputs.files != ''
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/mente-studio
+          key: models-${{ hashFiles('requirements.txt') }}
+
+      - name: Install system + project dependencies
+        if: steps.pick.outputs.files != ''
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng fluidsynth fluid-soundfont-gm > /dev/null
+          pip install -q -r requirements.txt
+          npm install --no-audit --no-fund
+          npx remotion browser ensure
+
+      - name: Produce
+        if: steps.pick.outputs.files != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ env.VOICE_ENGINE == 'elevenlabs' && secrets.ELEVENLABS_API_KEY || '' }}
+        run: |
+          set -o pipefail
+          FAILED=0
+          for f in ${{ steps.pick.outputs.files }}; do
+            [ -f "$f" ] || continue
+            bash pipeline/produce.sh "$f" "$VOICE_ENGINE" || FAILED=1
+            id=$(basename "$f" .json)
+            [ -f "output/$id/qc.md" ] && cat "output/$id/qc.md" >> "$GITHUB_STEP_SUMMARY"
+          done
+          exit $FAILED
+
+      - name: Publish to private release (one per video)
+        if: always() && steps.pick.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for d in output/*/; do
+            id=$(basename "$d")
+            [ -f "$d/$id.mp4" ] || continue
+            tag="video-$id-${{ github.run_number }}"
+            status=$(python3 -c "import json;print('PASS' if json.load(open('$d/qc.json'))['passed'] else 'FAIL')")
+            gh release create "$tag" "$d"/* --title "[$status] $id" --notes-file "$d/qc.md" --prerelease
+          done
+
+      - name: Keep a short-lived artifact copy
+        if: always() && steps.pick.outputs.files != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos-${{ github.run_number }}
+          path: output/
+          retention-days: 3
+          if-no-files-found: ignore

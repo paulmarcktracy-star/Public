@@ -1,0 +1,38 @@
+{
+  "name": "mente-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Psychology motion graphics studio: storyboard JSON -> voice -> captions -> Remotion render -> QC",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx pipeline/validate.ts",
+    "render": "tsx pipeline/render.ts",
+    "produce": "bash pipeline/produce.sh",
+    "postinstall": "node pipeline/fonts.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@remotion/captions": "4.0.546",
+    "@remotion/cli": "4.0.546",
+    "@remotion/fonts": "4.0.546",
+    "@remotion/media": "4.0.546",
+    "@remotion/renderer": "4.0.546",
+    "@remotion/three": "4.0.546",
+    "@remotion/zod-types": "4.0.546",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.546",
+    "three": "0.180.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "5.2.8",
+    "@fontsource/playfair-display": "5.2.8",
+    "@types/react": "19.1.0",
+    "@types/three": "0.180.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

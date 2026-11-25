@@ -1,0 +1,13 @@
+node_modules/
+out/
+output/
+tmp/
+ab/
+public/build/
+public/audio/
+.env
+.env.*
+*.log
+.DS_Store
+public/fonts/
+package-lock.json

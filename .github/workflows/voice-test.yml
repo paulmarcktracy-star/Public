@@ -1,0 +1,56 @@
+name: Voice A/B test
+
+# Generates the same narration with every available engine so you can compare
+# them by ear before choosing (and before paying for anything).
+on:
+  workflow_dispatch:
+    inputs:
+      storyboard:
+        description: "Storyboard to read"
+        default: "storyboards/001-placer-inmediato.json"
+
+permissions:
+  contents: write
+
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng fluidsynth fluid-soundfont-gm > /dev/null
+          pip install -q -r requirements.txt
+      - name: Generate samples
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
+        run: |
+          mkdir -p ab
+          run() { # name engine VAR=value
+            name=$1; engine=$2; shift 2
+            env "$@" python3 pipeline/voice.py "${{ inputs.storyboard }}" "$engine" "tmp/$name" \
+              && ffmpeg -loglevel error -y -i "tmp/$name/voice.wav" -c:a libmp3lame -b:a 160k "ab/$name.mp3" \
+              || echo "::warning::$name failed"
+          }
+          run A-kokoro-alex     kokoro KOKORO_VOICE=em_alex
+          run B-kokoro-dora     kokoro KOKORO_VOICE=ef_dora
+          run C-kokoro-santa    kokoro KOKORO_VOICE=em_santa
+          run D-piper-claude    piper  PIPER_VOICE=es_MX-claude-high
+          run E-piper-ald       piper  PIPER_VOICE=es_MX-ald-medium
+          if [ -n "$ELEVENLABS_API_KEY" ] && [ -n "$ELEVENLABS_VOICE_ID" ]; then
+            run F-elevenlabs elevenlabs
+          else
+            echo "ElevenLabs skipped (no secret configured)" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          ls -la ab >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish samples
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "voice-ab-${{ github.run_number }}" ab/*.mp3 --title "Voice A/B #${{ github.run_number }}" --notes "Escucha cada muestra y elige una letra." --prerelease
