@@ -69,6 +69,14 @@ Inspirado en las técnicas de retención de los grandes creadores de YouTube; si
 5. **Revelación psicológica inesperada** (beat `reveal`, obligatoria, en la segunda mitad del vídeo y siempre respaldada por una fuente).
 6. **Conclusión memorable** (beat `closer`), luego CTA natural (beat `cta`).
 
+**Reglas de implementación del hook (propietario, 2026-11-25):**
+
+- Cuando el propietario da un hook, se usa EXACTAMENTE como primera frase. No se cambia sin una razón editorial concreta, y en ese caso se le consulta antes. Hooks aprobados: `plan/hooks-mes-1.md`.
+- El hook aparece desde el primer segundo, sin presentación, saludo ni introducción. La voz empieza de inmediato, en el fotograma 0.
+- La primera escena visual representa exactamente lo que dice la frase del hook.
+- No se divide el hook en varias frases antes de presentar la idea principal: es la primera escena (beat `hook`), en una sola toma de voz.
+- Hook corto, natural y fácil de entender.
+
 Nada de vídeos genéricos: cada escena tiene una función narrativa declarada en su `beat`. `pipeline/validate.ts` bloquea el render si falta el hook, la pregunta, la revelación, el cierre o el CTA.
 
 ### Sound design premium (prioridad absoluta)
