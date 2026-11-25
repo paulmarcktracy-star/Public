@@ -30,6 +30,86 @@ const POSES: Record<PoseName, Pose> = {
 const mixPose = (a: Pose, b: Pose, t: number): Pose =>
   Object.fromEntries(Object.keys(a).map((k) => [k, lerp(a[k as keyof Pose], b[k as keyof Pose], t)])) as Pose;
 
+/* ===================== SIGNATURE DASHED PATH ===================== */
+type Fig = NonNullable<Props["figure"]>;
+const pathShape = (fig: Fig) => (fig.path === "auto" ? "flat" : fig.path);
+const pathSpan = (fig: Fig): [number, number] => {
+  const end = fig.toX ?? fig.x;
+  const lo = Math.min(fig.x, end), hi = Math.max(fig.x, end);
+  const walking = fig.toX !== undefined;
+  const back = walking ? 220 : 150, ahead = walking ? 300 : 260;
+  const a = fig.pathFrom ?? (fig.facing === 1 ? lo - back : lo - ahead);
+  const b = fig.pathTo ?? (fig.facing === 1 ? hi + ahead : hi + back);
+  return [a, b];
+};
+/** Ground height under the feet at x: the figure walks ON the path, never floats. */
+const pathY = (fig: Fig, x: number) => {
+  const shape = pathShape(fig);
+  if (shape !== "rise" && shape !== "fall") return fig.y;
+  const [a, b] = pathSpan(fig);
+  const u = Math.max(0, Math.min(1, (x - a) / Math.max(1, b - a)));
+  const k = fig.facing === 1 ? u : 1 - u; // progress in walking direction
+  const start = fig.x, s0 = Math.max(0, Math.min(1, (start - a) / Math.max(1, b - a)));
+  const k0 = fig.facing === 1 ? s0 : 1 - s0;
+  return fig.y + (shape === "rise" ? -1 : 1) * 170 * (k - k0);
+};
+const DashedPath: React.FC<{ fig: Fig; frame: number; dur: number }> = ({ fig, frame, dur }) => {
+  const shape = pathShape(fig);
+  if (shape === "none") return null;
+  const [a, b] = pathSpan(fig);
+  const DASH = 15, STEP = 31; // short, fine, evenly spaced strokes
+  const walking = fig.toX !== undefined;
+  const walkT = walking ? prog(frame, 4, Math.max(20, dur * 0.7), easeStd) : 0;
+  const cur = walking ? lerp(fig.x, fig.toX!, walkT) : fig.x;
+  const reveal = prog(frame, 0, 16, easeStd);
+  const lines: { pts: [number, number][]; branch?: number }[] = [];
+  const main: [number, number][] = [];
+  for (let x = a; x <= b; x += 2) main.push([x, pathY(fig, x)]);
+  if (shape === "fork") {
+    // stem up to a point ahead of the walker, then two diverging branches
+    const split = fig.facing === 1 ? Math.min(b - 80, (fig.toX ?? fig.x) + 90) : Math.max(a + 80, (fig.toX ?? fig.x) - 90);
+    const stem = main.filter(([x]) => (fig.facing === 1 ? x <= split : x >= split));
+    lines.push({ pts: stem });
+    const len = fig.facing === 1 ? b - split + 120 : split - a + 120;
+    for (const sgn of [-1, 1]) {
+      const br: [number, number][] = [];
+      for (let d = 0; d <= len; d += 2) br.push([split + fig.facing * d, fig.y + sgn * 0.42 * d]);
+      lines.push({ pts: br, branch: sgn });
+    }
+  } else lines.push({ pts: main });
+  const out: React.ReactNode[] = [];
+  lines.forEach((ln, li) => {
+    let acc = 0;
+    for (let i = 1; i < ln.pts.length; i++) {
+      const [x0, y0] = ln.pts[i - 1], [x1, y1] = ln.pts[i];
+      const seg = Math.hypot(x1 - x0, y1 - y0);
+      const prev = acc;
+      acc += seg;
+      if (Math.floor(prev / STEP) === Math.floor(acc / STEP)) continue;
+      // a dash starts here, oriented along the local tangent
+      const tx = (x1 - x0) / seg, ty = (y1 - y0) / seg;
+      const ahead = (x1 - cur) * fig.facing; // >0 in front of the walker
+      const order = ln.branch ? 1 : Math.max(0, Math.min(1, (x1 - a) / Math.max(1, b - a)));
+      const shown = reveal >= (fig.facing === 1 ? order : 1 - order) * 0.85 ? 1 : 0;
+      let op = ahead > 0 ? 0.78 : 0.32; // the road ahead is brighter than the road walked
+      if (shape === "fade" && ahead > 0) op *= Math.max(0, 1 - ahead / 300);
+      op *= Math.max(0.15, 1 - Math.max(0, Math.abs(ahead) - 260) / 260); // ends dissolve softly
+      if (ln.branch) op *= 0.85;
+      out.push(
+        <line key={`${li}-${i}`} x1={x1} y1={y1} x2={x1 + tx * DASH} y2={y1 + ty * DASH} stroke={COLORS.ink} strokeWidth={3.2} strokeLinecap="round" opacity={op * shown} />,
+      );
+    }
+  });
+  const gy = pathY(fig, cur);
+  return (
+    <g>
+      {/* faint contact glow: grounds the figure on the black void */}
+      <ellipse cx={cur} cy={gy + 4} rx={62 * fig.scale} ry={9 * fig.scale} fill={COLORS.ink} opacity={0.1 * reveal} />
+      {out}
+    </g>
+  );
+};
+
 const Figure: React.FC<{ fig: NonNullable<Props["figure"]>; frame: number; dur: number }> = ({ fig, frame, dur }) => {
   const s = fig.scale;
   const f = fig.facing;
@@ -42,9 +122,10 @@ const Figure: React.FC<{ fig: NonNullable<Props["figure"]>; frame: number; dur: 
     const ph = Math.sin(frame / 4.2);
     p = { ...p, rh: 24 * ph, lh: -24 * ph, rk: ph < 0 ? 30 * ph : -4, lk: ph > 0 ? -30 * ph : -4, rs: p.rs - 18 * ph, ls: p.ls + 18 * ph };
   }
+  const groundY = pathY(fig, x);
   const breathe = Math.sin(frame / 13) * 2.2;
   const dir = (deg: number) => [Math.sin((deg * Math.PI) / 180) * f, Math.cos((deg * Math.PI) / 180)];
-  const hip = [x, fig.y - 132 * s];
+  const hip = [x, groundY - 132 * s];
   const tl = dir(180 - p.lean); // torso goes up
   const shoulder = [hip[0] + tl[0] * 108 * s, hip[1] + tl[1] * 108 * s + breathe];
   const hd = dir(180 - p.lean - p.head * 0.5);
@@ -406,6 +487,7 @@ export const Stage: React.FC<Props> = ({ figure, props, texts, counters, spotlig
             </g>
           ) : null}
           {props.map((p, i) => <PropView key={i} p={p} frame={frame} fps={fps} dur={durationInFrames} />)}
+          {figure ? <DashedPath fig={figure} frame={frame} dur={durationInFrames} /> : null}
           {figure ? <Figure fig={figure} frame={frame} dur={durationInFrames} /> : null}
           {counters.map((c, i) => <Counter key={i} c={c} frame={frame} fps={fps} />)}
         </svg>

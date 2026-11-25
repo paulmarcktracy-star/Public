@@ -2,7 +2,7 @@
 // Every scene component reads from here so the brand stays consistent.
 
 export const COLORS = {
-  bg: "#050505",
+  bg: "#000000",
   bgRaised: "#0E0E0F",
   ink: "#F5F2EA", // warm white for text
   inkMuted: "rgba(245, 242, 234, 0.62)",

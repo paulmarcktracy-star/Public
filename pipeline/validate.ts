@@ -30,7 +30,13 @@ for (const file of process.argv.slice(2)) {
   if (sb.scenes[0].beat !== "hook") problems.push("first scene must be the hook");
   if (sb.scenes.at(-1)!.beat !== "cta") problems.push("last scene must be the CTA (rule 8)");
   if (!sb.scenes.some((s) => s.beat === "action")) problems.push("needs a practical takeaway (action beat)");
-  if (!sb.scenes.some((s) => s.beat === "retention" || s.beat === "question")) warnings.push("no explicit retention/question beat");
+  // storytelling system: hook → question → progressive info → metaphors → unexpected reveal → memorable close
+  if (!sb.scenes.slice(1, 3).some((s) => s.beat === "question")) problems.push("a question beat must open the curiosity gap in scene 2 or 3");
+  const reveal = sb.scenes.findIndex((s) => s.beat === "reveal");
+  if (reveal < 0) problems.push("needs an unexpected psychological reveal (reveal beat)");
+  else if (reveal < sb.scenes.length * 0.4) problems.push("the reveal comes too early: place it in the second half");
+  if (!sb.scenes.some((s) => s.beat === "closer")) problems.push("needs a memorable conclusion (closer beat)");
+  if (!sb.scenes.some((s) => s.beat === "retention")) warnings.push("no mid-video retention beat (open loop / twist)");
   const hookWords = sb.scenes[0].narration.split(/\s+/).length;
   if (hookWords > 22) warnings.push(`hook is long (${hookWords} words)`);
   if (!/[?¿]/.test(sb.scenes.at(-1)!.narration)) warnings.push("CTA has no question to answer in comments");

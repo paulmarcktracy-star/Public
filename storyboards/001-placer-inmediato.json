@@ -106,7 +106,8 @@
               "from": "stand",
               "x": 560,
               "toX": 450,
-              "facing": -1
+              "facing": -1,
+              "path": "fade"
             },
             "props": [
               {
@@ -577,7 +578,7 @@
     },
     {
       "id": "E",
-      "beat": "mechanism",
+      "beat": "reveal",
       "narration": "En un estudio con resonancia, zonas del sistema de recompensa se activaron más ante premios inmediatos. Y al elegir esperar, se activaron más zonas prefrontales.",
       "shots": [
         {
@@ -1045,7 +1046,8 @@
               "from": "stand",
               "x": 540,
               "toX": 640,
-              "facing": 1
+              "facing": 1,
+              "path": "rise"
             },
             "props": [
               {

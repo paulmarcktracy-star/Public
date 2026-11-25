@@ -142,6 +142,12 @@ export const Stage = z.object({
       facing: z.union([z.literal(1), z.literal(-1)]).default(1),
       scale: z.number().default(1),
       holding: z.enum(["none", "phone", "coins"]).default("none"),
+      path: z
+        .enum(["auto", "none", "flat", "rise", "fall", "fork", "fade"])
+        .default("auto")
+        .describe("signature dashed path under the feet; auto = flat, longer when walking"),
+      pathFrom: z.number().optional().describe("x where the dashed path starts"),
+      pathTo: z.number().optional().describe("x where the dashed path ends"),
     })
     .optional(),
   props: z.array(StageProp).default([]),
@@ -171,7 +177,7 @@ export type Shot = z.infer<typeof Shot>;
 
 export const StoryScene = z.object({
   id: z.string(),
-  beat: z.enum(["hook", "question", "mechanism", "demonstration", "retention", "action", "closer", "cta"]),
+  beat: z.enum(["hook", "question", "mechanism", "demonstration", "retention", "reveal", "action", "closer", "cta"]),
   narration: z.string().min(1).describe("spoken in one take so the voice keeps natural intonation"),
   shots: z.array(Shot).min(1).max(6),
   camera: z.string().optional().describe("Human-readable camera note"),

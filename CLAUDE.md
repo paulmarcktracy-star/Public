@@ -11,7 +11,7 @@ Si el propietario modifica una regla, actualizar este archivo en el mismo cambio
 
 La primera referencia de vídeo del propietario define el estilo gráfico:
 
-- Fondo negro predominante.
+- Fondo negro profundo `#000000` (ver «Identidad cinematográfica obligatoria»).
 - Personajes minimalistas blancos, tipo figuras humanas sencillas.
 - Ilustraciones de líneas blancas y elementos geométricos.
 - Focos de luz y efectos de iluminación cinematográficos.
@@ -22,6 +22,46 @@ La primera referencia de vídeo del propietario define el estilo gráfico:
 
 **Prohibido:** diapositivas, imágenes estáticas con subtítulos y recopilaciones de vídeos de stock.
 **Obligatorio:** motion graphics reales que expliquen visualmente la narración. Cada escena debe mostrar el concepto que se está narrando.
+
+### Identidad cinematográfica obligatoria (regla absoluta, desde 2026-11-25)
+
+Se mantiene en todos los vídeos salvo que el propietario pida explícitamente un cambio.
+
+- **Fondo SIEMPRE negro profundo `#000000`** (`COLORS.bg`). Nunca gris, azul ni entornos de color; nada de degradados tintados.
+- En el fondo solo se permiten detalles discretos y secundarios: pequeños puntos o partículas blancas, una textura fina (grano ≤ 0,03). Nunca deben cargar la imagen.
+- El blanco es el color principal de gráficos y contrastes; verde, rojo y dorado solo como acento puntual.
+- Estética premium, minimalista, cinematográfica y psicológica. Contraste fuerte entre personaje, gráficos y negro.
+
+#### Firma gráfica: el camino discontinuo
+
+- Cuando un personaje camina, camina **sobre** un camino hecho de muchos trazos blancos cortos, finos y separados a intervalos regulares (— — — —). Nunca flota en el vacío negro.
+- El camino puede extenderse delante, prolongarse detrás, unir dos puntos y transformarse según el tema psicológico. La parte ya recorrida es más tenue y la que queda por delante es más brillante.
+- Implementación: `figure.path` en el storyboard (`src/scenes/Stage.tsx`, componente `DashedPath`):
+  - `auto`/`flat`: recto.
+  - `rise`: sube (progreso, acercarse a una meta).
+  - `fall`: baja (recaída, pérdida).
+  - `fork`: se bifurca (decisión, elección).
+  - `fade`: se desvanece por delante (futuro incierto, lo que no vemos).
+  - `none`.
+  - `pathFrom`/`pathTo` fijan los extremos. El personaje sigue la altura del camino.
+
+#### Animación
+
+- Personajes con movimiento natural, cámara cinematográfica fluida, motion graphics sincronizados con la narración, transiciones limpias, partículas blancas discretas.
+- Objetivo: personajes 3D que caminan. El motor actual usa figuras blancas 2D con cinemática; la migración a un personaje 3D procedural es el siguiente paso técnico y debe respetar este mismo lenguaje (blanco, minimalista, camino discontinuo).
+
+### Sistema de storytelling y retención (obligatorio en cada vídeo)
+
+Inspirado en las técnicas de retención de los grandes creadores de YouTube; sin copiar su contenido ni su marca.
+
+1. **Hook** extremadamente atractivo en los primeros segundos (beat `hook`, legible en el fotograma 0).
+2. **Pregunta psicológica** que abre un vacío de curiosidad (beat `question` en la escena 2 o 3).
+3. **Progresión narrativa**: cada escena aporta información nueva (`mechanism`, `demonstration`, `retention` con giros y bucles abiertos).
+4. **Metáforas visuales y animaciones** que hacen visibles las ideas (puertas, caminos, balanzas, relojes…).
+5. **Revelación psicológica inesperada** (beat `reveal`, obligatoria, en la segunda mitad del vídeo y siempre respaldada por una fuente).
+6. **Conclusión memorable** (beat `closer`), luego CTA natural (beat `cta`).
+
+Nada de vídeos genéricos: cada escena tiene una función narrativa declarada en su `beat`. `pipeline/validate.ts` bloquea el render si falta el hook, la pregunta, la revelación, el cierre o el CTA.
 
 ### Minimalismo y encuadre 9:16
 
