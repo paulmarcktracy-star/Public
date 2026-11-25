@@ -53,7 +53,7 @@ def measure_lufs(path: Path) -> float:
 
 
 def black_and_frozen(path: Path) -> tuple[float, float]:
-    out = run("ffmpeg", "-hide_banner", "-i", str(path), "-vf", "blackdetect=d=0.5:pix_th=0.04,freezedetect=n=0.001:d=3", "-an", "-f", "null", "-")
+    out = run("ffmpeg", "-hide_banner", "-i", str(path), "-vf", "blackdetect=d=0.5:pix_th=0.04:pic_th=0.999,freezedetect=n=0.001:d=3", "-an", "-f", "null", "-")
     black = sum(float(x) for x in re.findall(r"black_duration:([\d.]+)", out))
     frozen = sum(float(x) for x in re.findall(r"freeze_duration: ([\d.]+)", out))
     return black, frozen
