@@ -8,10 +8,10 @@ import { RichLine } from "../components/Rich";
 
 type Props = z.infer<typeof StageS> & { durationInFrames: number };
 type PoseName = z.infer<typeof PoseS>;
-type Accent = "white" | "gold" | "green" | "red";
+type Accent = "white" | "gold" | "green" | "red" | "reward";
 
 export const accentColor = (a: Accent) =>
-  a === "gold" ? COLORS.goldBright : a === "green" ? COLORS.green : a === "red" ? COLORS.red : COLORS.ink;
+  a === "reward" ? COLORS.reward : a === "red" ? COLORS.red : COLORS.ink; // B&W identity
 
 /* ============================== FIGURE ============================== */
 // Angles in degrees. 0 = limb pointing down, +90 = pointing forward (facing), 180 = up.
@@ -182,7 +182,7 @@ const PROP: Record<string, (c: DrawCtx) => React.ReactNode> = {
   phone: (c) => (
     <>
       <rect x={-26} y={-46} width={52} height={92} rx={9} {...stroke(c)} />
-      <rect x={-19} y={-36} width={38} height={66} rx={3} fill={c.glow ? COLORS.goldBright : "rgba(245,242,234,0.08)"} opacity={c.d * (c.glow ? 0.8 + 0.2 * Math.sin(c.frame / 5) : 1)} />
+      <rect x={-19} y={-36} width={38} height={66} rx={3} fill={c.glow ? COLORS.goldBright : "rgba(255,255,255,0.08)"} opacity={c.d * (c.glow ? 0.8 + 0.2 * Math.sin(c.frame / 5) : 1)} />
       {c.glow ? [0, 1, 2].map((i) => <rect key={i} x={-14} y={-28 + i * 14} width={28 - i * 6} height={7} rx={3} fill={COLORS.bg} opacity={0.55 * c.d} />) : null}
       <circle cx={0} cy={38} r={3} fill={c.col} opacity={c.d} />
     </>

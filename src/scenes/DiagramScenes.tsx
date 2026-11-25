@@ -135,7 +135,7 @@ const ForceIcon: React.FC<{ kind: "task" | "reward" | "future" | "now"; x: numbe
   // task: a document with unchecked lines and a stalled progress bar
   return (
     <g opacity={0.55 + 0.45 * glow}>
-      <rect x={x - 85} y={y - 110} width={170} height={220} rx={14} fill="rgba(245,242,234,0.06)" stroke={COLORS.ink} strokeWidth={3} />
+      <rect x={x - 85} y={y - 110} width={170} height={220} rx={14} fill="rgba(255,255,255,0.06)" stroke={COLORS.ink} strokeWidth={3} />
       {[0, 1, 2, 3].map((k) => (
         <g key={k}>
           <rect x={x - 60} y={y - 78 + k * 40} width={22} height={22} rx={4} fill="none" stroke={COLORS.inkMuted} strokeWidth={2.5} />

@@ -17,20 +17,28 @@ La primera referencia de vídeo del propietario define el estilo gráfico:
 - Focos de luz y efectos de iluminación cinematográficos.
 - Objetos animados que representan conceptos: dinero, puertas, relojes, gráficos, pantallas, cerebros, etc.
 - Textos y cifras que aparecen animados.
-- Uso puntual de colores como verde, rojo y dorado para destacar información.
+- Paleta exclusivamente blanco y negro (ver «Identidad blanco y negro»).
 - Animaciones fluidas, movimientos de cámara y transiciones profesionales.
 
 **Prohibido:** diapositivas, imágenes estáticas con subtítulos y recopilaciones de vídeos de stock.
 **Obligatorio:** motion graphics reales que expliquen visualmente la narración. Cada escena debe mostrar el concepto que se está narrando.
 
-### Identidad cinematográfica obligatoria (regla absoluta, desde 2026-11-25)
+### Identidad blanco y negro (regla absoluta, desde 2026-11-25; reemplaza la paleta con dorado/verde/rojo)
 
 Se mantiene en todos los vídeos salvo que el propietario pida explícitamente un cambio.
 
-- **Fondo SIEMPRE negro profundo `#000000`** (`COLORS.bg`). Nunca gris, azul ni entornos de color; nada de degradados tintados.
-- En el fondo solo se permiten detalles discretos y secundarios: pequeños puntos o partículas blancas, una textura fina (grano ≤ 0,03). Nunca deben cargar la imagen.
-- El blanco es el color principal de gráficos y contrastes; verde, rojo y dorado solo como acento puntual.
+- **Solo dos colores:** negro profundo `#000000` y blanco puro `#FFFFFF`. Personajes, motion graphics, gráficos, tipografía y transiciones respetan esta paleta (los grises son blanco con opacidad).
+- Prohibido: azul, violeta, rojo, degradados de color y cualquier color añadido solo para decorar.
+- **Excepción:** un único color extra (`accent: "reward"`, `COLORS.reward`) solo cuando tiene una función narrativa real (recompensa, victoria, momento emocional clave). Raro e intencional: `validate.ts` bloquea más de 2 planos con `reward`.
+- Los antiguos acentos `gold`/`green` se dibujan en blanco y `red` en gris atenuado (pérdida, error).
 - Estética premium, minimalista, cinematográfica y psicológica. Contraste fuerte entre personaje, gráficos y negro.
+
+#### Fondo: cuadrícula de puntos estática
+
+- Fondo casi negro `#050505` (`COLORS.bgGrid`) con una cuadrícula regular de puntos grises diminutos (~1,3 px, opacidad 20 %, separación 36 px idéntica en horizontal y vertical).
+- Generada solo con CSS `radial-gradient()` + `background-size` (`src/components/Background.tsx`). Sin elementos individuales ni JavaScript.
+- **Totalmente estática:** nunca se mueve, anima, pulsa ni cambia de posición. Es una capa independiente debajo de todas las escenas; los movimientos de cámara y las transiciones ocurren encima y no la afectan.
+- Sin partículas animadas ni grano animado en el fondo.
 
 #### Firma gráfica: el camino discontinuo
 
@@ -62,6 +70,53 @@ Inspirado en las técnicas de retención de los grandes creadores de YouTube; si
 6. **Conclusión memorable** (beat `closer`), luego CTA natural (beat `cta`).
 
 Nada de vídeos genéricos: cada escena tiene una función narrativa declarada en su `beat`. `pipeline/validate.ts` bloquea el render si falta el hook, la pregunta, la revelación, el cierre o el CTA.
+
+### Sound design premium (prioridad absoluta)
+
+Nunca un vídeo con solo música de fondo + narración. Cada detalle visual puede llevar su efecto sonoro, y cada sonido tiene una razón para existir:
+
+- Personaje que camina: pasos reales, sincronizados con cada contacto del pie.
+- Pequeño elemento gráfico que aparece: pop sutil o soft click.
+- Línea blanca que se dibuja: sonido ligero de trazo.
+- Objeto que se desplaza: SFX fluido y preciso.
+- Texto que aparece: micro-sonido discreto.
+- Transición: whoosh cinematográfico suave.
+- Animación 3D: sonidos sutiles adaptados al movimiento.
+- Revelación importante (`reveal`): diseño sonoro que acentúa el impacto.
+- Recompensa final: sonido distintivo y satisfactorio.
+
+SFX profesionales, suaves, sutiles y perfectamente sincronizados al fotograma. Nunca agresivos, repetitivos, artificiales ni excesivos.
+
+**Estado técnico:** hoy hay un SFX por plano (`pipeline/sfx.py`). Antes de producir los vídeos del mes, el motor debe generar automáticamente los micro-SFX desde los eventos de animación (pasos según el ciclo de marcha, apariciones, trazos, textos, transiciones) y aplicar capas de ambiente y textura.
+
+### Mezcla de audio profesional
+
+- La narración domina y es perfectamente inteligible: ducking de música y SFX bajo la voz.
+- La música sostiene la emoción sin competir con la voz.
+- Los SFX son limpios, sincronizados, equilibrados en volumen y adaptados a cada escena, sin saturación (true peak ≤ −1 dBTP) ni ruidos inútiles.
+- Capas cuando mejoran la inmersión: ambiente, textura, movimiento e impacto.
+
+### Calidad de montaje y experiencia del espectador
+
+- Montaje extremadamente cuidado: animaciones fluidas, timing preciso, transiciones elegantes, tipografía perfectamente colocada, cámara natural, ritmo dinámico pero nunca desordenado.
+- Sincronización perfecta entre narración, imagen, animación y sonido.
+- Nada de animaciones solo para llenar la pantalla.
+- Cada escena crea una emoción, transmite información o refuerza la curiosidad. Debe sentirse como una producción profesional, no como un vídeo IA genérico.
+- La recompensa narrativa final va acompañada de un momento audiovisual satisfactorio.
+- Objetivo: minidocumentales psicológicos cinematográficos, con identidad blanco y negro reconocible, sound design premium y montaje de estudio.
+
+### Control de calidad final (obligatorio antes de entregar)
+
+1. Respeto de la identidad blanco y negro.
+2. Coherencia de personajes y escenas.
+3. Calidad y fluidez de las animaciones.
+4. Sincronización de los micro-SFX.
+5. Calidad de la mezcla de audio.
+6. Ritmo y retención narrativa.
+7. Calidad de transiciones y detalles.
+8. Impacto de la revelación final.
+
+Si algo parece amateur, se mejora antes de la entrega.
 
 ### Minimalismo y encuadre 9:16
 
@@ -150,4 +205,5 @@ Después verificar que todo respeta estas reglas y que la infraestructura existe
 - Sonido 100 % procedural (`pipeline/sfx.py`); sin música ni efectos con licencia de terceros.
 - Credenciales solo como GitHub Secrets o variables de entorno. Nunca en código, logs ni commits.
 - No activar servicios ni suscripciones de pago sin aprobación del propietario.
+- Calendario: los vídeos del mes se producen con TODAS estas reglas; no se producen vídeos fuera del plan sin pedido del propietario.
 - QC bloqueante en `pipeline/finish.py`: 1080×1920, 30 fps, H.264 yuv420p, audio a −14 LUFS, sin negros ni congelados, todas las palabras subtituladas.

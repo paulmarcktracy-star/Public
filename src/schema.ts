@@ -79,7 +79,7 @@ export const Closer = z.object({
 
 // ---------- Stage: white figure + animated objects + text/numbers (reference style) ----------
 
-export const Accent = z.enum(["white", "gold", "green", "red"]);
+export const Accent = z.enum(["white", "gold", "green", "red", "reward"]); // gold/green/red render monochrome; reward = rare colour
 export const PropKind = z.enum([
   "phone", "book", "clock", "coins", "bill", "piggy", "door", "mountain", "brain", "chart",
   "donut", "apple", "dumbbell", "cart", "lock", "calendar", "bubble", "question", "hourglass", "lightbulb",
@@ -125,7 +125,7 @@ export const StageCounter = z.object({
   x: z.number(),
   y: z.number(),
   size: z.number().default(120),
-  accent: Accent.default("gold"),
+  accent: Accent.default("white"),
   delay: z.number().min(0).default(0),
   seconds: z.number().default(0.9),
 });

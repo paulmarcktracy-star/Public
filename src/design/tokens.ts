@@ -1,20 +1,24 @@
-// Design system: premium black / white / gold.
-// Every scene component reads from here so the brand stays consistent.
+// Design system: STRICT BLACK & WHITE (owner rule, 2026-11-25).
+// Legacy names (gold, green, red) are kept so scenes compile, but they now resolve
+// to white / grey. The only colour left is `reward`, reserved for a rare narrative
+// moment (victory, reward, key emotion) via accent "reward".
 
 export const COLORS = {
   bg: "#000000",
-  bgRaised: "#0E0E0F",
-  ink: "#F5F2EA", // warm white for text
-  inkMuted: "rgba(245, 242, 234, 0.62)",
-  inkFaint: "rgba(245, 242, 234, 0.18)",
-  gold: "#D4AF62",
-  goldBright: "#F3D48A",
-  goldDeep: "#8C6A2E",
-  goldGlow: "rgba(212, 175, 98, 0.45)",
-  line: "rgba(245, 242, 234, 0.14)",
-  danger: "#E5534B", // red: cost, loss, wrong choice (use sparingly)
-  red: "#E5534B",
-  green: "#5FD38D", // green: gain, right choice, improvement (use sparingly)
+  bgGrid: "#050505", // static dot-grid backdrop
+  bgRaised: "#0B0B0B",
+  ink: "#FFFFFF",
+  inkMuted: "rgba(255, 255, 255, 0.62)",
+  inkFaint: "rgba(255, 255, 255, 0.18)",
+  gold: "#FFFFFF",
+  goldBright: "#FFFFFF",
+  goldDeep: "#8C8C8C",
+  goldGlow: "rgba(255, 255, 255, 0.35)",
+  line: "rgba(255, 255, 255, 0.14)",
+  danger: "#6E6E6E", // loss / wrong choice = dimmed grey, not red
+  red: "#6E6E6E",
+  green: "#FFFFFF",
+  reward: "#E8C872", // RARE: only with a real narrative function (max 2 shots per video)
 };
 
 export const VIDEO = {

@@ -36,6 +36,9 @@ for (const file of process.argv.slice(2)) {
   if (reveal < 0) problems.push("needs an unexpected psychological reveal (reveal beat)");
   else if (reveal < sb.scenes.length * 0.4) problems.push("the reveal comes too early: place it in the second half");
   if (!sb.scenes.some((s) => s.beat === "closer")) problems.push("needs a memorable conclusion (closer beat)");
+  // black & white identity: the one extra colour is rare and must carry meaning
+  const rewardShots = sb.scenes.flatMap((s) => s.shots).filter((sh) => JSON.stringify(sh.visual).includes('"reward"')).length;
+  if (rewardShots > 2) problems.push(`colour accent "reward" used in ${rewardShots} shots (max 2, narrative moments only)`);
   if (!sb.scenes.some((s) => s.beat === "retention")) warnings.push("no mid-video retention beat (open loop / twist)");
   const hookWords = sb.scenes[0].narration.split(/\s+/).length;
   if (hookWords > 22) warnings.push(`hook is long (${hookWords} words)`);
