@@ -41,7 +41,7 @@ def scene(id_, beat, shots):
 def sb(id_, title, pillar, sources, scenes, caption, hashtags):
     return {
         "id": id_, "title": title, "pillar": pillar, "format": "secondPerson", "evidenceLevel": "solid",
-        "music": "intimo", "sources": sources, "scenes": scenes,
+        "music": "meaningful", "sources": sources, "scenes": scenes,
         "social": {"caption": caption, "hashtags": hashtags, "aiLabel": True},
     }
 
@@ -77,52 +77,52 @@ v004 = sb(
                 texts=[text("Eso nos enseñaron", family="sans", size=60)], camera=cam(1.0, 1.06))),
         ]),
         scene("B", "question", [
-            shot("¿Más testigos significa menos ayuda?", stage(
+            shot("¿Entonces más testigos significan menos ayuda?", stage(
                 extras=crowd([300, 400, 500], opacity=0.6, scale=0.7),
                 props=[prop("chart", 850, 680, size=150, state="down", label="AYUDA", enter="draw")],
                 counters=[{"from": 1, "to": 30, "x": 380, "y": 560, "size": 120, "seconds": 1.4, "suffix": " testigos"}],
                 texts=[text("¿Más testigos, menos ayuda?", family="sans", size=58, emphasis=["menos"])])),
         ]),
         scene("C", "mechanism", [
-            shot("En los años 60, Darley y Latané simularon una emergencia.", stage(
+            shot("En los años sesenta, Darley y Latané fingieron una emergencia.", stage(
                 figure=fig("think", 360), props=[prop("bubble", 720, 640, size=190, enter="pop", delay=0.3, label="¡AYUDA!")],
                 texts=[text("Darley y Latané · años 60", family="sans", size=46)])),
-            shot("Quienes creían estar solos ayudaban más", stage(
+            shot("Cuando la gente creía estar sola, ayudaba mucho más.", stage(
                 figure=fig("walk", 300, toX=600, path="rise"),
                 props=[prop("bubble", 800, 600, size=150, label="¡AYUDA!", enter="none", mark="check", markAt=0.7)],
                 texts=[text("Solos: ayudaban más", family="sans", size=52, emphasis=["más"])])),
-            shot("que quienes creían que otros también escuchaban.", stage(
+            shot("Si creía que otros también escuchaban, dudaba.", stage(
                 figure=fig("stand", 540), extras=crowd([260, 380, 700, 820], opacity=0.45, scale=0.72),
                 props=[prop("bubble", 800, 560, size=130, label="¡AYUDA!", enter="none", mark="question", markAt=0.5),
                        prop("clock", 300, 560, size=110, state="spin", enter="pop", delay=0.4)],
                 texts=[text("Con otros: dudaban", family="sans", size=52, emphasis=["dudaban"])])),
-            shot("Se llama difusión de responsabilidad:", {"type": "kineticTitle", "kicker": "Se llama", "lines": ["Difusión de", "responsabilidad"], "emphasis": ["responsabilidad"]}, "impact"),
-            shot("si todos pueden ayudar, nadie se siente obligado.", stage(
+            shot("A esto se le llama difusión de responsabilidad.", {"type": "kineticTitle", "kicker": "Se llama", "lines": ["Difusión de", "responsabilidad"], "emphasis": ["responsabilidad"]}, "impact"),
+            shot("Si todos pueden ayudar, nadie siente que le toca.", stage(
                 extras=crowd([200, 340, 480, 620, 760, 900], opacity=0.55, scale=0.72),
-                texts=[text("Si todos pueden, nadie se siente obligado", family="sans", size=48, emphasis=["nadie"])], camera=cam(1.06, 1.0))),
+                texts=[text("Si todos pueden, a nadie le toca", family="sans", size=50, emphasis=["nadie"])], camera=cam(1.06, 1.0))),
         ]),
         scene("D", "demonstration", [
-            shot("Un metaanálisis confirmó el efecto…", stage(
+            shot("Un metaanálisis confirmó el efecto.", stage(
                 props=[prop("chart", 540, 640, size=220, state="down", enter="draw", mark="check", markAt=0.6)],
                 texts=[text("Metaanálisis", family="sans", size=56)])),
-            shot("pero encontró que se debilita en emergencias claramente peligrosas.", stage(
+            shot("Pero cuando el peligro es claro, el efecto se debilita.", stage(
                 props=[prop("chart", 540, 640, size=220, state="down", enter="none", to={"state": "up", "at": 0.3}),
                        prop("lightbulb", 820, 500, size=110, state="glow", enter="pop", delay=0.5)],
                 texts=[text("En el peligro real, se debilita", family="sans", size=50, emphasis=["se debilita"])])),
         ]),
         scene("E", "retention", [
-            shot("Y entonces alguien hizo lo que casi nadie había hecho:", stage(
+            shot("Entonces, unos investigadores hicieron algo poco común:", stage(
                 figure=fig("walk", 300, toX=480, path="flat"), props=[prop("cctv", 760, 500, size=200, enter="draw")], camera=cam(1.0, 1.06))),
             shot("mirar la vida real.", stage(
                 props=[prop("cctv", 760, 500, size=200, enter="none", state="glow")],
                 texts=[text("La vida real", emphasis=["real"])], camera=cam(1.0, 1.22, 760, 520))),
         ]),
         scene("F", "reveal", [
-            shot("Un equipo analizó más de 200 conflictos reales grabados por cámaras en tres países.", stage(
+            shot("Revisaron más de 200 conflictos reales, grabados por cámaras en tres países.", stage(
                 props=[prop("cctv", 830, 470, size=120, enter="pop")],
                 counters=[{"from": 0, "to": 200, "prefix": "+", "x": 500, "y": 620, "size": 150, "seconds": 1.6}],
                 texts=[text("conflictos reales · 3 países", y=760, family="sans", size=42)])),
-            shot("En 9 de cada 10, al menos una persona intervino.", stage(
+            shot("Y en 9 de cada 10 casos, alguien intervino.", stage(
                 extras=crowd([200, 330, 460, 590, 720, 850], opacity=0.4, scale=0.66),
                 counters=[{"from": 0, "to": 9, "suffix": " de 10", "x": 540, "y": 600, "size": 170, "seconds": 1.0, "accent": "reward"}],
                 texts=[text("alguien ayudó", y=760, family="sans", size=46)])),
@@ -137,12 +137,12 @@ v004 = sb(
                 extras=[fig("stand", 580, scale=0.78, opacity=0.4, facing=-1), fig("stand", 700, scale=0.78, opacity=1, facing=-1),
                         fig("stand", 820, scale=0.78, opacity=0.4, facing=-1), fig("stand", 930, scale=0.78, opacity=0.4, facing=-1)],
                 texts=[text("«Tú. Ayúdame.»", family="sans", size=54, emphasis=["Tú"])])),
-            shot("Y si eres testigo, no esperes a que otro empiece.", stage(
+            shot("Y si eres testigo, no esperes a que otro reaccione.", stage(
                 figure=fig("walk", 280, toX=560, path="rise"), extras=crowd([700, 820, 930], opacity=0.4, scale=0.72),
                 texts=[text("No esperes", family="sans", size=56, emphasis=["No esperes"])])),
         ]),
         scene("H", "closer", [
-            shot("La multitud no es indiferente.", stage(
+            shot("La gente no es indiferente.", stage(
                 extras=crowd([200, 330, 460, 620, 750, 880], opacity=0.6, scale=0.75, facing=[1, 1, 1, -1, -1, -1]),
                 texts=[text("No es indiferencia", emphasis=["indiferencia"])], camera=cam(1.0, 1.05))),
             shot("Solo está esperando que alguien dé el primer paso.", stage(
@@ -151,10 +151,10 @@ v004 = sb(
                 texts=[text("El primer paso", emphasis=["primer paso"])], camera=cam(1.0, 1.08, 600, 800, 30))),
         ]),
         scene("I", "cta", [
-            shot("¿Alguna vez ayudaste a un desconocido, o alguien te ayudó a ti?", stage(
+            shot("¿Alguna vez ayudaste a un desconocido… o alguien te ayudó a ti?", stage(
                 figure=fig("reach", 400), extras=[fig("stand", 680, facing=-1, scale=1, opacity=0.9)],
                 props=[prop("bubble", 540, 560, size=150, enter="pop", delay=0.4)])),
-            shot("Cuéntalo abajo.", stage(texts=[text("Cuéntalo abajo", family="sans", size=60, emphasis=["abajo"])],
+            shot("Cuéntamelo en los comentarios.", stage(texts=[text("Cuéntamelo", family="sans", size=60)],
                                           props=[prop("bubble", 540, 640, size=160, enter="pop")])),
         ]),
     ],
@@ -183,69 +183,69 @@ v019 = sb(
                 texts=[text("Perder pesa más", emphasis=["Perder"])], camera=cam(1.0, 1.08)), "impact"),
         ]),
         scene("B", "question", [
-            shot("¿Por qué perder pesa tanto?", stage(
+            shot("¿Por qué perder nos pesa tanto?", stage(
                 figure=fig("slump", 460, path="fall"),
                 props=[prop("coins", 700, 520, size=130, enter="drop"), prop("question", 700, 360, size=90, enter="pop", delay=0.5)],
                 texts=[text("¿Por qué pesa tanto?", family="sans", size=58)])),
         ]),
         scene("C", "mechanism", [
-            shot("En 1979, Daniel Kahneman y Amos Tversky propusieron", stage(
+            shot("En 1979, los psicólogos Daniel Kahneman y Amos Tversky propusieron una idea:", stage(
                 props=[prop("lightbulb", 540, 620, size=180, state="glow", enter="draw")],
                 texts=[text("Kahneman y Tversky · 1979", family="sans", size=48)])),
-            shot("que evaluamos todo como ganancias o pérdidas desde un punto de referencia,", stage(
+            shot("no vemos el dinero en sí, sino si ganamos o perdemos.", stage(
                 figure=fig("stand", 540, path="flat", pathFrom=120, pathTo=960),
                 texts=[text("← pérdidas", x=300, y=700, family="sans", size=40, accent="red"), text("ganancias →", x=780, y=700, family="sans", size=40),
-                       text("Tu punto de referencia", family="sans", size=50, emphasis=["referencia"])], camera=cam(1.0, 1.05))),
-            shot("y que las pérdidas pesan más.", stage(
+                       text("¿Gano o pierdo?", family="sans", size=54)], camera=cam(1.0, 1.05))),
+            shot("Y perder pesa más que ganar.", stage(
                 props=[prop("balance", 540, 720, size=280, enter="none", to={"state": "down", "at": 0.25})],
                 texts=[text("−", x=420, y=520, size=90, family="sans", accent="red"), text("+", x=660, y=520, size=90, family="sans")])),
         ]),
         scene("D", "demonstration", [
-            shot("Por eso muchas personas rechazan lanzar una moneda", stage(
+            shot("Por eso, mucha gente dice que no a una apuesta con una moneda", stage(
                 figure=fig("stand", 330, path="flat"), props=[prop("coins", 660, 640, size=150, state="spin", enter="pop", mark="cross", markAt=0.75)])),
-            shot("en la que podrían ganar 120 y perder 100,", stage(
+            shot("donde podría ganar 120 o perder 100,", stage(
                 props=[prop("coins", 540, 700, size=120, state="spin", enter="none")],
                 counters=[{"from": 0, "to": 120, "prefix": "+$", "x": 720, "y": 540, "size": 104, "seconds": 0.8},
                           {"from": 0, "to": 100, "prefix": "−$", "x": 360, "y": 540, "size": 104, "seconds": 0.8, "accent": "red"}])),
-            shot("aunque en promedio les convenga.", stage(
+            shot("aunque, en promedio, le convenga.", stage(
                 counters=[{"from": 0, "to": 10, "prefix": "+$", "x": 540, "y": 600, "size": 140, "seconds": 0.7}],
                 texts=[text("en promedio, por lanzamiento", y=740, family="sans", size=40)])),
         ]),
         scene("E", "retention", [
-            shot("¿Y cuánto más pesa una pérdida?", stage(
+            shot("¿Pero cuánto más pesa una pérdida, exactamente?", stage(
                 props=[prop("balance", 540, 720, size=260, state="down", enter="pop"), prop("question", 540, 440, size=100, enter="pop", delay=0.4)],
                 camera=cam(1.0, 1.12))),
         ]),
         scene("F", "reveal", [
-            shot("Un metaanálisis de 2024 reunió más de 600 estimaciones de 150 artículos.", stage(
+            shot("En 2024, un metaanálisis reunió más de 600 estimaciones de 150 artículos científicos.", stage(
                 counters=[{"from": 0, "to": 607, "x": 360, "y": 600, "size": 120, "seconds": 1.4}, {"from": 0, "to": 150, "x": 740, "y": 600, "size": 120, "seconds": 1.4, "delay": 0.3}],
                 texts=[text("estimaciones", x=360, y=720, family="sans", size=36), text("artículos", x=740, y=720, family="sans", size=36),
                        text("Metaanálisis · 2024", family="sans", size=48)])),
-            shot("En promedio, una pérdida pesa casi el doble que una ganancia equivalente.", stage(
+            shot("En promedio, perder algo pesa casi el doble que ganar lo mismo.", stage(
                 props=[prop("balance", 540, 780, size=260, enter="none", to={"state": "down", "at": 0.2})],
                 texts=[text("casi ×2", y=520, size=110, emphasis=["×2"])], camera=cam(1.0, 1.08))),
-            shot("Pero es un promedio: varía según la persona y el contexto.", stage(
+            shot("Ojo, es un promedio: cambia según la persona y la situación.", stage(
                 props=[prop("balance", 260, 700, size=130, state="normal"), prop("balance", 540, 700, size=130, state="down", delay=0.2),
                        prop("balance", 820, 700, size=130, state="up", delay=0.4)],
                 texts=[text("Varía según la persona", family="sans", size=48, emphasis=["persona"])])),
         ]),
         scene("G", "action", [
-            shot("Cuando una decisión te dé miedo, añade una pregunta.", stage(
+            shot("La próxima vez que una decisión te dé miedo, hazte una pregunta más.", stage(
                 figure=fig("think", 360, path="fork"), props=[prop("question", 360, 560, size=80, enter="pop", delay=0.5)])),
-            shot("No solo ¿qué pierdo si lo hago?,", stage(
+            shot("No solo «¿qué pierdo si lo hago?»,", stage(
                 texts=[text("¿Qué pierdo si lo hago?", family="sans", size=54, y=600)], props=[prop("balance", 540, 820, size=150, state="down")])),
-            shot("también: ¿qué pierdo si no lo hago?", stage(
+            shot("sino también «¿qué pierdo si no lo hago?»", stage(
                 figure=fig("walk", 300, toX=560, path="fork"),
                 texts=[text("¿Qué pierdo si NO lo hago?", family="sans", size=54, emphasis=["NO"])])),
         ]),
         scene("H", "closer", [
-            shot("A veces no eliges lo mejor. Eliges lo que menos te hace sentir que pierdes.",
+            shot("Muchas veces no eliges lo mejor. Eliges lo que menos se siente como perder.",
                  {"type": "closer", "line": "No eliges lo mejor. Eliges lo que menos se siente como perder.", "emphasis": ["perder"], "source": "Kahneman y Tversky, 1979 · Brown et al., 2024"}, "shimmer"),
         ]),
         scene("I", "cta", [
             shot("¿Qué decisión estás evitando por miedo a perder?", stage(
                 figure=fig("lookUp", 540, path="fade"), props=[prop("bubble", 700, 520, size=140, enter="pop", delay=0.3)])),
-            shot("Cuéntame.", stage(texts=[text("Cuéntame", family="sans", size=62)], props=[prop("bubble", 540, 640, size=150, enter="pop")])),
+            shot("Cuéntamelo en los comentarios.", stage(texts=[text("Cuéntamelo", family="sans", size=62)], props=[prop("bubble", 540, 640, size=150, enter="pop")])),
         ]),
     ],
     "¿Por qué perder 100 duele más que ganar 100? 🧠 Un metaanálisis con más de 600 estimaciones tiene la respuesta, y una pregunta que cambia cómo decides.",
@@ -275,7 +275,7 @@ v012 = sb(
                        text("«Me cayó bien»", x=800, y=560, family="sans", size=40, delay=0.9)])),
         ]),
         scene("B", "question", [
-            shot("¿Por qué el miedo al juicio de los demás nos frena tanto?", stage(
+            shot("¿Por qué nos frena tanto lo que piensen los demás?", stage(
                 figure=fig("slump", 540, path="flat"), extras=crowd([200, 330, 750, 880], opacity=0.35, scale=0.72, facing=[1, 1, -1, -1]),
                 props=[prop("question", 540, 480, size=90, enter="pop", delay=0.4)],
                 texts=[text("¿Por qué nos frena?", family="sans", size=56)])),
@@ -284,10 +284,10 @@ v012 = sb(
             shot("En un experimento, unos estudiantes entraron a una sala con una camiseta vergonzosa.", stage(
                 spotlight={"x": 520}, figure=fig("walk", 240, toX=520, path="flat"), props=[prop("shirt", 800, 600, size=150, enter="draw", delay=0.4)],
                 camera=cam(1.0, 1.06))),
-            shot("Calcularon que cerca de la mitad de los presentes lo notaría.", stage(
+            shot("Creían que casi la mitad de la sala lo iba a notar.", stage(
                 figure=fig("stand", 300), counters=[{"from": 0, "to": 50, "suffix": "%", "x": 660, "y": 580, "size": 150, "seconds": 1.0}],
                 texts=[text("lo que creyeron", x=660, y=700, family="sans", size=38)])),
-            shot("En realidad, lo notó alrededor de uno de cada cuatro.", stage(
+            shot("En realidad, lo notó una de cada cuatro.", stage(
                 extras=[fig("lookUp", 300, scale=0.75, opacity=1), fig("stand", 450, scale=0.75, opacity=0.3, facing=-1),
                         fig("stand", 600, scale=0.75, opacity=0.3), fig("stand", 750, scale=0.75, opacity=0.3, facing=-1)],
                 texts=[text("1 de cada 4", family="sans", size=90)], camera=cam(1.0, 1.05))),
@@ -296,50 +296,53 @@ v012 = sb(
             shot("Sentimos que todos nos miran,", stage(
                 spotlight={"x": 540, "snap": True}, figure=fig("stand", 540),
                 extras=crowd([200, 320, 760, 880], opacity=0.45, scale=0.72, facing=[1, 1, -1, -1]))),
-            shot("pero cada persona está ocupada pensando en sí misma.", stage(
+            shot("pero la mayoría está ocupada pensando en sí misma.", stage(
                 figure=fig("stand", 540), extras=[fig("phone", 220, scale=0.72, opacity=0.5, facing=-1), fig("think", 360, scale=0.72, opacity=0.5, facing=-1),
                                                   fig("phone", 740, scale=0.72, opacity=0.5), fig("think", 880, scale=0.72, opacity=0.5)],
                 texts=[text("Cada uno piensa en sí mismo", family="sans", size=48)])),
         ]),
         scene("E", "retention", [
-            shot("Y después de una conversación pasa algo todavía más curioso.", stage(
+            shot("Y después de conversar, pasa algo aún más curioso.", stage(
                 figure=fig("stand", 400), extras=[fig("stand", 680, facing=-1, opacity=0.9)],
                 props=[prop("bubble", 540, 540, size=120, enter="pop"), prop("question", 540, 380, size=80, enter="pop", delay=0.8)])),
         ]),
         scene("F", "reveal", [
-            shot("Investigadores pusieron a conversar a desconocidos", stage(
+            shot("Unos investigadores pusieron a conversar a desconocidos.", stage(
                 figure=fig("reach", 400), extras=[fig("point", 680, facing=-1, opacity=0.9)],
                 props=[prop("bubble", 470, 520, size=100, enter="pop"), prop("bubble", 620, 480, size=100, enter="pop", delay=0.5)])),
-            shot("y luego les preguntaron cuánto les había gustado el otro y cuánto creían haberle gustado.", stage(
+            shot("Luego les preguntaron qué tanto les cayó bien el otro…", stage(
                 props=[prop("balance", 540, 760, size=260, enter="pop")],
+                texts=[text("Lo que sintió", x=700, y=560, family="sans", size=38)])),
+            shot("y qué tanto creían haberle caído ellos.", stage(
+                props=[prop("balance", 540, 760, size=260, enter="none")],
                 texts=[text("Lo que creíste", x=380, y=560, family="sans", size=38), text("Lo que sintió", x=700, y=560, family="sans", size=38)])),
-            shot("La gente subestimaba sistemáticamente cuánto había agradado.", stage(
+            shot("Una y otra vez, creían haber caído peor de lo que cayeron.", stage(
                 props=[prop("balance", 540, 760, size=260, enter="none", to={"state": "up", "at": 0.25})],
                 texts=[text("Le agradaste más", family="sans", size=54, emphasis=["más"])], camera=cam(1.0, 1.08))),
             shot("Lo llamaron la brecha de agrado.", {"type": "kineticTitle", "kicker": "Lo llamaron", "lines": ["La brecha", "de agrado"], "emphasis": ["agrado"]}, "impact"),
         ]),
         scene("G", "action", [
-            shot("Antes de no escribir ese mensaje o no hacer esa pregunta,", stage(
+            shot("Antes de no mandar ese mensaje,", stage(
                 figure=fig("phone", 480, holding="phone"), props=[prop("phone", 760, 600, size=150, state="typing", enter="pop", delay=0.3)])),
-            shot("recuerda: el juicio que imaginas es más duro que el real.", stage(
+            shot("recuerda: el juicio que imaginas suele ser más duro que el real.", stage(
                 props=[prop("balance", 540, 760, size=220, enter="none", state="normal", to={"state": "down", "at": 0.3})],
                 texts=[text("Imaginado", x=400, y=580, family="sans", size=38, accent="red"), text("Real", x=680, y=580, family="sans", size=38),
                        text("Más duro en tu cabeza", family="sans", size=50)])),
-            shot("Empieza por algo pequeño.", stage(
+            shot("Empieza con algo pequeño.", stage(
                 figure=fig("walk", 380, toX=520, path="rise"), texts=[text("Algo pequeño", family="sans", size=56)])),
         ]),
         scene("H", "closer", [
             shot("El rechazo que temes vive sobre todo en tu cabeza.", stage(
                 figure=fig("think", 540), props=[prop("bubble", 640, 420, size=120, enter="pop", state="dim")],
                 texts=[text("Vive en tu cabeza", emphasis=["cabeza"])])),
-            shot("La conexión que te pierdes es real.", stage(
+            shot("Pero la conexión que te pierdes es real.", stage(
                 figure=fig("walk", 300, toX=470, path="flat", pathTo=760), extras=[fig("walk", 800, toX=620, facing=-1, opacity=0.9)],
                 texts=[text("La conexión es real", emphasis=["real"], accent="reward", delay=0.6)], camera=cam(1.0, 1.08))),
         ]),
         scene("I", "cta", [
             shot("¿Qué harías hoy si supieras que nadie te va a juzgar?", stage(
                 figure=fig("lookUp", 540, path="rise"), props=[prop("bubble", 720, 500, size=130, enter="pop", delay=0.4)])),
-            shot("Comenta.", stage(texts=[text("Comenta", family="sans", size=62)], props=[prop("bubble", 540, 640, size=150, enter="pop")])),
+            shot("Te leo en los comentarios.", stage(texts=[text("Te leo", family="sans", size=62)], props=[prop("bubble", 540, 640, size=150, enter="pop")])),
         ]),
     ],
     "Le caes mejor a la gente de lo que crees 💬 La ciencia lo llama «brecha de agrado». Mira hasta el final antes de dejar de escribir ese mensaje.",

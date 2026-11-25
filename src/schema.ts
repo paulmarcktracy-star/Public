@@ -83,7 +83,7 @@ export const Accent = z.enum(["white", "gold", "green", "red", "reward"]); // go
 export const PropKind = z.enum([
   "phone", "book", "clock", "coins", "bill", "piggy", "door", "mountain", "brain", "chart",
   "donut", "apple", "dumbbell", "cart", "lock", "calendar", "bubble", "question", "hourglass", "lightbulb",
-  "balance", "cctv", "shirt",
+  "balance", "cctv", "shirt", "tag", "dice", "wheel", "checklist", "gauge", "jar",
 ]);
 export const PropState = z.enum(["normal", "glow", "dim", "open", "closed", "locked", "spin", "typing", "down", "up"]);
 export const Pose = z.enum(["stand", "reach", "point", "phone", "think", "celebrate", "slump", "walk", "lookUp"]);
@@ -203,6 +203,7 @@ export const Storyboard = z.object({
   sources: z.array(Source).min(1),
   scenes: z.array(StoryScene).min(4).max(14),
   music: z.enum(["reflexion", "esperanza", "intimo", "sereno", "meaningful", "none"]).default("meaningful"),
+  cameraStyle: z.enum(["cinematic", "classic"]).default("cinematic").describe("cinematic = intelligent global camera (src/camera); classic = videos made before 2026-11-25 05:40"),
   social: z.object({
     caption: z.string(),
     hashtags: z.array(z.string()).max(8),
@@ -237,6 +238,7 @@ export const Timeline = z.object({
   voiceSrc: z.string().nullable(),
   musicSrc: z.string().nullable(),
   sfxDir: z.string().nullable(),
+  cameraStyle: z.enum(["cinematic", "classic"]).default("cinematic"),
   fxSrc: z.string().nullable().optional().describe("event-driven micro-SFX bus from pipeline/mix.py"),
   musicGain: z.number().optional().describe("1 when the music file is already levelled and ducked"),
   shots: z.array(TimelineShot),

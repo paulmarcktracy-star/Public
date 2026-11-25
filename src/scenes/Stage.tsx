@@ -179,6 +179,78 @@ const stroke = (c: DrawCtx, w = 4) => ({
 const solid = (c: DrawCtx, o = 1) => ({ fill: c.col, opacity: o * c.d });
 
 const PROP: Record<string, (c: DrawCtx) => React.ReactNode> = {
+  jar: (c) => (
+    <>
+      <rect x={-30} y={-52} width={60} height={12} rx={3} {...stroke(c, 4)} />
+      <path d="M-34 -40 Q-40 -30 -40 -16 L-40 40 Q-40 52 -28 52 L28 52 Q40 52 40 40 L40 -16 Q40 -30 34 -40 Z" {...stroke(c, 4)} />
+      <rect x={-24} y={-6} width={48} height={26} rx={4} fill="none" stroke={c.col} strokeWidth={2.5} opacity={c.d * 0.7} />
+    </>
+  ),
+  tag: (c) => (
+    <>
+      <path d="M-50 -24 L24 -24 L50 0 L24 24 L-50 24 Z" {...stroke(c, 4)} />
+      <circle cx={28} cy={0} r={5} {...stroke(c, 3)} />
+      {c.label ? <text x={-14} y={11} textAnchor="middle" fontFamily={TYPE.sans} fontWeight={800} fontSize={30} fill={c.col} opacity={c.d}>{c.label}</text> : null}
+    </>
+  ),
+  dice: (c) => {
+    const roll = c.state === "spin" ? Math.max(0, 1 - c.frame / 24) : 0;
+    const face = c.state === "spin" && roll > 0 ? 1 + (Math.floor(c.frame / 3) % 6) : c.label ? Number(c.label) || 3 : 3;
+    const pips: Record<number, number[][]> = {1: [[0, 0]], 2: [[-14, -14], [14, 14]], 3: [[-16, -16], [0, 0], [16, 16]], 4: [[-15, -15], [15, -15], [-15, 15], [15, 15]], 5: [[-16, -16], [16, -16], [0, 0], [-16, 16], [16, 16]], 6: [[-15, -18], [15, -18], [-15, 0], [15, 0], [-15, 18], [15, 18]], 9: [[-16, -16], [0, -16], [16, -16], [-16, 0], [0, 0], [16, 0], [-16, 16], [0, 16], [16, 16]]};
+    const f = pips[face] ? face : 3;
+    return (
+      <g transform={`rotate(${roll * 260})`}>
+        <rect x={-34} y={-34} width={68} height={68} rx={12} {...stroke(c, 4)} />
+        {pips[f].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={5.5} fill={c.col} opacity={c.d} />)}
+      </g>
+    );
+  },
+  wheel: (c) => {
+    const ang = c.state === "spin" ? 720 * (1 - Math.pow(1 - Math.min(1, c.frame / 45), 3)) : 0;
+    return (
+      <>
+        <g transform={`rotate(${ang})`}>
+          <circle r={46} {...stroke(c, 4)} />
+          {Array.from({ length: 10 }, (_, i) => {
+            const a = (i / 10) * Math.PI * 2;
+            return <line key={i} x1={0} y1={0} x2={Math.sin(a) * 46} y2={-Math.cos(a) * 46} stroke={c.col} strokeWidth={2} opacity={0.6 * c.d} />;
+          })}
+          <circle r={6} fill={c.col} opacity={c.d} />
+        </g>
+        <path d="M0 -60 L-8 -48 L8 -48 Z" fill={c.col} opacity={c.d} />
+      </>
+    );
+  },
+  checklist: (c) => {
+    const done = c.state === "open" ? 3 : c.state === "closed" ? 0 : 2;
+    return (
+      <>
+        <rect x={-40} y={-50} width={80} height={100} rx={8} {...stroke(c, 4)} />
+        {[0, 1, 2].map((i) => (
+          <g key={i} transform={`translate(-26 ${-28 + i * 28})`}>
+            <rect x={0} y={-8} width={16} height={16} rx={3} fill="none" stroke={c.col} strokeWidth={2.5} opacity={c.d} />
+            {i < done ? <path d="M3 0 L7 5 L14 -5" fill="none" stroke={c.col} strokeWidth={3} strokeLinecap="round" opacity={c.d} /> : null}
+            <line x1={24} y1={0} x2={i === 2 ? 42 : 52} y2={0} stroke={c.col} strokeWidth={3} strokeLinecap="round" opacity={(i < done ? 0.45 : 1) * c.d} />
+          </g>
+        ))}
+      </>
+    );
+  },
+  gauge: (c) => {
+    const valOf = (st?: string) => (st === "down" ? -60 : st === "up" ? 60 : 0);
+    const wobble = c.state === "spin" ? Math.sin(c.frame / 3) * 25 : 0;
+    const a = lerp(valOf(c.from), valOf(c.to ?? c.from), easeStd(c.t ?? 0)) + wobble;
+    return (
+      <>
+        <path d="M-46 14 A46 46 0 0 1 46 14" {...stroke(c, 4)} />
+        {[-60, -30, 0, 30, 60].map((t) => (
+          <line key={t} x1={Math.sin((t * Math.PI) / 180) * 38} y1={14 - Math.cos((t * Math.PI) / 180) * 38} x2={Math.sin((t * Math.PI) / 180) * 46} y2={14 - Math.cos((t * Math.PI) / 180) * 46} stroke={c.col} strokeWidth={3} opacity={c.d} />
+        ))}
+        <line x1={0} y1={14} x2={Math.sin((a * Math.PI) / 180) * 36} y2={14 - Math.cos((a * Math.PI) / 180) * 36} stroke={c.col} strokeWidth={4} strokeLinecap="round" opacity={c.d} />
+        <circle cx={0} cy={14} r={5} fill={c.col} opacity={c.d} />
+      </>
+    );
+  },
   balance: (c) => {
     // tilt eases between states: down = left pan sinks, up = right pan sinks
     const tiltOf = (st?: string) => (st === "down" ? -13 : st === "up" ? 13 : 0);
@@ -455,14 +527,14 @@ const PropView: React.FC<{ p: z.infer<typeof StageProp>; frame: number; fps: num
   return (
     <g transform={`translate(${x + dx} ${y + dy})`} opacity={opacity}>
       <g transform={`scale(${k})`} filter={glow ? "url(#stageGlow)" : undefined}>
-        {draw({ col, d, frame, state, glow, label: p.kind === "calendar" ? p.label : undefined, t: tt, from: p.state, to: p.to?.state })}
+        {draw({ col, d, frame, state, glow, label: ["calendar", "tag", "dice"].includes(p.kind) ? p.label : undefined, t: tt, from: p.state, to: p.to?.state })}
       </g>
       {p.mark ? (
         <g transform={`translate(${size * 0.42} ${-size * 0.42})`}>
           <Mark kind={p.mark} p={markP} />
         </g>
       ) : null}
-      {p.label && p.kind !== "calendar" ? (
+      {p.label && !["calendar", "tag", "dice"].includes(p.kind) ? (
         <text y={size * 0.6 + 44} textAnchor="middle" fontFamily={TYPE.sans} fontWeight={700} fontSize={SCALE.label / SCALE.visual} fill={col} opacity={labelP}
           style={{ paintOrder: "stroke", stroke: "rgba(0,0,0,0.8)", strokeWidth: 8 }}>
           {p.label}

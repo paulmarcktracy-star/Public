@@ -61,6 +61,7 @@ const last = shots[shots.length - 1];
 const timeline: Timeline = Timeline.parse({
   id: sb.id,
   title: sb.title,
+  cameraStyle: sb.cameraStyle,
   fps,
   durationInFrames: last.startFrame + last.durationInFrames,
   voiceSrc: voice.engine === "estimate" ? null : `${buildRel}/voice.wav`,

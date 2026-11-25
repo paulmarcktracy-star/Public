@@ -38,7 +38,7 @@ python3 pipeline/mix.py "$BUILD"
 step "render"
 mkdir -p out
 npx remotion render src/index.ts PsychVideo "out/$ID.mp4" --props="$BUILD/props.json" \
-  --concurrency="${RENDER_CONCURRENCY:-$(nproc)}" --log=error
+  --concurrency="${RENDER_CONCURRENCY:-$(nproc)}" --log=error ${REMOTION_BROWSER:+--browser-executable="$REMOTION_BROWSER"}
 
 step "master + QC + package"
 python3 pipeline/finish.py "$SB" "out/$ID.mp4" "$BUILD" "$DELIVER"

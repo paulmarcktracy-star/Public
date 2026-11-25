@@ -165,6 +165,17 @@ def count_tick(r, i):
     return norm(x, -37)
 
 
+def dice_clack(r):
+    t = tt(0.09)
+    x = bp(r.standard_normal(len(t)), 1200, 6000) * np.exp(-t * 90) + np.sin(2 * np.pi * r.uniform(900, 1400) * t) * np.exp(-t * 70) * 0.4
+    return norm(x, -29)
+
+
+def wheel_tick(r):
+    t = tt(0.03)
+    return norm(bp(r.standard_normal(len(t)), 2500, 8000) * np.exp(-t * 300), -35)
+
+
 def hook_hit(r):
     """Frame 0: a soft, deep hit that says 'listen' without startling."""
     t = tt(1.2)
@@ -268,6 +279,14 @@ def events_for_shot(shot, eff_dur, scene_first: bool, is_first: bool, reveal_sta
             ev.append((start, "swish", {"sec": 0.45}))
         if reward:
             ev.append((start + 4, "reward", {}))
+        if p["kind"] == "dice" and p.get("state") == "spin":
+            for f in (0, 5, 11, 16, 21, 24):
+                ev.append((start + f, "dice", {}))
+        if p["kind"] == "wheel" and p.get("state") == "spin":
+            f = 0.0
+            while f < 45:  # decelerating clicks, same easing as the wheel (cubic out)
+                ev.append((start + f, "wheel", {}))
+                f += 1.2 + (f / 45) ** 2 * 7
         to = p.get("to")
         if to:
             at = round(to.get("at", 0.35) * eff_dur)
@@ -386,6 +405,10 @@ def main() -> None:
                 place(fx, light_on(r), g)
             elif kind == "tick":
                 place(fx, count_tick(r, par["i"]), g)
+            elif kind == "dice":
+                place(fx, dice_clack(r), g, pan=r.uniform(-0.2, 0.2))
+            elif kind == "wheel":
+                place(fx, wheel_tick(r), g)
             elif kind == "hook":
                 place(fx, hook_hit(r), g)
             elif kind == "reveal_rise":

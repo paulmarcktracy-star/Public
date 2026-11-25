@@ -10,6 +10,7 @@ import { Brain3D } from "./scenes/Brain3D";
 import { ActionSteps, Closer, KineticTitle } from "./scenes/TextScenes";
 import { BehaviorLoop, DiscountCurve, EmotionWave, NeuralNetwork, TwoForces } from "./scenes/DiagramScenes";
 import { Stage } from "./scenes/Stage";
+import { CameraRig } from "./camera/Camera";
 import { SCALE, VIDEO } from "./design/tokens";
 
 const renderVisual = (s: TimelineShot) => {
@@ -29,29 +30,35 @@ const renderVisual = (s: TimelineShot) => {
   }
 };
 
+const Scenes: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
+  const overlap = VIDEO.sceneOverlapFrames;
+  const shots = timeline.shots.map((s, i) => {
+    const isLast = i === timeline.shots.length - 1;
+    const lead = i === 0 ? VIDEO.hookLeadFrames : 0; // hook: already on screen at frame 0
+    const dur = s.durationInFrames + (isLast ? 0 : overlap) + lead;
+    return (
+      <Sequence key={s.id} name={`${s.beat}:${s.visual.type}`} from={s.startFrame - lead} durationInFrames={dur}>
+        <SceneFrame durationInFrames={dur} first={i === 0}>
+          {s.visual.type === "stage" ? (
+            renderVisual({ ...s, durationInFrames: dur })
+          ) : (
+            // minimal framing for diagram / 3D / text scenes
+            <AbsoluteFill style={{ scale: String(SCALE.visual), transformOrigin: "540px 760px" }}>{renderVisual({ ...s, durationInFrames: dur })}</AbsoluteFill>
+          )}
+        </SceneFrame>
+      </Sequence>
+    );
+  });
+  // the cinematic camera moves the scene layer only (grid + captions stay put)
+  return timeline.cameraStyle === "classic" ? <>{shots}</> : <CameraRig timeline={timeline}>{shots}</CameraRig>;
+};
+
 export const Video: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
   const { fps, durationInFrames } = useVideoConfig();
-  const overlap = VIDEO.sceneOverlapFrames;
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <Background />
-      {timeline.shots.map((s, i) => {
-        const isLast = i === timeline.shots.length - 1;
-        const lead = i === 0 ? VIDEO.hookLeadFrames : 0; // hook: already on screen at frame 0
-        const dur = s.durationInFrames + (isLast ? 0 : overlap) + lead;
-        return (
-          <Sequence key={s.id} name={`${s.beat}:${s.visual.type}`} from={s.startFrame - lead} durationInFrames={dur}>
-            <SceneFrame durationInFrames={dur} first={i === 0}>
-              {s.visual.type === "stage" ? (
-                renderVisual({ ...s, durationInFrames: dur })
-              ) : (
-                // minimal framing for diagram / 3D / text scenes
-                <AbsoluteFill style={{ scale: String(SCALE.visual), transformOrigin: "540px 760px" }}>{renderVisual({ ...s, durationInFrames: dur })}</AbsoluteFill>
-              )}
-            </SceneFrame>
-          </Sequence>
-        );
-      })}
+      <Scenes timeline={timeline} />
       <Captions captions={timeline.captions} />
 
       {timeline.voiceSrc ? <Audio src={staticFile(timeline.voiceSrc)} /> : null}
