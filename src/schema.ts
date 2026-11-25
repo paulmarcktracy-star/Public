@@ -202,7 +202,7 @@ export const Storyboard = z.object({
   evidenceLevel: z.enum(["solid", "moderate", "mixed"]),
   sources: z.array(Source).min(1),
   scenes: z.array(StoryScene).min(4).max(14),
-  music: z.enum(["reflexion", "esperanza", "intimo", "none"]).default("intimo"),
+  music: z.enum(["reflexion", "esperanza", "intimo", "sereno", "meaningful", "none"]).default("meaningful"),
   social: z.object({
     caption: z.string(),
     hashtags: z.array(z.string()).max(8),

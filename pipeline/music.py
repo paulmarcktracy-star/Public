@@ -2,7 +2,7 @@
 samples (FluidSynth + FluidR3 General MIDI soundfont: piano, strings, cello).
 No third-party music, so no licensing questions.
 
-Usage: python pipeline/music.py [style ...]      styles: reflexion | esperanza | intimo
+Usage: python pipeline/music.py [style ...]      styles: reflexion | esperanza | intimo | sereno
 Writes public/audio/music/<style>.wav (48 kHz stereo, ~85 s, mastered to -20 LUFS).
 """
 import random
@@ -165,7 +165,39 @@ def intimo() -> tuple[int, list[Track]]:
     return 66, [pad, piano, bass]
 
 
-STYLES = {"reflexion": reflexion, "esperanza": esperanza, "intimo": intimo}
+def sereno() -> tuple[int, list[Track]]:
+    """Original, calm and tender (owner: 'cool, slow, tranquille'): D major, 60 bpm.
+    Soft felt-like piano broken chords, a simple original melody that breathes,
+    warm string pad and a quiet cello line. Nothing percussive, nothing that competes with the voice."""
+    rng = random.Random(27)
+    piano, melody, pad, cello = Track(0, 0, "piano"), Track(1, 0, "melody"), Track(2, 49, "strings"), Track(3, 42, "cello")
+    # I – V/3 – vi – IV  |  I – iii – IV – V   (two 4-bar phrases, repeated 3x = 24 bars ≈ 96 s)
+    prog = [("D", None), ("A", "C#"), ("Bm", None), ("G", None), ("D", None), ("F#m", None), ("G", None), ("A", None)] * 3
+    # melody: one note on beat 1, an answer on beat 3, rests every 4th bar so the voice has room
+    contour = [9, 7, 6, 2, 4, 6, 7, 9, 11, 9, 7, 6, 4, 2, 4, 2]
+    for i, (name, bass_note) in enumerate(prog):
+        bar = i * BAR
+        notes = chord(name, 3)
+        root = NOTE[bass_note] + 12 * 3 if bass_note else notes[0] - 12
+        # broken chord: root, fifth, third, fifth (slow quarter notes), soft and human
+        for k, n in enumerate([root, notes[2], notes[1] + 12, notes[2]]):
+            piano.note(bar + k * TPB + rng.randint(0, 18), TPB * 2, n, humanize(rng, 40 - (4 if k else 0), 4))
+        for n in notes:
+            pad.note(bar, BAR, n + 12, 44)
+        pad.expr(bar, bar + BAR, 55, 72 if i % 4 < 2 else 60)
+        cello.note(bar, BAR, root - 12 if root > 50 else root, 46)
+        if i % 4 != 3:
+            m1 = 62 + contour[(i * 2) % len(contour)]
+            m2 = 62 + contour[(i * 2 + 1) % len(contour)]
+            melody.note(bar + rng.randint(0, 25), int(TPB * 1.8), m1 + 12, humanize(rng, 46, 5))
+            melody.note(bar + 2 * TPB + rng.randint(0, 25), int(TPB * 1.6), m2 + 12, humanize(rng, 40, 5))
+    for n in chord("D", 3):
+        piano.note(24 * BAR, 2 * BAR, n, 34)
+        pad.note(24 * BAR, 2 * BAR, n + 12, 38)
+    return 60, [piano, melody, pad, cello]
+
+
+STYLES = {"reflexion": reflexion, "esperanza": esperanza, "intimo": intimo, "sereno": sereno}
 
 
 def render(style: str) -> Path:

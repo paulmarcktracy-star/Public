@@ -80,6 +80,19 @@ jobs:
           npm install --no-audit --no-fund
           npx remotion browser ensure
 
+      - name: Unlock owner's music (encrypted in the repo, key in secret MUSIC_KEY)
+        if: steps.pick.outputs.files != ''
+        env:
+          MUSIC_KEY: ${{ secrets.MUSIC_KEY }}
+        run: |
+          mkdir -p public/audio/music
+          if [ -n "$MUSIC_KEY" ]; then
+            printf '%s' "$MUSIC_KEY" > /tmp/mk && openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -in assets/music/meaningful.flac.enc -out /tmp/meaningful.flac -pass file:/tmp/mk && rm /tmp/mk
+            ffmpeg -v error -y -i /tmp/meaningful.flac -ar 48000 -ac 2 public/audio/music/meaningful.wav && echo "music unlocked"
+          else
+            echo "::warning::MUSIC_KEY secret missing: storyboards using music 'meaningful' will fail"
+          fi
+
       - name: Produce
         if: steps.pick.outputs.files != ''
         env:

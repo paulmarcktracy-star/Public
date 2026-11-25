@@ -188,7 +188,7 @@ Después verificar que todo respeta estas reglas y que la infraestructura existe
 ## VOZ Y MÚSICA (elegidas por el propietario, usar en todos los vídeos)
 
 - **Voz:** n.º 10 del catálogo, mujer, mezcla Kokoro `ef_dora+af_heart`, velocidad 0.9. Variable `KOKORO_VOICE=ef_dora+af_heart`. Ver `VOICES.md`.
-- **Música:** «intimo» (pad cálido, piano agudo espaciado, cuerdas graves; Mi menor, 66 bpm), generada por `pipeline/music.py`. Campo `"music": "intimo"` en cada storyboard.
+- **Música (decisión del propietario, 2026-11-25):** «Meaningful Love – instrumental» (Silo, Steven Cranberry), tramo tranquilo y lento, en todos los vídeos. Campo `"music": "meaningful"`. El propietario asume el uso de esta canción comercial (riesgo informado: TikTok puede silenciar o limitar audio incrustado; primero se publica un vídeo de prueba). Se guarda cifrada en `assets/music/meaningful.flac.enc` (nunca en claro en el repo público); el workflow la descifra con el secreto `MUSIC_KEY`. Bucle con fundidos cruzados de 3 s, ducking bajo la voz como siempre. Excepción explícita a la regla de música 100 % procedural.
 - El propietario no descarga ni instala archivos: Claude entrega siempre el vídeo final ya montado con voz, música y efectos.
 - No descargar ni republicar vídeos de otros creadores. Los vídeos virales solo se usan como referencia de estructura.
 
@@ -199,6 +199,7 @@ Después verificar que todo respeta estas reglas y que la infraestructura existe
 - Lo especulativo o debatido se presenta como tal; los temas no replicados solo en formato «mito vs. evidencia».
 - Sin autodiagnóstico, autolesiones ni trastornos usados como gancho.
 - Voz del narrador: español latinoamericano neutro, natural, cercano y profesional, sin acento regional marcado.
+- **Español fluido y natural (propietario, 2026-11-25):** escribir como se habla, no como un paper. Frases cortas, conectores naturales («así que», «ojo», «una y otra vez»), «tú» cercano, nada de giros traducidos («subestimaban sistemáticamente», «evaluamos todo como»). Leer cada guion en voz alta antes de producir.
 - Todo vídeo se publica con la etiqueta de contenido generado por IA.
 - Nunca publicar automáticamente: todo vídeo queda para aprobación humana.
 
@@ -210,7 +211,7 @@ Después verificar que todo respeta estas reglas y que la infraestructura existe
 - Diseño: colores, tipografía, zonas seguras y curvas de movimiento solo desde `src/design/tokens.ts`. Zonas seguras de TikTok/Reels: arriba 170 px, abajo 360 px, izquierda 72 px, derecha 150 px.
 - Las animaciones se controlan solo con `useCurrentFrame()` (nada de animaciones CSS ni `useFrame` de three.js); todo aleatorio con semilla fija.
 - El primer fotograma del hook debe ser legible (sin fundido de entrada en la primera escena).
-- Sonido 100 % procedural (`pipeline/sfx.py`); sin música ni efectos con licencia de terceros.
+- SFX 100 % procedurales (`pipeline/sfx.py`, `pipeline/mix.py`). Música: la elegida por el propietario (ver VOZ Y MÚSICA); ningún otro audio de terceros.
 - Credenciales solo como GitHub Secrets o variables de entorno. Nunca en código, logs ni commits.
 - No activar servicios ni suscripciones de pago sin aprobación del propietario.
 - Calendario: los vídeos del mes se producen con TODAS estas reglas; no se producen vídeos fuera del plan sin pedido del propietario.

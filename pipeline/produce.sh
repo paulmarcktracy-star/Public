@@ -16,7 +16,12 @@ npx tsx pipeline/validate.ts "$SB"
 
 step "sound library + score"
 python3 pipeline/sfx.py
-[ -f "public/audio/music/$(python3 -c "import json;print(json.load(open('$SB')).get('music','esperanza'))").wav" ] || python3 pipeline/music.py
+MUSIC="$(python3 -c "import json;print(json.load(open('$SB')).get('music','meaningful'))")"
+if [ "$MUSIC" = "meaningful" ]; then
+  [ -f public/audio/music/meaningful.wav ] || { echo "owner's music not unlocked (MUSIC_KEY secret)"; exit 1; }
+elif [ "$MUSIC" != "none" ]; then
+  [ -f "public/audio/music/$MUSIC.wav" ] || python3 pipeline/music.py "$MUSIC"
+fi
 
 step "voice ($ENGINE)"
 python3 pipeline/voice.py "$SB" "$ENGINE" "$BUILD"
