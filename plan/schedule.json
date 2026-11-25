@@ -1,0 +1,178 @@
+{
+ "channel": "psychologie137",
+ "channelId": "6b05ff848541f09ecb9112c6",
+ "organizationId": "6a08a385ae2b8a7265de06d4",
+ "tiktok": {
+  "isAiGenerated": true
+ },
+ "posts": [
+  {
+   "n": 1,
+   "id": "001-pensar-demasiado",
+   "dueAt": "2026-11-26T12:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/001-pensar-demasiado.mp4",
+   "text": "Pensar más no siempre te hace decidir mejor 🧠 La ciencia descubrió qué tipo de pensamiento te atrapa… y cuál te saca del bucle.\n\n#psicologia #sobrepensar #decisiones #mente #aprendeentiktok"
+  },
+  {
+   "n": 2,
+   "id": "002-sesgo-confirmacion",
+   "dueAt": "2026-11-26T18:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/002-sesgo-confirmacion.mp4",
+   "text": "Crees que buscas la verdad, pero tu cerebro busca tener razón 🧠 Prueba el reto 2-4-6 antes de ver la respuesta.\n\n#psicologia #sesgos #pensamientocritico #mente #aprendeentiktok"
+  },
+  {
+   "n": 3,
+   "id": "003-paradoja-eleccion",
+   "dueAt": "2026-11-26T21:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/003-paradoja-eleccion.mp4",
+   "text": "¿Demasiadas opciones te paralizan? 🛒 El famoso experimento de las mermeladas no cuenta toda la historia. Mira lo que encontró la ciencia después.\n\n#psicologia #decisiones #consumo #mitos #aprendeentiktok"
+  },
+  {
+   "n": 4,
+   "id": "004-efecto-espectador",
+   "dueAt": "2026-11-27T12:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/004-efecto-espectador.mp4",
+   "text": "¿Más gente significa menos ayuda? 👀 Eso nos enseñaron… hasta que alguien revisó cámaras reales en tres países. El resultado te va a sorprender.\n\n#psicologia #efectoespectador #comportamiento #ciencia #aprendeentiktok"
+  },
+  {
+   "n": 5,
+   "id": "005-necesidad-aprobacion",
+   "dueAt": "2026-11-27T18:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/005-necesidad-aprobacion.mp4",
+   "text": "Necesitar aprobación no es debilidad: es una alarma 🧠 La ciencia dice que tu autoestima no mide cuánto vales… mide otra cosa.\n\n#psicologia #autoestima #relaciones #crecimientopersonal #aprendeentiktok"
+  },
+  {
+   "n": 6,
+   "id": "006-efecto-camaleon",
+   "dueAt": "2026-11-27T21:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/006-efecto-camaleon.mp4",
+   "text": "Sin darte cuenta, podrías estar copiando a la persona que tienes enfrente 🦎 ¿Es el truco perfecto para caer bien? La ciencia tiene un matiz.\n\n#psicologia #comunicacion #relaciones #lenguajecorporal #aprendeentiktok"
+  },
+  {
+   "n": 7,
+   "id": "007-gratificacion-instantanea",
+   "dueAt": "2026-11-28T12:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/007-gratificacion-instantanea.mp4",
+   "text": "¿Esperar por un dulce predice tu éxito? 🍩 El famoso test se repitió con más niños… y la respuesta no es la que te contaron.\n\n#psicologia #autocontrol #mitos #crianza #aprendeentiktok"
+  },
+  {
+   "n": 8,
+   "id": "008-sesgo-presente",
+   "dueAt": "2026-11-28T18:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/008-sesgo-presente.mp4",
+   "text": "Para tu cerebro, tu yo del futuro es casi un desconocido 🧠 Y hay una forma sencilla de presentarte a esa persona.\n\n#psicologia #futuro #ahorro #habitos #aprendeentiktok"
+  },
+  {
+   "n": 9,
+   "id": "009-regla-dos-minutos",
+   "dueAt": "2026-11-28T21:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/009-regla-dos-minutos.mp4",
+   "text": "Llevas días evitando algo que podrías empezar en 2 minutos ⏱️ La regla funciona, pero no por la razón que crees.\n\n#psicologia #procrastinacion #productividad #habitos #aprendeentiktok"
+  },
+  {
+   "n": 10,
+   "id": "010-efecto-halo",
+   "dueAt": "2026-11-29T12:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/010-efecto-halo.mp4",
+   "text": "Te basta una décima de segundo para juzgar a alguien 👀 Y lo más inquietante es que no te das cuenta de cuánto te influye.\n\n#psicologia #primeraimpresion #sesgos #relaciones #aprendeentiktok"
+  },
+  {
+   "n": 11,
+   "id": "011-reciprocidad",
+   "dueAt": "2026-11-29T18:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/011-reciprocidad.mp4",
+   "text": "Un favor pequeño puede hacerte decir que sí a algo que no querías 🎁 Y no es porque te caiga bien.\n\n#psicologia #persuasion #relaciones #ventas #aprendeentiktok"
+  },
+  {
+   "n": 12,
+   "id": "012-miedo-rechazo",
+   "dueAt": "2026-11-29T21:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/012-miedo-rechazo.mp4",
+   "text": "Le caes mejor a la gente de lo que crees 💬 La ciencia lo llama «brecha de agrado». Mira hasta el final antes de dejar de escribir ese mensaje.\n\n#psicologia #confianza #relaciones #autoestima #aprendeentiktok"
+  },
+  {
+   "n": 13,
+   "id": "013-prueba-social",
+   "dueAt": "2026-11-30T12:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/013-prueba-social.mp4",
+   "text": "Puedes ver la respuesta correcta y aun así decir la incorrecta 👥 El experimento de Asch tiene un detalle que casi nadie cuenta.\n\n#psicologia #presionsocial #comportamiento #ciencia #aprendeentiktok"
+  },
+  {
+   "n": 14,
+   "id": "014-efecto-anclaje",
+   "dueAt": "2026-11-30T18:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/014-efecto-anclaje.mp4",
+   "text": "El primer precio que ves cambia lo que estás dispuesto a pagar 💸 Hasta a jueces expertos les pasa. Mira cómo protegerte la próxima vez que negocies.\n\n#psicologia #dinero #negociacion #sesgos #aprendeentiktok"
+  },
+  {
+   "n": 15,
+   "id": "015-escasez",
+   "dueAt": "2026-11-30T21:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/015-escasez.mp4",
+   "text": "¿Por qué queremos más lo que está por acabarse? 🍪 Un experimento con galletas lo explica… y te ayuda a no caer en el próximo «últimas unidades».\n\n#psicologia #compras #marketing #dinero #aprendeentiktok"
+  },
+  {
+   "n": 16,
+   "id": "016-efecto-zeigarnik",
+   "dueAt": "2026-12-01T12:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/016-efecto-zeigarnik.mp4",
+   "text": "¿Recordamos mejor lo que dejamos a medias? 🧠 Casi cien años de estudios dicen otra cosa… y la respuesta real es más útil.\n\n#psicologia #productividad #procrastinacion #mitos #aprendeentiktok"
+  },
+  {
+   "n": 17,
+   "id": "017-falsos-recuerdos",
+   "dueAt": "2026-12-01T18:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/017-falsos-recuerdos.mp4",
+   "text": "Puedes recordar con detalle algo que nunca te pasó 🧠 Casi un tercio de las personas lo hizo en estos estudios.\n\n#psicologia #memoria #cerebro #ciencia #aprendeentiktok"
+  },
+  {
+   "n": 18,
+   "id": "018-ilusion-frecuencia",
+   "dueAt": "2026-12-01T21:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/018-ilusion-frecuencia.mp4",
+   "text": "Aprendes algo nuevo y de pronto lo ves en todas partes 👀 No es una señal: es tu atención. Y el experimento del gorila lo demuestra.\n\n#psicologia #atencion #cerebro #curiosidades #aprendeentiktok"
+  },
+  {
+   "n": 19,
+   "id": "019-aversion-perdida",
+   "dueAt": "2026-12-02T12:00:00-03:00",
+   "status": "scheduled",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/019-aversion-perdida.mp4",
+   "text": "¿Por qué perder 100 duele más que ganar 100? 🧠 Un metaanálisis con más de 600 estimaciones tiene la respuesta, y una pregunta que cambia cómo decides.\n\n#psicologia #dinero #decisiones #economiaconductual #aprendeentiktok"
+  },
+  {
+   "n": 20,
+   "id": "020-profecia-autocumplida",
+   "dueAt": "2026-12-02T18:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/020-profecia-autocumplida.mp4",
+   "text": "Lo que esperas de alguien puede cambiar en quién se convierte 🌱 Pero no funciona como en el mito: funciona a través del trato.\n\n#psicologia #educacion #crecimientopersonal #liderazgo #aprendeentiktok"
+  },
+  {
+   "n": 21,
+   "id": "021-disonancia-cognitiva",
+   "dueAt": "2026-12-02T21:00:00-03:00",
+   "status": "pending",
+   "video": "https://raw.githubusercontent.com/paulmarcktracy-star/Public/main/published/021-disonancia-cognitiva.mp4",
+   "text": "¿Justificas decisiones solo porque ya las tomaste? 🤔 El experimento más famoso sobre esto acaba de fallar en una gran réplica.\n\n#psicologia #mitos #decisiones #ciencia #aprendeentiktok"
+  }
+ ]
+}
