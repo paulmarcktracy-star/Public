@@ -1,0 +1,1120 @@
+{
+ "id": "004-efecto-espectador",
+ "title": "El efecto espectador: ¿más gente significa menos ayuda?",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "intimo",
+ "sources": [
+  {
+   "citation": "Darley, J. M., & Latané, B. (1968). Bystander intervention in emergencies: Diffusion of responsibility. Journal of Personality and Social Psychology, 8(4), 377–383.",
+   "doi": "10.1037/h0025589",
+   "supports": "Quienes creían estar solos ayudaban más que quienes creían que otros también escuchaban (difusión de responsabilidad)."
+  },
+  {
+   "citation": "Fischer, P., et al. (2011). The bystander-effect: A meta-analytic review on bystander intervention in dangerous and non-dangerous emergencies. Psychological Bulletin, 137(4), 517–537.",
+   "doi": "10.1037/a0023304",
+   "supports": "Metaanálisis: el efecto existe, pero se debilita en emergencias claramente peligrosas."
+  },
+  {
+   "citation": "Philpot, R., Liebst, L. S., Levine, M., Bernasco, W., & Lindegaard, M. R. (2020). Would I be helped? Cross-national CCTV footage shows that intervention is the norm in public conflicts. American Psychologist, 75(1), 66–75.",
+   "doi": "10.1037/amp0000469",
+   "supports": "219 conflictos reales en tres países: en 9 de cada 10 al menos una persona intervino; más testigos, más probabilidad de ayuda."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Si te pasa algo en una calle llena de gente, tal vez nadie te ayude. Eso nos enseñaron.",
+   "shots": [
+    {
+     "text": "Si te pasa algo en una calle llena de gente,",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 170,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 290,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 410,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 670,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 790,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 910,
+        "scale": 0.78,
+        "opacity": 0.5,
+        "facing": 1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Una calle llena de gente",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "gente"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "tal vez nadie te ayude.",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 290,
+        "toX": 150,
+        "facing": -1,
+        "scale": 0.78,
+        "opacity": 0.5
+       },
+       {
+        "pose": "stand",
+        "x": 410,
+        "scale": 0.78,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 670,
+        "scale": 0.78,
+        "opacity": 0.4,
+        "facing": 1
+       },
+       {
+        "pose": "walk",
+        "x": 790,
+        "toX": 940,
+        "facing": 1,
+        "scale": 0.78,
+        "opacity": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "…y nadie ayuda",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "nadie"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.08,
+       "toZoom": 1.14,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Eso nos enseñaron.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 540,
+        "y": 690,
+        "size": 200,
+        "enter": "draw",
+        "label": "LO QUE APRENDIMOS"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Eso nos enseñaron",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Más testigos significa menos ayuda?",
+   "shots": [
+    {
+     "text": "¿Más testigos significa menos ayuda?",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 400,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 500,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "chart",
+        "x": 850,
+        "y": 680,
+        "size": 150,
+        "state": "down",
+        "label": "AYUDA",
+        "enter": "draw"
+       }
+      ],
+      "counters": [
+       {
+        "from": 1,
+        "to": 30,
+        "x": 380,
+        "y": 560,
+        "size": 120,
+        "seconds": 1.4,
+        "suffix": " testigos"
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Más testigos, menos ayuda?",
+        "y": 330,
+        "size": 58,
+        "family": "sans",
+        "emphasis": [
+         "menos"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En los años 60, Darley y Latané simularon una emergencia. Quienes creían estar solos ayudaban más que quienes creían que otros también escuchaban. Se llama difusión de responsabilidad: si todos pueden ayudar, nadie se siente obligado.",
+   "shots": [
+    {
+     "text": "En los años 60, Darley y Latané simularon una emergencia.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 360
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 640,
+        "size": 190,
+        "enter": "pop",
+        "delay": 0.3,
+        "label": "¡AYUDA!"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Darley y Latané · años 60",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Quienes creían estar solos ayudaban más",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 600,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 800,
+        "y": 600,
+        "size": 150,
+        "label": "¡AYUDA!",
+        "enter": "none",
+        "mark": "check",
+        "markAt": 0.7
+       }
+      ],
+      "texts": [
+       {
+        "content": "Solos: ayudaban más",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "más"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "que quienes creían que otros también escuchaban.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 260,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 380,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 700,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 820,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 800,
+        "y": 560,
+        "size": 130,
+        "label": "¡AYUDA!",
+        "enter": "none",
+        "mark": "question",
+        "markAt": 0.5
+       },
+       {
+        "kind": "clock",
+        "x": 300,
+        "y": 560,
+        "size": 110,
+        "state": "spin",
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "Con otros: dudaban",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "dudaban"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Se llama difusión de responsabilidad:",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Se llama",
+      "lines": [
+       "Difusión de",
+       "responsabilidad"
+      ],
+      "emphasis": [
+       "responsabilidad"
+      ]
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "si todos pueden ayudar, nadie se siente obligado.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 340,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 480,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 620,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 760,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 900,
+        "scale": 0.72,
+        "opacity": 0.55,
+        "facing": 1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Si todos pueden, nadie se siente obligado",
+        "y": 330,
+        "size": 48,
+        "family": "sans",
+        "emphasis": [
+         "nadie"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.06,
+       "toZoom": 1.0,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Un metaanálisis confirmó el efecto… pero encontró que se debilita en emergencias claramente peligrosas.",
+   "shots": [
+    {
+     "text": "Un metaanálisis confirmó el efecto…",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 220,
+        "state": "down",
+        "enter": "draw",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Metaanálisis",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "pero encontró que se debilita en emergencias claramente peligrosas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 220,
+        "state": "down",
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       },
+       {
+        "kind": "lightbulb",
+        "x": 820,
+        "y": 500,
+        "size": 110,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "En el peligro real, se debilita",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "se debilita"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Y entonces alguien hizo lo que casi nadie había hecho: mirar la vida real.",
+   "shots": [
+    {
+     "text": "Y entonces alguien hizo lo que casi nadie había hecho:",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 480,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "cctv",
+        "x": 760,
+        "y": 500,
+        "size": 200,
+        "enter": "draw"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "mirar la vida real.",
+     "visual": {
+      "props": [
+       {
+        "kind": "cctv",
+        "x": 760,
+        "y": 500,
+        "size": 200,
+        "enter": "none",
+        "state": "glow"
+       }
+      ],
+      "texts": [
+       {
+        "content": "La vida real",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "real"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.22,
+       "x": 760,
+       "y": 520,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Un equipo analizó más de 200 conflictos reales grabados por cámaras en tres países. En 9 de cada 10, al menos una persona intervino. Y cuantas más personas había, más probable era que alguien ayudara.",
+   "shots": [
+    {
+     "text": "Un equipo analizó más de 200 conflictos reales grabados por cámaras en tres países.",
+     "visual": {
+      "props": [
+       {
+        "kind": "cctv",
+        "x": 830,
+        "y": 470,
+        "size": 120,
+        "enter": "pop"
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 200,
+        "prefix": "+",
+        "x": 500,
+        "y": 620,
+        "size": 150,
+        "seconds": 1.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "conflictos reales · 3 países",
+        "y": 760,
+        "size": 42,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En 9 de cada 10, al menos una persona intervino.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 330,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 460,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 590,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 720,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 850,
+        "scale": 0.66,
+        "opacity": 0.4,
+        "facing": 1
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 9,
+        "suffix": " de 10",
+        "x": 540,
+        "y": 600,
+        "size": 170,
+        "seconds": 1.0,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "alguien ayudó",
+        "y": 760,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y cuantas más personas había, más probable era que alguien ayudara.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 840,
+       "toX": 600,
+       "facing": -1,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "slump",
+        "x": 460,
+        "scale": 0.9,
+        "opacity": 0.9
+       },
+       {
+        "pose": "stand",
+        "x": 180,
+        "scale": 0.7,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.7,
+        "opacity": 0.4,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 900,
+        "scale": 0.7,
+        "opacity": 0.4,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "chart",
+        "x": 800,
+        "y": 470,
+        "size": 120,
+        "state": "up",
+        "enter": "pop",
+        "delay": 0.3,
+        "label": "AYUDA"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Si necesitas ayuda, no le hables a la multitud: señala a una persona. Y si eres testigo, no esperes a que otro empiece.",
+   "shots": [
+    {
+     "text": "Si necesitas ayuda, no le hables a la multitud: señala a una persona.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 300
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 580,
+        "scale": 0.78,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 700,
+        "scale": 0.78,
+        "opacity": 1,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 820,
+        "scale": 0.78,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 930,
+        "scale": 0.78,
+        "opacity": 0.4,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "«Tú. Ayúdame.»",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "Tú"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y si eres testigo, no esperes a que otro empiece.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 280,
+       "toX": 560,
+       "path": "rise"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 700,
+        "scale": 0.72,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 820,
+        "scale": 0.72,
+        "opacity": 0.4,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 930,
+        "scale": 0.72,
+        "opacity": 0.4,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "No esperes",
+        "y": 330,
+        "size": 56,
+        "family": "sans",
+        "emphasis": [
+         "No esperes"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "La multitud no es indiferente. Solo está esperando que alguien dé el primer paso.",
+   "shots": [
+    {
+     "text": "La multitud no es indiferente.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 330,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 460,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 620,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 750,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "No es indiferencia",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "indiferencia"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.05,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Solo está esperando que alguien dé el primer paso.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 380,
+       "toX": 620,
+       "path": "flat",
+       "pathTo": 980
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 220,
+        "toX": 400,
+        "scale": 0.75,
+        "opacity": 0.5
+       },
+       {
+        "pose": "walk",
+        "x": 140,
+        "toX": 300,
+        "scale": 0.75,
+        "opacity": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "El primer paso",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "primer paso"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 600,
+       "y": 800,
+       "panX": 30
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Alguna vez ayudaste a un desconocido, o alguien te ayudó a ti? Cuéntalo abajo.",
+   "shots": [
+    {
+     "text": "¿Alguna vez ayudaste a un desconocido, o alguien te ayudó a ti?",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "scale": 1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 560,
+        "size": 150,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntalo abajo.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntalo abajo",
+        "y": 330,
+        "size": 60,
+        "family": "sans",
+        "emphasis": [
+         "abajo"
+        ]
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 160,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Más gente significa menos ayuda? 👀 Eso nos enseñaron… hasta que alguien revisó cámaras reales en tres países. El resultado te va a sorprender.",
+  "hashtags": [
+   "#psicologia",
+   "#efectoespectador",
+   "#comportamiento",
+   "#ciencia",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

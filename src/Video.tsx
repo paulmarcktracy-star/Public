@@ -59,7 +59,7 @@ export const Video: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
           src={staticFile(timeline.musicSrc)}
           loop
           volume={(f) =>
-            0.24 *
+            (timeline.musicGain ?? 0.24) *
             interpolate(f, [0, fps, durationInFrames - fps * 1.5, durationInFrames], [0, 1, 1, 0], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -67,7 +67,8 @@ export const Video: React.FC<{ timeline: Timeline }> = ({ timeline }) => {
           }
         />
       ) : null}
-      {timeline.sfxDir
+      {timeline.fxSrc ? <Audio src={staticFile(timeline.fxSrc)} /> : null}
+      {timeline.sfxDir && !timeline.fxSrc
         ? timeline.shots.map((s, i) =>
             s.sfx === "none" ? null : (
               <Sequence key={`sfx-${s.id}`} from={Math.max(0, s.startFrame - (i ? 4 : 0))} durationInFrames={fps * 3}>

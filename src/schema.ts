@@ -83,6 +83,7 @@ export const Accent = z.enum(["white", "gold", "green", "red", "reward"]); // go
 export const PropKind = z.enum([
   "phone", "book", "clock", "coins", "bill", "piggy", "door", "mountain", "brain", "chart",
   "donut", "apple", "dumbbell", "cart", "lock", "calendar", "bubble", "question", "hourglass", "lightbulb",
+  "balance", "cctv", "shirt",
 ]);
 export const PropState = z.enum(["normal", "glow", "dim", "open", "closed", "locked", "spin", "typing", "down", "up"]);
 export const Pose = z.enum(["stand", "reach", "point", "phone", "think", "celebrate", "slump", "walk", "lookUp"]);
@@ -130,10 +131,7 @@ export const StageCounter = z.object({
   seconds: z.number().default(0.9),
 });
 
-export const Stage = z.object({
-  type: z.literal("stage"),
-  figure: z
-    .object({
+export const FigureSpec = z.object({
       pose: Pose,
       from: Pose.optional().describe("pose at the start of the shot, blends into 'pose'"),
       x: z.number().default(540),
@@ -148,8 +146,13 @@ export const Stage = z.object({
         .describe("signature dashed path under the feet; auto = flat, longer when walking"),
       pathFrom: z.number().optional().describe("x where the dashed path starts"),
       pathTo: z.number().optional().describe("x where the dashed path ends"),
-    })
-    .optional(),
+      opacity: z.number().min(0).max(1).default(1).describe("secondary characters can sit back in the scene"),
+    });
+
+export const Stage = z.object({
+  type: z.literal("stage"),
+  figure: FigureSpec.optional(),
+  extras: z.array(FigureSpec).default([]).describe("other people in the scene (crowds, conversations); same rig, no path unless set"),
   props: z.array(StageProp).default([]),
   texts: z.array(StageText).default([]),
   counters: z.array(StageCounter).default([]),
@@ -234,6 +237,8 @@ export const Timeline = z.object({
   voiceSrc: z.string().nullable(),
   musicSrc: z.string().nullable(),
   sfxDir: z.string().nullable(),
+  fxSrc: z.string().nullable().optional().describe("event-driven micro-SFX bus from pipeline/mix.py"),
+  musicGain: z.number().optional().describe("1 when the music file is already levelled and ducked"),
   shots: z.array(TimelineShot),
   captions: z.array(CaptionWord),
   sourceLine: z.string(),

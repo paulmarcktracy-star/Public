@@ -27,6 +27,9 @@ python3 pipeline/captions.py "$BUILD"
 step "timeline"
 npx tsx pipeline/timeline.ts "$SB" "$BUILD_REL"
 
+step "sound design + mix bus"
+python3 pipeline/mix.py "$BUILD"
+
 step "render"
 mkdir -p out
 npx remotion render src/index.ts PsychVideo "out/$ID.mp4" --props="$BUILD/props.json" \

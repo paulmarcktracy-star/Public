@@ -1,0 +1,807 @@
+{
+ "id": "012-miedo-rechazo",
+ "title": "El miedo al rechazo: le caes mejor a la gente de lo que crees",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "intimo",
+ "sources": [
+  {
+   "citation": "Gilovich, T., Medvec, V. H., & Savitsky, K. (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. Journal of Personality and Social Psychology, 78(2), 211–222.",
+   "doi": "10.1037/0022-3514.78.2.211",
+   "supports": "Quienes llevaban una camiseta vergonzosa estimaron que cerca de la mitad lo notaría; en realidad, alrededor de uno de cada cuatro."
+  },
+  {
+   "citation": "Boothby, E. J., Cooney, G., Sandstrom, G. M., & Clark, M. S. (2018). The liking gap in conversations: Do people like us more than we think? Psychological Science, 29(11), 1742–1756.",
+   "doi": "10.1177/0956797618783714",
+   "supports": "Tras conversar, las personas subestiman sistemáticamente cuánto le agradaron a su compañero (brecha de agrado)."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Después de conocer a alguien, crees que le caíste peor de lo que le caíste en realidad.",
+   "shots": [
+    {
+     "text": "Después de conocer a alguien,",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "scale": 1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 560,
+        "size": 120,
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Después de conocer a alguien…",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "crees que le caíste peor de lo que le caíste en realidad.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 400,
+       "toX": 250,
+       "facing": -1,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 680,
+        "toX": 830,
+        "facing": 1,
+        "opacity": 0.9
+       }
+      ],
+      "texts": [
+       {
+        "content": "«Le caí mal»",
+        "y": 560,
+        "size": 40,
+        "x": 280,
+        "family": "sans",
+        "accent": "red",
+        "delay": 0.3
+       },
+       {
+        "content": "«Me cayó bien»",
+        "y": 560,
+        "size": 40,
+        "x": 800,
+        "family": "sans",
+        "delay": 0.9
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué el miedo al juicio de los demás nos frena tanto?",
+   "shots": [
+    {
+     "text": "¿Por qué el miedo al juicio de los demás nos frena tanto?",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.72,
+        "opacity": 0.35,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 330,
+        "scale": 0.72,
+        "opacity": 0.35,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 750,
+        "scale": 0.72,
+        "opacity": 0.35,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.72,
+        "opacity": 0.35,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 480,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Por qué nos frena?",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En un experimento, unos estudiantes entraron a una sala con una camiseta vergonzosa. Calcularon que cerca de la mitad de los presentes lo notaría. En realidad, lo notó alrededor de uno de cada cuatro.",
+   "shots": [
+    {
+     "text": "En un experimento, unos estudiantes entraron a una sala con una camiseta vergonzosa.",
+     "visual": {
+      "spotlight": {
+       "x": 520
+      },
+      "figure": {
+       "pose": "walk",
+       "x": 240,
+       "toX": 520,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "shirt",
+        "x": 800,
+        "y": 600,
+        "size": 150,
+        "enter": "draw",
+        "delay": 0.4
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Calcularon que cerca de la mitad de los presentes lo notaría.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 300
+      },
+      "counters": [
+       {
+        "from": 0,
+        "to": 50,
+        "suffix": "%",
+        "x": 660,
+        "y": 580,
+        "size": 150,
+        "seconds": 1.0
+       }
+      ],
+      "texts": [
+       {
+        "content": "lo que creyeron",
+        "y": 700,
+        "size": 38,
+        "x": 660,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En realidad, lo notó alrededor de uno de cada cuatro.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "lookUp",
+        "x": 300,
+        "scale": 0.75,
+        "opacity": 1
+       },
+       {
+        "pose": "stand",
+        "x": 450,
+        "scale": 0.75,
+        "opacity": 0.3,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 600,
+        "scale": 0.75,
+        "opacity": 0.3
+       },
+       {
+        "pose": "stand",
+        "x": 750,
+        "scale": 0.75,
+        "opacity": 0.3,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "1 de cada 4",
+        "y": 330,
+        "size": 90,
+        "family": "sans"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.05,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Sentimos que todos nos miran, pero cada persona está ocupada pensando en sí misma.",
+   "shots": [
+    {
+     "text": "Sentimos que todos nos miran,",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 320,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 760,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.72,
+        "opacity": 0.45,
+        "facing": -1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "pero cada persona está ocupada pensando en sí misma.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "phone",
+        "x": 220,
+        "scale": 0.72,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 360,
+        "scale": 0.72,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "phone",
+        "x": 740,
+        "scale": 0.72,
+        "opacity": 0.5
+       },
+       {
+        "pose": "think",
+        "x": 880,
+        "scale": 0.72,
+        "opacity": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Cada uno piensa en sí mismo",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Y después de una conversación pasa algo todavía más curioso.",
+   "shots": [
+    {
+     "text": "Y después de una conversación pasa algo todavía más curioso.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 540,
+        "size": 120,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 380,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.8
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Investigadores pusieron a conversar a desconocidos y luego les preguntaron cuánto les había gustado el otro y cuánto creían haberle gustado. La gente subestimaba sistemáticamente cuánto había agradado. Lo llamaron la brecha de agrado.",
+   "shots": [
+    {
+     "text": "Investigadores pusieron a conversar a desconocidos",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 470,
+        "y": 520,
+        "size": 100,
+        "enter": "pop"
+       },
+       {
+        "kind": "bubble",
+        "x": 620,
+        "y": 480,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "y luego les preguntaron cuánto les había gustado el otro y cuánto creían haberle gustado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 760,
+        "size": 260,
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Lo que creíste",
+        "y": 560,
+        "size": 38,
+        "x": 380,
+        "family": "sans"
+       },
+       {
+        "content": "Lo que sintió",
+        "y": 560,
+        "size": 38,
+        "x": 700,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La gente subestimaba sistemáticamente cuánto había agradado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 760,
+        "size": 260,
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.25
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Le agradaste más",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "más"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Lo llamaron la brecha de agrado.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Lo llamaron",
+      "lines": [
+       "La brecha",
+       "de agrado"
+      ],
+      "emphasis": [
+       "agrado"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Antes de no escribir ese mensaje o no hacer esa pregunta, recuerda: el juicio que imaginas es más duro que el real. Empieza por algo pequeño.",
+   "shots": [
+    {
+     "text": "Antes de no escribir ese mensaje o no hacer esa pregunta,",
+     "visual": {
+      "figure": {
+       "pose": "phone",
+       "x": 480,
+       "holding": "phone"
+      },
+      "props": [
+       {
+        "kind": "phone",
+        "x": 760,
+        "y": 600,
+        "size": 150,
+        "state": "typing",
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "recuerda: el juicio que imaginas es más duro que el real.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 760,
+        "size": 220,
+        "enter": "none",
+        "state": "normal",
+        "to": {
+         "state": "down",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Imaginado",
+        "y": 580,
+        "size": 38,
+        "x": 400,
+        "family": "sans",
+        "accent": "red"
+       },
+       {
+        "content": "Real",
+        "y": 580,
+        "size": 38,
+        "x": 680,
+        "family": "sans"
+       },
+       {
+        "content": "Más duro en tu cabeza",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Empieza por algo pequeño.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 380,
+       "toX": 520,
+       "path": "rise"
+      },
+      "texts": [
+       {
+        "content": "Algo pequeño",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "El rechazo que temes vive sobre todo en tu cabeza. La conexión que te pierdes es real.",
+   "shots": [
+    {
+     "text": "El rechazo que temes vive sobre todo en tu cabeza.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 640,
+        "y": 420,
+        "size": 120,
+        "enter": "pop",
+        "state": "dim"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Vive en tu cabeza",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "cabeza"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La conexión que te pierdes es real.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 470,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 800,
+        "toX": 620,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "texts": [
+       {
+        "content": "La conexión es real",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "real"
+        ],
+        "accent": "reward",
+        "delay": 0.6
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué harías hoy si supieras que nadie te va a juzgar? Comenta.",
+   "shots": [
+    {
+     "text": "¿Qué harías hoy si supieras que nadie te va a juzgar?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Comenta.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Comenta",
+        "y": 330,
+        "size": 62,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Le caes mejor a la gente de lo que crees 💬 La ciencia lo llama «brecha de agrado». Mira hasta el final antes de dejar de escribir ese mensaje.",
+  "hashtags": [
+   "#psicologia",
+   "#confianza",
+   "#relaciones",
+   "#autoestima",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

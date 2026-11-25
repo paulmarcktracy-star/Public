@@ -145,7 +145,7 @@ const Figure: React.FC<{ fig: NonNullable<Props["figure"]>; frame: number; dur: 
   );
   const appear = prog(frame, 0, 10);
   return (
-    <g opacity={appear}>
+    <g opacity={appear * (fig.opacity ?? 1)}>
       {/* back limbs slightly dimmer for depth */}
       {seg(hip, ll.j, ll.e, 15, "ll", 0.72)}
       {seg(shoulder, la.j, la.e, 13, "la", 0.72)}
@@ -165,7 +165,7 @@ const Figure: React.FC<{ fig: NonNullable<Props["figure"]>; frame: number; dur: 
 };
 
 /* ============================== PROPS ============================== */
-type DrawCtx = { col: string; d: number; frame: number; state: string; glow: boolean; label?: string };
+type DrawCtx = { col: string; d: number; frame: number; state: string; glow: boolean; label?: string; t?: number; from?: string; to?: string };
 const stroke = (c: DrawCtx, w = 4) => ({
   fill: "none",
   stroke: c.col,
@@ -179,6 +179,51 @@ const stroke = (c: DrawCtx, w = 4) => ({
 const solid = (c: DrawCtx, o = 1) => ({ fill: c.col, opacity: o * c.d });
 
 const PROP: Record<string, (c: DrawCtx) => React.ReactNode> = {
+  balance: (c) => {
+    // tilt eases between states: down = left pan sinks, up = right pan sinks
+    const tiltOf = (st?: string) => (st === "down" ? -13 : st === "up" ? 13 : 0);
+    const tilt = lerp(tiltOf(c.from), tiltOf(c.to ?? c.from), easeStd(c.t ?? 0));
+    const r = (tilt * Math.PI) / 180;
+    const pan = (sx: number) => {
+      const px = Math.cos(r) * sx, py = Math.sin(r) * sx - 34;
+      return (
+        <g transform={`translate(${px} ${py})`}>
+          <line x1={0} y1={0} x2={-14} y2={34} stroke={c.col} strokeWidth={2.5} opacity={c.d} />
+          <line x1={0} y1={0} x2={14} y2={34} stroke={c.col} strokeWidth={2.5} opacity={c.d} />
+          <path d="M-22 34 Q0 48 22 34 Z" {...stroke(c, 4)} />
+        </g>
+      );
+    };
+    return (
+      <>
+        <path d="M0 -40 L0 50 M-26 50 L26 50" {...stroke(c, 5)} />
+        <circle cx={0} cy={-40} r={4} fill={c.col} opacity={c.d} />
+        <line x1={-46 * Math.cos(r)} y1={-34 - 46 * Math.sin(r)} x2={46 * Math.cos(r)} y2={-34 + 46 * Math.sin(r)} stroke={c.col} strokeWidth={4} strokeLinecap="round" opacity={c.d} />
+        {pan(-46)}
+        {pan(46)}
+      </>
+    );
+  },
+  cctv: (c) => {
+    const sweep = Math.sin(c.frame / 28) * 9;
+    const rec = Math.floor(c.frame / 15) % 2 === 0 ? 1 : 0.25;
+    return (
+      <>
+        <path d="M34 -30 L34 -6 L18 -6" {...stroke(c, 4)} />
+        <g transform={`rotate(${12 + sweep} 18 -6)`}>
+          <rect x={-40} y={-20} width={58} height={28} rx={5} {...stroke(c, 4)} />
+          <path d="M-40 -14 L-54 -18 L-54 4 L-40 0" {...stroke(c, 3.5)} />
+          <circle cx={8} cy={-6} r={3.5} fill={c.col} opacity={c.d * rec} />
+        </g>
+      </>
+    );
+  },
+  shirt: (c) => (
+    <>
+      <path d="M-20 -44 L-46 -30 L-36 -8 L-26 -14 L-26 44 L26 44 L26 -14 L36 -8 L46 -30 L20 -44 Q0 -30 -20 -44 Z" {...stroke(c, 4)} />
+      <circle cx={0} cy={6} r={12} {...stroke(c, 3)} />
+    </>
+  ),
   phone: (c) => (
     <>
       <rect x={-26} y={-46} width={52} height={92} rx={9} {...stroke(c)} />
@@ -410,7 +455,7 @@ const PropView: React.FC<{ p: z.infer<typeof StageProp>; frame: number; fps: num
   return (
     <g transform={`translate(${x + dx} ${y + dy})`} opacity={opacity}>
       <g transform={`scale(${k})`} filter={glow ? "url(#stageGlow)" : undefined}>
-        {draw({ col, d, frame, state, glow, label: p.kind === "calendar" ? p.label : undefined })}
+        {draw({ col, d, frame, state, glow, label: p.kind === "calendar" ? p.label : undefined, t: tt, from: p.state, to: p.to?.state })}
       </g>
       {p.mark ? (
         <g transform={`translate(${size * 0.42} ${-size * 0.42})`}>
@@ -449,7 +494,7 @@ const Counter: React.FC<{ c: z.infer<typeof StageCounter>; frame: number; fps: n
 };
 
 /* ============================== STAGE ============================== */
-export const Stage: React.FC<Props> = ({ figure, props, texts, counters, spotlight, camera, note, durationInFrames }) => {
+export const Stage: React.FC<Props> = ({ figure, extras, props, texts, counters, spotlight, camera, note, durationInFrames }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = frame / Math.max(1, durationInFrames);
@@ -487,6 +532,10 @@ export const Stage: React.FC<Props> = ({ figure, props, texts, counters, spotlig
             </g>
           ) : null}
           {props.map((p, i) => <PropView key={i} p={p} frame={frame} fps={fps} dur={durationInFrames} />)}
+          {(extras ?? []).map((ex, i) =>
+            ex.path !== "auto" && ex.path !== "none" ? <DashedPath key={`xp${i}`} fig={ex} frame={frame} dur={durationInFrames} /> : null,
+          )}
+          {(extras ?? []).map((ex, i) => <Figure key={`x${i}`} fig={ex} frame={frame} dur={durationInFrames} />)}
           {figure ? <DashedPath fig={figure} frame={frame} dur={durationInFrames} /> : null}
           {figure ? <Figure fig={figure} frame={frame} dur={durationInFrames} /> : null}
           {counters.map((c, i) => <Counter key={i} c={c} frame={frame} fps={fps} />)}

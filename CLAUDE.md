@@ -95,11 +95,11 @@ Nunca un vídeo con solo música de fondo + narración. Cada detalle visual pued
 
 SFX profesionales, suaves, sutiles y perfectamente sincronizados al fotograma. Nunca agresivos, repetitivos, artificiales ni excesivos.
 
-**Estado técnico:** hoy hay un SFX por plano (`pipeline/sfx.py`). Antes de producir los vídeos del mes, el motor debe generar automáticamente los micro-SFX desde los eventos de animación (pasos según el ciclo de marcha, apariciones, trazos, textos, transiciones) y aplicar capas de ambiente y textura.
+**Implementación:** `pipeline/mix.py` deriva cada sonido de los mismos tiempos que las animaciones (`Stage.tsx`): pasos en cada contacto del pie (también de los personajes secundarios, más lejanos), pop/thud en apariciones, trazo de lápiz en caminos y líneas dibujadas, swish en desplazamientos, click en textos, ticks en contadores, whoosh suave solo en cambios de escena, golpe suave en el fotograma 0, subida + impacto en la revelación y campanilla cálida en cada elemento `reward`. Capa de textura (room tone a −54 dB). Semilla fija: mismo storyboard, mismo sonido.
 
 ### Mezcla de audio profesional
 
-- La narración domina y es perfectamente inteligible: ducking de música y SFX bajo la voz.
+- La narración domina y es perfectamente inteligible: ducking por sidechain de la voz (música ≈ −6 dB y SFX ≈ −3,7 dB mientras habla; vuelven en las pausas). Implementado en `pipeline/mix.py`.
 - La música sostiene la emoción sin competir con la voz.
 - Los SFX son limpios, sincronizados, equilibrados en volumen y adaptados a cada escena, sin saturación (true peak ≤ −1 dBTP) ni ruidos inútiles.
 - Capas cuando mejoran la inmersión: ambiente, textura, movimiento e impacto.
