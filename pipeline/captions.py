@@ -119,11 +119,21 @@ def main() -> None:
         elif model is None:
             times = pause_aligned(words, out_dir / "voice" / f"{sc['id']}.wav", sc["start"], sc["duration"])
         else:
-            segs, _ = model.transcribe(
-                str(out_dir / "voice" / f"{sc['id']}.wav"), language="es", word_timestamps=True, initial_prompt=sc["text"]
-            )
-            heard = [(w.word.strip(), w.start, w.end) for s in segs for w in (s.words or [])]
-            times = align(words, heard, sc["start"], sc["duration"])
+            wav = out_dir / "voice" / f"{sc['id']}.wav"
+            try:
+                import soundfile as sf
+                audio, sr = sf.read(str(wav), dtype="float32")
+                if audio.ndim > 1:
+                    audio = audio.mean(axis=1)
+                if sr != 16000:
+                    from scipy.signal import resample_poly
+                    audio = resample_poly(audio, 16000, sr).astype("float32")
+                segs, _ = model.transcribe(audio, language="es", word_timestamps=True, initial_prompt=sc["text"])
+                heard = [(w.word.strip(), w.start, w.end) for s in segs for w in (s.words or [])]
+                times = align(words, heard, sc["start"], sc["duration"])
+            except Exception as e:  # never block production on the aligner
+                print(f"  whisper failed on {sc['id']} ({type(e).__name__}: {e}), using pause-aligned timing")
+                times = pause_aligned(words, wav, sc["start"], sc["duration"])
         breaks, acc = set(), 0
         for n in sc.get("shots", [len(words)]):
             acc += n
