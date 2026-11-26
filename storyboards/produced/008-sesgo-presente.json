@@ -1,0 +1,554 @@
+{
+ "id": "008-sesgo-presente",
+ "title": "El sesgo del presente: tu yo del futuro es casi un desconocido",
+ "pillar": 2,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Ersner-Hershfield, H., Wimmer, G. E., & Knutson, B. (2009). Saving for the future self: Neural measures of future self-continuity predict temporal discounting. Social Cognitive and Affective Neuroscience, 4(1), 85–92.",
+   "doi": "10.1093/scan/nsn042",
+   "supports": "Pensar en el yo futuro se parece, en el cerebro, a pensar en otra persona; quienes muestran más distancia son más impacientes con el dinero."
+  },
+  {
+   "citation": "Hershfield, H. E., et al. (2011). Increasing saving behavior through age-progressed renderings of the future self. Journal of Marketing Research, 48(SPL), S23–S37.",
+   "doi": "10.1509/jmkr.48.SPL.S23",
+   "supports": "Ver una imagen envejecida de uno mismo aumentó la asignación al ahorro en una decisión de prueba."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Para tu cerebro, tu yo del futuro es casi un desconocido.",
+   "shots": [
+    {
+     "text": "Para tu cerebro, tu yo del futuro es casi un desconocido.",
+     "visual": {
+      "spotlight": {
+       "x": 380,
+       "snap": true
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 380,
+       "path": "fade",
+       "pathTo": 980
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 820,
+        "facing": -1,
+        "opacity": 0.25
+       }
+      ],
+      "texts": [
+       {
+        "content": "Tu yo del futuro",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "futuro"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué le dejas los problemas al tú de mañana, como si fuera otra persona?",
+   "shots": [
+    {
+     "text": "¿Por qué le dejas los problemas al tú de mañana, como si fuera otra persona?",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 380,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "slump",
+        "x": 800,
+        "facing": -1,
+        "opacity": 0.3
+       }
+      ],
+      "props": [
+       {
+        "kind": "book",
+        "x": 600,
+        "y": 640,
+        "size": 110,
+        "enter": "pop",
+        "to": {
+         "x": 760,
+         "y": 640,
+         "at": 0.4
+        }
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "Se llama sesgo del presente: lo de hoy pesa más que lo de mañana. En un estudio con resonancia magnética, pensar en tu yo futuro activaba el cerebro de forma más parecida a pensar en otra persona.",
+   "shots": [
+    {
+     "text": "Se llama sesgo del presente: lo de hoy pesa más que lo de mañana.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 240,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Hoy",
+        "y": 540,
+        "size": 40,
+        "x": 420,
+        "family": "sans"
+       },
+       {
+        "content": "Mañana",
+        "y": 540,
+        "size": 40,
+        "x": 660,
+        "family": "sans"
+       },
+       {
+        "content": "Sesgo del presente",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En un estudio con resonancia magnética, pensar en tu yo futuro",
+     "visual": {
+      "props": [
+       {
+        "kind": "brain",
+        "x": 540,
+        "y": 600,
+        "size": 220,
+        "state": "glow",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "activaba el cerebro de forma más parecida a pensar en otra persona.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 360
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 720,
+        "facing": -1,
+        "opacity": 0.35
+       }
+      ],
+      "props": [
+       {
+        "kind": "brain",
+        "x": 540,
+        "y": 440,
+        "size": 110,
+        "state": "glow",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Como otra persona",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "otra"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Y quienes sentían más lejos a ese desconocido eran más impacientes con el dinero.",
+   "shots": [
+    {
+     "text": "Y quienes sentían más lejos a ese desconocido eran más impacientes con el dinero.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "coins",
+        "x": 640,
+        "y": 640,
+        "size": 130,
+        "enter": "pop"
+       },
+       {
+        "kind": "clock",
+        "x": 820,
+        "y": 480,
+        "size": 90,
+        "state": "spin",
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Entonces, ¿qué pasa si conoces a ese desconocido?",
+   "shots": [
+    {
+     "text": "Entonces, ¿qué pasa si conoces a ese desconocido?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 380,
+       "path": "fade",
+       "pathTo": 980
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 760,
+        "facing": -1,
+        "opacity": 0.35
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 760,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "En otro experimento, algunas personas vieron una imagen envejecida de sí mismas. Y en una decisión de prueba, destinaron más dinero al ahorro.",
+   "shots": [
+    {
+     "text": "En otro experimento, algunas personas vieron una imagen envejecida de sí mismas.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9,
+        "scale": 0.95
+       }
+      ],
+      "props": [
+       {
+        "kind": "phone",
+        "x": 540,
+        "y": 500,
+        "size": 110,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y en una decisión de prueba, destinaron más dinero al ahorro.",
+     "visual": {
+      "props": [
+       {
+        "kind": "piggy",
+        "x": 540,
+        "y": 640,
+        "size": 190,
+        "enter": "drop",
+        "accent": "reward"
+       },
+       {
+        "kind": "coins",
+        "x": 540,
+        "y": 420,
+        "size": 90,
+        "enter": "drop",
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Más ahorro",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "ahorro"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que haz visible a tu yo futuro: escríbele una carta, con fecha. Y antes de decidir, pregúntate: ¿qué le estoy dejando?",
+   "shots": [
+    {
+     "text": "Así que haz visible a tu yo futuro: escríbele una carta, con fecha.",
+     "visual": {
+      "figure": {
+       "pose": "phone",
+       "x": 420,
+       "holding": "phone"
+      },
+      "props": [
+       {
+        "kind": "calendar",
+        "x": 740,
+        "y": 600,
+        "size": 140,
+        "label": "2036",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y antes de decidir, pregúntate: ¿qué le estoy dejando?",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "rise"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 800,
+        "facing": -1,
+        "opacity": 0.7
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Qué le estoy dejando?",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Tu yo del futuro no es un extraño. Es la persona en la que te vas a convertir.",
+   "shots": [
+    {
+     "text": "Tu yo del futuro no es un extraño.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 380,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 760,
+        "facing": -1,
+        "opacity": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Es la persona en la que te vas a convertir.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 360,
+       "toX": 520,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 760,
+        "toX": 600,
+        "facing": -1,
+        "opacity": 1
+       }
+      ],
+      "texts": [
+       {
+        "content": "No es un extraño",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "extraño"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "Si pudieras dejarle un mensaje a tu yo de dentro de diez años, ¿qué le dirías? Escríbelo abajo.",
+   "shots": [
+    {
+     "text": "Si pudieras dejarle un mensaje a tu yo de dentro de diez años, ¿qué le dirías?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Escríbelo abajo.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Escríbelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Para tu cerebro, tu yo del futuro es casi un desconocido 🧠 Y hay una forma sencilla de presentarte a esa persona.",
+  "hashtags": [
+   "#psicologia",
+   "#futuro",
+   "#ahorro",
+   "#habitos",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

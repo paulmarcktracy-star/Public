@@ -1,0 +1,635 @@
+{
+ "id": "006-efecto-camaleon",
+ "title": "El efecto camaleón: por qué imitamos sin darnos cuenta",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Chartrand, T. L., & Bargh, J. A. (1999). The chameleon effect: The perception–behavior link and social interaction. Journal of Personality and Social Psychology, 76(6), 893–910.",
+   "doi": "10.1037/0022-3514.76.6.893",
+   "supports": "Imitación inconsciente de gestos; ser imitado aumenta la fluidez y el agrado; las personas más empáticas imitan más."
+  },
+  {
+   "citation": "Vicaria, I. M., & Dickens, L. (2016). Meta-analyses of the intra- and interpersonal outcomes of interpersonal coordination. Journal of Nonverbal Behavior, 40(4), 335–361.",
+   "doi": "10.1007/s10919-016-0238-8",
+   "supports": "Metaanálisis: la coordinación interpersonal se asocia con más agrado y conducta prosocial."
+  },
+  {
+   "citation": "FORRT Replication Atlas — Chartrand & Bargh (1999): registro de réplicas.",
+   "url": "https://forrt.org/flora-replication-atlas/doi/10.1037/0022-3514.76.6.893/",
+   "supports": "Réplicas con efecto menor y no en todos los gestos (sonrisa sí; mover el pie, no de forma consistente)."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Sin darte cuenta, podrías estar copiando los gestos de la persona que tienes enfrente.",
+   "shots": [
+    {
+     "text": "Sin darte cuenta, podrías estar copiando los gestos de la persona que tienes enfrente.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "reach",
+       "x": 400,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "texts": [
+       {
+        "content": "Copias sin darte cuenta",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "sin darte cuenta"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué copiamos gestos, posturas y hasta palabras de quien tenemos al frente?",
+   "shots": [
+    {
+     "text": "¿Por qué copiamos gestos, posturas y hasta palabras de quien tenemos al frente?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "think",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1999, los psicólogos Chartrand y Bargh lo pusieron a prueba. Si la otra persona se tocaba la cara, los participantes también lo hacían más. Sin darse cuenta. Lo llamaron efecto camaleón.",
+   "shots": [
+    {
+     "text": "En 1999, los psicólogos Chartrand y Bargh lo pusieron a prueba.",
+     "visual": {
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 600,
+        "size": 170,
+        "state": "glow",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Chartrand y Bargh · 1999",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Si la otra persona se tocaba la cara, los participantes también lo hacían más.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "think",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "texts": [
+       {
+        "content": "Lo hacían más",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "más"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Sin darse cuenta.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Lo llamaron efecto camaleón.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Lo llamaron",
+      "lines": [
+       "Efecto",
+       "camaleón"
+      ],
+      "emphasis": [
+       "camaleón"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Y cuando alguien los imitaba a ellos, sutilmente, la conversación les parecía más fluida. Esa persona les caía mejor.",
+   "shots": [
+    {
+     "text": "Y cuando alguien los imitaba a ellos, sutilmente, la conversación les parecía más fluida.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 470,
+        "y": 520,
+        "size": 100,
+        "enter": "pop"
+       },
+       {
+        "kind": "bubble",
+        "x": 610,
+        "y": 480,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Esa persona les caía mejor.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "normal",
+        "enter": "pop",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Les caía mejor",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "mejor"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Parece el truco perfecto para caer bien. Pero hay un detalle.",
+   "shots": [
+    {
+     "text": "Parece el truco perfecto para caer bien. Pero hay un detalle.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "lock",
+        "x": 540,
+        "y": 440,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿El truco perfecto?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Cuando otros científicos repitieron el estudio, el efecto fue más pequeño y no apareció con todos los gestos. La sonrisa sí se contagiaba. Mover el pie, no tanto.",
+   "shots": [
+    {
+     "text": "Cuando otros científicos repitieron el estudio, el efecto fue más pequeño",
+     "visual": {
+      "extras": [
+       {
+        "pose": "think",
+        "x": 220,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 380,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 540,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 700,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 860,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 460,
+        "size": 150,
+        "state": "down",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Más pequeño",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "pequeño"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "y no apareció con todos los gestos.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La sonrisa sí se contagiaba. Mover el pie, no tanto.",
+     "visual": {
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 380,
+        "y": 620,
+        "size": 140,
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.3,
+        "accent": "reward"
+       },
+       {
+        "kind": "question",
+        "x": 720,
+        "y": 620,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.8,
+        "mark": "cross",
+        "markAt": 0.8
+       }
+      ],
+      "texts": [
+       {
+        "content": "Sonrisa",
+        "y": 800,
+        "size": 40,
+        "x": 380,
+        "family": "sans"
+       },
+       {
+        "content": "Pie",
+        "y": 800,
+        "size": 40,
+        "x": 720,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que no copies a nadie a propósito. Se nota. Mejor escucha de verdad. La sintonía llega sola cuando prestas atención.",
+   "shots": [
+    {
+     "text": "Así que no copies a nadie a propósito. Se nota.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 700,
+        "facing": -1,
+        "opacity": 0.8
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 440,
+        "size": 70,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Mejor escucha de verdad. La sintonía llega sola cuando prestas atención.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 420,
+       "path": "flat",
+       "pathTo": 720
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 660,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 480,
+        "size": 110,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "Escucha de verdad",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "de verdad"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "No imitamos para escondernos. Imitamos para conectar.",
+   "shots": [
+    {
+     "text": "No imitamos para escondernos. Imitamos para conectar.",
+     "visual": {
+      "type": "closer",
+      "line": "No imitamos para escondernos. Imitamos para conectar.",
+      "emphasis": [
+       "conectar"
+      ],
+      "source": "Chartrand y Bargh, 1999 · Vicaria y Dickens, 2016"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Te ha pasado que se te pegan las palabras o el acento de alguien? Cuéntame en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Te ha pasado que se te pegan las palabras o el acento de alguien?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Sin darte cuenta, podrías estar copiando a la persona que tienes enfrente 🦎 ¿Es el truco perfecto para caer bien? La ciencia tiene un matiz.",
+  "hashtags": [
+   "#psicologia",
+   "#comunicacion",
+   "#relaciones",
+   "#lenguajecorporal",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

@@ -1,0 +1,504 @@
+{
+ "id": "009-regla-dos-minutos",
+ "title": "La regla de los dos minutos: cómo vencer la resistencia a empezar",
+ "pillar": 2,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Steel, P. (2007). The nature of procrastination: A meta-analytic and theoretical review of quintessential self-regulatory failure. Psychological Bulletin, 133(1), 65–94.",
+   "doi": "10.1037/0033-2909.133.1.65",
+   "supports": "Postergamos más las tareas que nos resultan desagradables (aversión a la tarea)."
+  },
+  {
+   "citation": "Sirois, F., & Pychyl, T. (2013). Procrastination and the priority of short-term mood regulation. Social and Personality Psychology Compass, 7(2), 115–127.",
+   "doi": "10.1111/spc3.12011",
+   "supports": "La procrastinación funciona como reparación del ánimo a corto plazo."
+  },
+  {
+   "citation": "Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis of effects and processes. Advances in Experimental Social Psychology, 38, 69–119.",
+   "doi": "10.1016/S0065-2601(06)38002-1",
+   "supports": "Planes «si–entonces»: efecto de tamaño medio a grande en 94 estudios."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Llevas diez días evitando una tarea que podrías empezar en solo dos minutos.",
+   "shots": [
+    {
+     "text": "Llevas diez días evitando una tarea que podrías empezar en solo dos minutos.",
+     "visual": {
+      "spotlight": {
+       "x": 360,
+       "snap": true
+      },
+      "figure": {
+       "pose": "slump",
+       "x": 360,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "calendar",
+        "x": 700,
+        "y": 520,
+        "size": 130,
+        "label": "10",
+        "enter": "none"
+       },
+       {
+        "kind": "clock",
+        "x": 700,
+        "y": 760,
+        "size": 110,
+        "state": "spin",
+        "enter": "pop",
+        "delay": 1.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "10 días… para 2 minutos",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "2 minutos"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué empezar cuesta tanto más que hacer?",
+   "shots": [
+    {
+     "text": "¿Por qué empezar cuesta tanto más que hacer?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "door",
+        "x": 720,
+        "y": 600,
+        "size": 170,
+        "state": "closed",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 720,
+        "y": 420,
+        "size": 70,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "Un metaanálisis sobre la procrastinación encontró que postergamos más lo que nos resulta desagradable. Y otros investigadores lo explican así: evitas la tarea para no sentir esa incomodidad ahora.",
+   "shots": [
+    {
+     "text": "Un metaanálisis sobre la procrastinación encontró que postergamos más lo que nos resulta desagradable.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 540,
+        "y": 640,
+        "size": 190,
+        "state": "closed",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Lo desagradable, para después",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y otros investigadores lo explican así: evitas la tarea para no sentir esa incomodidad ahora.",
+     "visual": {
+      "figure": {
+       "pose": "phone",
+       "x": 420,
+       "holding": "phone"
+      },
+      "props": [
+       {
+        "kind": "phone",
+        "x": 720,
+        "y": 600,
+        "size": 130,
+        "state": "typing",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "La regla de los dos minutos ataca justo eso. Si algo toma menos de dos minutos, hazlo ya. Y si es grande, haz solo los primeros dos: abre el documento, escribe una línea.",
+   "shots": [
+    {
+     "text": "La regla de los dos minutos ataca justo eso.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "La regla",
+      "lines": [
+       "De los dos",
+       "minutos"
+      ],
+      "emphasis": [
+       "minutos"
+      ]
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Si algo toma menos de dos minutos, hazlo ya.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 700,
+        "y": 600,
+        "size": 150,
+        "state": "normal",
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y si es grande, haz solo los primeros dos: abre el documento, escribe una línea.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 500,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 760,
+        "y": 620,
+        "size": 140,
+        "state": "open",
+        "enter": "draw",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero ojo, ¿la ciencia la respalda?",
+   "shots": [
+    {
+     "text": "Pero ojo, ¿la ciencia la respalda?",
+     "visual": {
+      "props": [
+       {
+        "kind": "clock",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "La regla, tal cual, no se ha probado en experimentos. Pero se apoya en algo que sí: decidir de antemano cuándo y dónde vas a empezar. En 94 estudios, esos planes de «si pasa esto, hago aquello» funcionaron bien.",
+   "shots": [
+    {
+     "text": "La regla, tal cual, no se ha probado en experimentos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 180,
+        "enter": "draw",
+        "mark": "question",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "No probada tal cual",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pero se apoya en algo que sí: decidir de antemano cuándo y dónde vas a empezar.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 380
+      },
+      "props": [
+       {
+        "kind": "calendar",
+        "x": 700,
+        "y": 600,
+        "size": 130,
+        "label": "7:00",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En 94 estudios, esos planes de «si pasa esto, hago aquello» funcionaron bien.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 94,
+        "x": 540,
+        "y": 560,
+        "size": 140,
+        "seconds": 1.2,
+        "suffix": " estudios",
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "«Si son las 7, empiezo»",
+        "y": 760,
+        "size": 44,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Hoy, elige una tarea que llevas días evitando. Escribe: «si son las siete, hago los primeros dos minutos». Solo dos.",
+   "shots": [
+    {
+     "text": "Hoy, elige una tarea que llevas días evitando.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 720,
+        "y": 600,
+        "size": 150,
+        "state": "closed",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Escribe: «si son las siete, hago los primeros dos minutos». Solo dos.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "clock",
+        "x": 780,
+        "y": 560,
+        "size": 110,
+        "enter": "pop"
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 2,
+        "x": 780,
+        "y": 760,
+        "size": 90,
+        "seconds": 0.4,
+        "suffix": " min"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "No necesitas motivación para empezar. Necesitas que empezar sea más fácil que evitarlo.",
+   "shots": [
+    {
+     "text": "No necesitas motivación para empezar. Necesitas que empezar sea más fácil que evitarlo.",
+     "visual": {
+      "type": "closer",
+      "line": "Haz que empezar sea más fácil que evitarlo.",
+      "emphasis": [
+       "empezar"
+      ],
+      "source": "Steel, 2007 · Gollwitzer y Sheeran, 2006"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué tarea vas a empezar con tus dos minutos? Escríbela en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué tarea vas a empezar con tus dos minutos?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Escríbela en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Escríbela",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Llevas días evitando algo que podrías empezar en 2 minutos ⏱️ La regla funciona, pero no por la razón que crees.",
+  "hashtags": [
+   "#psicologia",
+   "#procrastinacion",
+   "#productividad",
+   "#habitos",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

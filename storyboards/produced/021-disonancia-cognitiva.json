@@ -1,0 +1,514 @@
+{
+ "id": "021-disonancia-cognitiva",
+ "title": "La disonancia cognitiva: ¿justificamos lo que hicimos?",
+ "pillar": 5,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Festinger, L., & Carlsmith, J. M. (1959). Cognitive consequences of forced compliance. Journal of Abnormal and Social Psychology, 58(2), 203–210.",
+   "doi": "10.1037/h0041593",
+   "supports": "Pagar 1 dólar vs 20 por decir que una tarea aburrida era divertida: los de 1 dólar la valoraron mejor."
+  },
+  {
+   "citation": "Vaidis, D. C., et al. (2024). A multilab replication of the induced-compliance paradigm of cognitive dissonance. Advances in Methods and Practices in Psychological Science, 7(1).",
+   "doi": "10.1177/25152459231213375",
+   "supports": "Réplica multilaboratorio: no se encontró el cambio de actitud esperado en el paradigma de acatamiento inducido."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "¿Alguna vez defendiste una decisión que sabías que estaba mal, solo porque ya la habías tomado?",
+   "shots": [
+    {
+     "text": "¿Alguna vez defendiste una decisión que sabías que estaba mal, solo porque ya la habías tomado?",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "point",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 700,
+        "y": 440,
+        "size": 100,
+        "enter": "none",
+        "mark": "cross",
+        "markAt": 0.7
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Cambiamos lo que pensamos para justificar lo que hicimos?",
+   "shots": [
+    {
+     "text": "¿Cambiamos lo que pensamos para justificar lo que hicimos?",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 700,
+        "size": 230,
+        "state": "normal",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1959, Festinger y Carlsmith pagaron a personas para decir que una tarea aburrida era divertida. A unos les dieron un dólar. A otros, veinte. Y los del dólar terminaron diciendo que la tarea les había gustado más. La idea: sin una buena excusa, cambias tu opinión para sentirte coherente.",
+   "shots": [
+    {
+     "text": "En 1959, Festinger y Carlsmith pagaron a personas para decir que una tarea aburrida era divertida.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 380
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 700,
+        "y": 600,
+        "size": 140,
+        "state": "closed",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Festinger · 1959",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "A unos les dieron un dólar. A otros, veinte.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 1,
+        "prefix": "$",
+        "x": 360,
+        "y": 600,
+        "size": 130,
+        "seconds": 0.4
+       },
+       {
+        "from": 0,
+        "to": 20,
+        "prefix": "$",
+        "x": 720,
+        "y": 600,
+        "size": 130,
+        "seconds": 0.6,
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y los del dólar terminaron diciendo que la tarea les había gustado más.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 220,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "$1",
+        "y": 560,
+        "size": 44,
+        "x": 420,
+        "family": "sans"
+       },
+       {
+        "content": "$20",
+        "y": 560,
+        "size": 44,
+        "x": 660,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La idea: sin una buena excusa, cambias tu opinión para sentirte coherente.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Disonancia",
+      "lines": [
+       "Cambias de opinión",
+       "para ser coherente"
+      ],
+      "emphasis": [
+       "coherente"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "Se volvió uno de los pilares de la psicología social.",
+   "shots": [
+    {
+     "text": "Se volvió uno de los pilares de la psicología social.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "enter": "draw",
+        "state": "glow"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "reveal",
+   "narration": "Pero en 2024, decenas de laboratorios en varios países intentaron repetirlo… y no encontraron el cambio de opinión esperado. La teoría sigue en debate. Lo que se tambalea es su prueba más famosa.",
+   "shots": [
+    {
+     "text": "Pero en 2024, decenas de laboratorios en varios países intentaron repetirlo…",
+     "visual": {
+      "extras": [
+       {
+        "pose": "think",
+        "x": 200,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 330,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 460,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 620,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 750,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 880,
+        "scale": 0.65,
+        "opacity": 0.55,
+        "facing": 1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "y no encontraron el cambio de opinión esperado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "normal",
+        "enter": "draw",
+        "mark": "cross",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "No se repitió",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "No"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La teoría sigue en debate. Lo que se tambalea es su prueba más famosa.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 540,
+        "y": 620,
+        "size": 170,
+        "state": "dim",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Sigue en debate",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "demonstration",
+   "narration": "Eso no significa que nunca te justifiques. Significa que la ciencia corrige sus propias historias.",
+   "shots": [
+    {
+     "text": "Eso no significa que nunca te justifiques. Significa que la ciencia corrige sus propias historias.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 780,
+        "y": 580,
+        "size": 130,
+        "state": "open",
+        "enter": "pop",
+        "delay": 0.6,
+        "accent": "reward"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando te descubras defendiendo algo solo porque ya lo hiciste, pregúntate: ¿lo elegiría otra vez hoy, sabiendo lo que sé?",
+   "shots": [
+    {
+     "text": "Así que, cuando te descubras defendiendo algo solo porque ya lo hiciste,",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 540,
+       "path": "fork"
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "pregúntate: ¿lo elegiría otra vez hoy, sabiendo lo que sé?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "¿Lo elegiría otra vez?",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Ser coherente no es nunca cambiar. Es estar dispuesto a revisar.",
+   "shots": [
+    {
+     "text": "Ser coherente no es nunca cambiar. Es estar dispuesto a revisar.",
+     "visual": {
+      "type": "closer",
+      "line": "Ser coherente no es nunca cambiar. Es estar dispuesto a revisar.",
+      "emphasis": [
+       "revisar"
+      ],
+      "source": "Festinger y Carlsmith, 1959 · Vaidis et al., 2024"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué «verdad» de la psicología te gustaría que pusiéramos a prueba? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué «verdad» de la psicología te gustaría que pusiéramos a prueba?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Justificas decisiones solo porque ya las tomaste? 🤔 El experimento más famoso sobre esto acaba de fallar en una gran réplica.",
+  "hashtags": [
+   "#psicologia",
+   "#mitos",
+   "#decisiones",
+   "#ciencia",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

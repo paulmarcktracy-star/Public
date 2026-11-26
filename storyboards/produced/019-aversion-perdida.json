@@ -1,0 +1,683 @@
+{
+ "id": "019-aversion-perdida",
+ "title": "La aversión a la pérdida: por qué perder duele más que ganar",
+ "pillar": 4,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. Econometrica, 47(2), 263–291.",
+   "doi": "10.2307/1914185",
+   "supports": "Teoría prospectiva: resultados evaluados como ganancias o pérdidas desde un punto de referencia; las pérdidas pesan más."
+  },
+  {
+   "citation": "Brown, A. L., Imai, T., Vieider, F. M., & Camerer, C. F. (2024). Meta-analysis of empirical estimates of loss aversion. Journal of Economic Literature, 62(2), 485–516.",
+   "doi": "10.1257/jel.20221698",
+   "supports": "607 estimaciones de 150 artículos; coeficiente medio ≈ 1,96 (casi el doble); varía según el diseño y el contexto."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Perder cien dólares duele más de lo que te alegra ganar cien.",
+   "shots": [
+    {
+     "text": "Perder cien dólares duele más de lo que te alegra ganar cien.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 230,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "balance",
+        "x": 560,
+        "y": 760,
+        "size": 260,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.35
+        }
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 100,
+        "prefix": "−$",
+        "x": 420,
+        "y": 560,
+        "size": 96,
+        "seconds": 0.6,
+        "accent": "red"
+       },
+       {
+        "from": 0,
+        "to": 100,
+        "prefix": "+$",
+        "x": 700,
+        "y": 560,
+        "size": 96,
+        "seconds": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Perder pesa más",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Perder"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué perder nos pesa tanto?",
+   "shots": [
+    {
+     "text": "¿Por qué perder nos pesa tanto?",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 460,
+       "path": "fall"
+      },
+      "props": [
+       {
+        "kind": "coins",
+        "x": 700,
+        "y": 520,
+        "size": 130,
+        "enter": "drop"
+       },
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 360,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Por qué pesa tanto?",
+        "y": 330,
+        "size": 58,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1979, los psicólogos Daniel Kahneman y Amos Tversky propusieron una idea: no vemos el dinero en sí, sino si ganamos o perdemos. Y perder pesa más que ganar.",
+   "shots": [
+    {
+     "text": "En 1979, los psicólogos Daniel Kahneman y Amos Tversky propusieron una idea:",
+     "visual": {
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "state": "glow",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Kahneman y Tversky · 1979",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "no vemos el dinero en sí, sino si ganamos o perdemos.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat",
+       "pathFrom": 120,
+       "pathTo": 960
+      },
+      "texts": [
+       {
+        "content": "← pérdidas",
+        "y": 700,
+        "size": 40,
+        "x": 300,
+        "family": "sans",
+        "accent": "red"
+       },
+       {
+        "content": "ganancias →",
+        "y": 700,
+        "size": 40,
+        "x": 780,
+        "family": "sans"
+       },
+       {
+        "content": "¿Gano o pierdo?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.05,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y perder pesa más que ganar.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 280,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.25
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "−",
+        "y": 520,
+        "size": 90,
+        "x": 420,
+        "family": "sans",
+        "accent": "red"
+       },
+       {
+        "content": "+",
+        "y": 520,
+        "size": 90,
+        "x": 660,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Por eso, mucha gente dice que no a una apuesta con una moneda donde podría ganar 120 o perder 100, aunque, en promedio, le convenga.",
+   "shots": [
+    {
+     "text": "Por eso, mucha gente dice que no a una apuesta con una moneda",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 330,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "coins",
+        "x": 660,
+        "y": 640,
+        "size": 150,
+        "state": "spin",
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.75
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "donde podría ganar 120 o perder 100,",
+     "visual": {
+      "props": [
+       {
+        "kind": "coins",
+        "x": 540,
+        "y": 700,
+        "size": 120,
+        "state": "spin",
+        "enter": "none"
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 120,
+        "prefix": "+$",
+        "x": 720,
+        "y": 540,
+        "size": 104,
+        "seconds": 0.8
+       },
+       {
+        "from": 0,
+        "to": 100,
+        "prefix": "−$",
+        "x": 360,
+        "y": 540,
+        "size": 104,
+        "seconds": 0.8,
+        "accent": "red"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "aunque, en promedio, le convenga.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 10,
+        "prefix": "+$",
+        "x": 540,
+        "y": 600,
+        "size": 140,
+        "seconds": 0.7
+       }
+      ],
+      "texts": [
+       {
+        "content": "en promedio, por lanzamiento",
+        "y": 740,
+        "size": 40,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "¿Pero cuánto más pesa una pérdida, exactamente?",
+   "shots": [
+    {
+     "text": "¿Pero cuánto más pesa una pérdida, exactamente?",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 260,
+        "state": "down",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.12,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "En 2024, un metaanálisis reunió más de 600 estimaciones de 150 artículos científicos. En promedio, perder algo pesa casi el doble que ganar lo mismo. Ojo, es un promedio: cambia según la persona y la situación.",
+   "shots": [
+    {
+     "text": "En 2024, un metaanálisis reunió más de 600 estimaciones de 150 artículos científicos.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 607,
+        "x": 360,
+        "y": 600,
+        "size": 120,
+        "seconds": 1.4
+       },
+       {
+        "from": 0,
+        "to": 150,
+        "x": 740,
+        "y": 600,
+        "size": 120,
+        "seconds": 1.4,
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "estimaciones",
+        "y": 720,
+        "size": 36,
+        "x": 360,
+        "family": "sans"
+       },
+       {
+        "content": "artículos",
+        "y": 720,
+        "size": 36,
+        "x": 740,
+        "family": "sans"
+       },
+       {
+        "content": "Metaanálisis · 2024",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En promedio, perder algo pesa casi el doble que ganar lo mismo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 780,
+        "size": 260,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.2
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "casi ×2",
+        "y": 520,
+        "size": 110,
+        "emphasis": [
+         "×2"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Ojo, es un promedio: cambia según la persona y la situación.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 260,
+        "y": 700,
+        "size": 130,
+        "state": "normal"
+       },
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 700,
+        "size": 130,
+        "state": "down",
+        "delay": 0.2
+       },
+       {
+        "kind": "balance",
+        "x": 820,
+        "y": 700,
+        "size": 130,
+        "state": "up",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "Varía según la persona",
+        "y": 330,
+        "size": 48,
+        "family": "sans",
+        "emphasis": [
+         "persona"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "La próxima vez que una decisión te dé miedo, hazte una pregunta más. No solo «¿qué pierdo si lo hago?», sino también «¿qué pierdo si no lo hago?»",
+   "shots": [
+    {
+     "text": "La próxima vez que una decisión te dé miedo, hazte una pregunta más.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 360,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 360,
+        "y": 560,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "No solo «¿qué pierdo si lo hago?»,",
+     "visual": {
+      "texts": [
+       {
+        "content": "¿Qué pierdo si lo hago?",
+        "y": 600,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 820,
+        "size": 150,
+        "state": "down"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "sino también «¿qué pierdo si no lo hago?»",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 560,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "¿Qué pierdo si NO lo hago?",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "NO"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Muchas veces no eliges lo mejor. Eliges lo que menos se siente como perder.",
+   "shots": [
+    {
+     "text": "Muchas veces no eliges lo mejor. Eliges lo que menos se siente como perder.",
+     "visual": {
+      "type": "closer",
+      "line": "No eliges lo mejor. Eliges lo que menos se siente como perder.",
+      "emphasis": [
+       "perder"
+      ],
+      "source": "Kahneman y Tversky, 1979 · Brown et al., 2024"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué decisión estás evitando por miedo a perder? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué decisión estás evitando por miedo a perder?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 700,
+        "y": 520,
+        "size": 140,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 62,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Por qué perder 100 duele más que ganar 100? 🧠 Un metaanálisis con más de 600 estimaciones tiene la respuesta, y una pregunta que cambia cómo decides.",
+  "hashtags": [
+   "#psicologia",
+   "#dinero",
+   "#decisiones",
+   "#economiaconductual",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ },
+ "cameraStyle": "classic"
+}

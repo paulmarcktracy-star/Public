@@ -1,0 +1,636 @@
+{
+ "id": "003-paradoja-eleccion",
+ "title": "La paradoja de la elección: ¿demasiadas opciones te paralizan?",
+ "pillar": 4,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Iyengar, S. S., & Lepper, M. R. (2000). When choice is demotivating: Can one desire too much of a good thing? Journal of Personality and Social Psychology, 79(6), 995–1006.",
+   "doi": "10.1037/0022-3514.79.6.995",
+   "supports": "Mesa de 24 mermeladas frente a 6: la grande atrae más, pero en la pequeña compra mucha más gente (≈30 % frente a ≈3 %)."
+  },
+  {
+   "citation": "Scheibehenne, B., Greifeneder, R., & Todd, P. M. (2010). Can there ever be too many options? A meta-analytic review of choice overload. Journal of Consumer Research, 37(3), 409–425.",
+   "doi": "10.1086/651235",
+   "supports": "Metaanálisis de 50 experimentos: efecto medio de sobrecarga prácticamente nulo."
+  },
+  {
+   "citation": "Chernev, A., Böckenholt, U., & Goodman, J. (2015). Choice overload: A conceptual review and meta-analysis. Journal of Consumer Psychology, 25(2), 333–358.",
+   "doi": "10.1016/j.jcps.2014.08.002",
+   "supports": "La sobrecarga aparece bajo condiciones: opciones difíciles de comparar, preferencias poco claras, tarea compleja."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Tener 100 opciones puede hacer que elegir sea más difícil que tener solo 5.",
+   "shots": [
+    {
+     "text": "Tener 100 opciones puede hacer que elegir sea más difícil que tener solo 5.",
+     "visual": {
+      "spotlight": {
+       "x": 400,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 400,
+       "path": "fork"
+      },
+      "counters": [
+       {
+        "from": 100,
+        "to": 5,
+        "x": 720,
+        "y": 560,
+        "size": 130,
+        "seconds": 1.6,
+        "delay": 1.0,
+        "suffix": " opciones"
+       }
+      ],
+      "texts": [
+       {
+        "content": "100 opciones",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "100"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué a veces elegir entre muchas cosas te bloquea… y otras veces no?",
+   "shots": [
+    {
+     "text": "¿Por qué a veces elegir entre muchas cosas te bloquea… y otras veces no?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Siempre te bloquea?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En el año 2000, en un supermercado, una mesa ofrecía 24 mermeladas y otra, solo 6. La mesa grande atraía a más gente. Pero en la pequeña compraban muchas más personas: cerca del 30 % frente al 3 %. Así nació la famosa paradoja de la elección.",
+   "shots": [
+    {
+     "text": "En el año 2000, en un supermercado, una mesa ofrecía 24 mermeladas y otra, solo 6.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 300,
+        "y": 640,
+        "size": 90,
+        "enter": "pop"
+       },
+       {
+        "kind": "jar",
+        "x": 380,
+        "y": 640,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.1
+       },
+       {
+        "kind": "jar",
+        "x": 460,
+        "y": 640,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.2
+       },
+       {
+        "kind": "jar",
+        "x": 740,
+        "y": 640,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 24,
+        "x": 380,
+        "y": 800,
+        "size": 90,
+        "seconds": 0.8
+       },
+       {
+        "from": 0,
+        "to": 6,
+        "x": 740,
+        "y": 800,
+        "size": 90,
+        "seconds": 0.5,
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La mesa grande atraía a más gente.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 400,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 500,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "jar",
+        "x": 350,
+        "y": 520,
+        "size": 90,
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "24: más curiosos",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pero en la pequeña compraban muchas más personas: cerca del 30 % frente al 3 %.",
+     "visual": {
+      "props": [
+       {
+        "kind": "cart",
+        "x": 720,
+        "y": 520,
+        "size": 130,
+        "enter": "pop"
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 30,
+        "suffix": "%",
+        "x": 720,
+        "y": 720,
+        "size": 120,
+        "seconds": 1.0
+       },
+       {
+        "from": 0,
+        "to": 3,
+        "suffix": "%",
+        "x": 360,
+        "y": 720,
+        "size": 120,
+        "seconds": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "24",
+        "y": 840,
+        "size": 36,
+        "x": 360,
+        "family": "sans"
+       },
+       {
+        "content": "6",
+        "y": 840,
+        "size": 36,
+        "x": 720,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Así nació la famosa paradoja de la elección.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Así nació",
+      "lines": [
+       "La paradoja",
+       "de la elección"
+      ],
+      "emphasis": [
+       "elección"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "Pero cuando otros científicos repitieron estos experimentos…",
+   "shots": [
+    {
+     "text": "Pero cuando otros científicos repitieron estos experimentos…",
+     "visual": {
+      "extras": [
+       {
+        "pose": "think",
+        "x": 220,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 380,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 540,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 700,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 860,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "reveal",
+   "narration": "un metaanálisis de 50 experimentos encontró que, en promedio, el efecto era casi cero. Elegir entre muchas opciones sí te puede bloquear, pero en casos concretos: cuando las opciones son difíciles de comparar y cuando no sabes bien qué quieres.",
+   "shots": [
+    {
+     "text": "un metaanálisis de 50 experimentos encontró que, en promedio, el efecto era casi cero.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 760,
+        "size": 240,
+        "state": "down",
+        "enter": "none",
+        "to": {
+         "state": "normal",
+         "at": 0.35
+        }
+       }
+      ],
+      "counters": [
+       {
+        "from": 50,
+        "to": 0,
+        "x": 540,
+        "y": 520,
+        "size": 130,
+        "seconds": 1.4,
+        "delay": 0.8
+       }
+      ],
+      "texts": [
+       {
+        "content": "Efecto promedio ≈ 0",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Elegir entre muchas opciones sí te puede bloquear, pero en casos concretos:",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 760,
+        "y": 480,
+        "size": 100,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "cuando las opciones son difíciles de comparar y cuando no sabes bien qué quieres.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 380,
+        "y": 640,
+        "size": 130,
+        "enter": "pop",
+        "mark": "question",
+        "markAt": 0.4
+       },
+       {
+        "kind": "jar",
+        "x": 700,
+        "y": 640,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3,
+        "mark": "question",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Difícil de comparar · no sé qué quiero",
+        "y": 330,
+        "size": 40,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "action",
+   "narration": "Así que no necesitas menos opciones. Necesitas un criterio. Antes de elegir, escribe las dos cosas que más te importan y descarta todo lo que no las cumpla.",
+   "shots": [
+    {
+     "text": "Así que no necesitas menos opciones. Necesitas un criterio.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "Necesitas un criterio",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "criterio"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Antes de elegir, escribe las dos cosas que más te importan",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 360,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 700,
+        "y": 600,
+        "size": 150,
+        "state": "closed",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "y descarta todo lo que no las cumpla.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 780,
+        "y": 580,
+        "size": 150,
+        "state": "open",
+        "enter": "draw",
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Dos criterios. Lo demás, fuera.",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "closer",
+   "narration": "El problema casi nunca es el menú. Es no saber de qué tienes hambre.",
+   "shots": [
+    {
+     "text": "El problema casi nunca es el menú. Es no saber de qué tienes hambre.",
+     "visual": {
+      "type": "closer",
+      "line": "El problema no es el menú. Es no saber de qué tienes hambre.",
+      "emphasis": [
+       "hambre"
+      ],
+      "source": "Scheibehenne et al., 2010 · Chernev et al., 2015"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "cta",
+   "narration": "¿Dónde te bloquean más las opciones: comida, ropa, series o tu carrera? Cuéntame.",
+   "shots": [
+    {
+     "text": "¿Dónde te bloquean más las opciones: comida, ropa, series o tu carrera?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Demasiadas opciones te paralizan? 🛒 El famoso experimento de las mermeladas no cuenta toda la historia. Mira lo que encontró la ciencia después.",
+  "hashtags": [
+   "#psicologia",
+   "#decisiones",
+   "#consumo",
+   "#mitos",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

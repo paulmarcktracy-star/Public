@@ -1,0 +1,617 @@
+{
+ "id": "013-prueba-social",
+ "title": "La prueba social: por qué seguimos a la mayoría",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Asch, S. E. (1956). Studies of independence and conformity: I. A minority of one against a unanimous majority. Psychological Monographs, 70(9), 1–70.",
+   "doi": "10.1037/h0093718",
+   "supports": "La mayoría cedió al menos una vez; cerca de uno de cada cuatro nunca cedió; un solo aliado reducía mucho la conformidad."
+  },
+  {
+   "citation": "Bond, R., & Smith, P. B. (1996). Culture and conformity: A meta-analysis of studies using Asch's line judgment task. Psychological Bulletin, 119(1), 111–137.",
+   "doi": "10.1037/0033-2909.119.1.111",
+   "supports": "Metaanálisis: la conformidad varía según la cultura y la época."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Puedes ver la respuesta correcta con tus propios ojos… y aun así decir la incorrecta.",
+   "shots": [
+    {
+     "text": "Puedes ver la respuesta correcta con tus propios ojos…",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 460,
+        "size": 150,
+        "state": "normal",
+        "enter": "none"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "y aun así decir la incorrecta.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 200,
+        "scale": 0.8,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "point",
+        "x": 320,
+        "scale": 0.8,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "point",
+        "x": 760,
+        "scale": 0.8,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "point",
+        "x": 880,
+        "scale": 0.8,
+        "opacity": 0.55,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué seguimos a la mayoría, incluso cuando se equivoca?",
+   "shots": [
+    {
+     "text": "¿Por qué seguimos a la mayoría, incluso cuando se equivoca?",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 500,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 620,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "walk",
+        "x": 740,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "walk",
+        "x": 860,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Por qué la seguimos?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En los años cincuenta, Solomon Asch mostró a unos grupos tres líneas. Había que decir cuál medía lo mismo que otra. Era obvio. Pero los demás del grupo eran actores, y a veces daban la respuesta equivocada a propósito.",
+   "shots": [
+    {
+     "text": "En los años cincuenta, Solomon Asch mostró a unos grupos tres líneas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Solomon Asch · años 50",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Había que decir cuál medía lo mismo que otra. Era obvio.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "enter": "none",
+        "mark": "check",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Era obvio",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "obvio"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pero los demás del grupo eran actores, y a veces daban la respuesta equivocada a propósito.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 200,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "point",
+        "x": 320,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "point",
+        "x": 760,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "point",
+        "x": 880,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "La mayoría de los participantes cedió al menos una vez.",
+   "shots": [
+    {
+     "text": "La mayoría de los participantes cedió al menos una vez.",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 320,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 760,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Cedieron",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Cedieron"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero hay un detalle que casi nadie cuenta.",
+   "shots": [
+    {
+     "text": "Pero hay un detalle que casi nadie cuenta.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 440,
+        "size": 100,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Más o menos una de cada cuatro personas nunca cedió. Y cuando había un solo aliado que decía la verdad, la presión del grupo caía muchísimo.",
+   "shots": [
+    {
+     "text": "Más o menos una de cada cuatro personas nunca cedió.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.8,
+        "opacity": 1
+       },
+       {
+        "pose": "slump",
+        "x": 450,
+        "scale": 0.8,
+        "opacity": 0.35
+       },
+       {
+        "pose": "slump",
+        "x": 600,
+        "scale": 0.8,
+        "opacity": 0.35
+       },
+       {
+        "pose": "slump",
+        "x": 750,
+        "scale": 0.8,
+        "opacity": 0.35
+       }
+      ],
+      "texts": [
+       {
+        "content": "1 de cada 4",
+        "y": 330,
+        "size": 80,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y cuando había un solo aliado que decía la verdad,",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 460
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 640,
+        "facing": -1,
+        "opacity": 1
+       },
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.8,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 860,
+        "scale": 0.8,
+        "opacity": 0.4,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 640,
+        "y": 460,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.3,
+        "accent": "reward"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "la presión del grupo caía muchísimo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "normal",
+        "enter": "pop",
+        "to": {
+         "state": "down",
+         "at": 0.25
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Un aliado lo cambia todo",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "aliado"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "No necesitas ser valiente contra todos. Solo necesitas una voz. Sé esa voz para alguien.",
+   "shots": [
+    {
+     "text": "No necesitas ser valiente contra todos. Solo necesitas una voz.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "Solo una voz",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "una voz"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Sé esa voz para alguien.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 500,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "slump",
+        "x": 720,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "La mayoría no siempre tiene razón. A veces solo tiene volumen.",
+   "shots": [
+    {
+     "text": "La mayoría no siempre tiene razón. A veces solo tiene volumen.",
+     "visual": {
+      "type": "closer",
+      "line": "La mayoría no siempre tiene razón. A veces solo tiene volumen.",
+      "emphasis": [
+       "volumen"
+      ],
+      "source": "Asch, 1956 · Bond y Smith, 1996"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Alguna vez dijiste que sí solo porque todos decían que sí? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Alguna vez dijiste que sí solo porque todos decían que sí?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Puedes ver la respuesta correcta y aun así decir la incorrecta 👥 El experimento de Asch tiene un detalle que casi nadie cuenta.",
+  "hashtags": [
+   "#psicologia",
+   "#presionsocial",
+   "#comportamiento",
+   "#ciencia",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

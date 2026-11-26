@@ -1,0 +1,643 @@
+{
+ "id": "001-pensar-demasiado",
+ "title": "Pensar demasiado: por qué darle vueltas puede impedirte actuar",
+ "pillar": 1,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Wilson, T. D., & Schooler, J. W. (1991). Thinking too much: Introspection can reduce the quality of preferences and decisions. Journal of Personality and Social Psychology, 60(2), 181–192.",
+   "doi": "10.1037/0022-3514.60.2.181",
+   "supports": "Quienes analizaron por escrito sus razones sobre mermeladas terminaron con preferencias más alejadas de las de los expertos."
+  },
+  {
+   "citation": "Watkins, E. R. (2008). Constructive and unconstructive repetitive thought. Psychological Bulletin, 134(2), 163–206.",
+   "doi": "10.1037/0033-2909.134.2.163",
+   "supports": "El pensamiento repetitivo abstracto (el porqué) es poco constructivo; el concreto (el cómo) ayuda a resolver."
+  },
+  {
+   "citation": "Lyubomirsky, S., & Nolen-Hoeksema, S. (1995). Effects of self-focused rumination on negative thinking and interpersonal problem solving. Journal of Personality and Social Psychology, 69(1), 176–190.",
+   "doi": "10.1037/0022-3514.69.1.176",
+   "supports": "La rumiación empeora la resolución de problemas."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Cuanto más piensas en una decisión, más difícil puede volverse elegir.",
+   "shots": [
+    {
+     "text": "Cuanto más piensas en una decisión, más difícil puede volverse elegir.",
+     "visual": {
+      "spotlight": {
+       "x": 420,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 420,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 560,
+        "y": 430,
+        "size": 110,
+        "enter": "none"
+       },
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 360,
+        "size": 70,
+        "enter": "pop",
+        "delay": 0.8
+       },
+       {
+        "kind": "question",
+        "x": 610,
+        "y": 300,
+        "size": 55,
+        "enter": "pop",
+        "delay": 1.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "Pensar más, elegir peor",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "peor"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Cómo puede ser que darle más vueltas te aleje de la respuesta?",
+   "shots": [
+    {
+     "text": "¿Cómo puede ser que darle más vueltas te aleje de la respuesta?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "clock",
+        "x": 760,
+        "y": 520,
+        "size": 110,
+        "state": "spin",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Más vueltas, menos respuesta?",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En un experimento clásico, unas personas probaron mermeladas y dijeron cuál preferían. A otras se les pidió, además, escribir por qué. Y las que analizaron sus razones terminaron eligiendo peor, según los expertos.",
+   "shots": [
+    {
+     "text": "En un experimento clásico, unas personas probaron mermeladas y dijeron cuál preferían.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 300
+      },
+      "props": [
+       {
+        "kind": "jar",
+        "x": 560,
+        "y": 640,
+        "size": 120,
+        "enter": "pop"
+       },
+       {
+        "kind": "jar",
+        "x": 700,
+        "y": 640,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.2
+       },
+       {
+        "kind": "jar",
+        "x": 840,
+        "y": 640,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "A otras se les pidió, además, escribir por qué.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 320
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 620,
+        "y": 640,
+        "size": 170,
+        "state": "open",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Por qué?",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "¿Por qué?"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y las que analizaron sus razones terminaron eligiendo peor, según los expertos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 240,
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Analizar",
+        "y": 540,
+        "size": 38,
+        "x": 400,
+        "family": "sans"
+       },
+       {
+        "content": "Expertos",
+        "y": 540,
+        "size": 38,
+        "x": 680,
+        "family": "sans"
+       },
+       {
+        "content": "Eligieron peor",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "peor"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Al buscar razones fáciles de explicar, le das peso a detalles que no son los importantes.",
+   "shots": [
+    {
+     "text": "Al buscar razones fáciles de explicar,",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 360
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 680,
+        "y": 620,
+        "size": 140,
+        "state": "open",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "le das peso a detalles que no son los importantes.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 540,
+        "y": 660,
+        "size": 170,
+        "enter": "pop"
+       },
+       {
+        "kind": "lightbulb",
+        "x": 780,
+        "y": 480,
+        "size": 90,
+        "state": "dim",
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Detalles que no importan",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Y cuando el pensamiento se vuelve un círculo, ¿y si sale mal?, ¿y si me equivoco?, ya no estás resolviendo nada. Estás rumiando.",
+   "shots": [
+    {
+     "text": "Y cuando el pensamiento se vuelve un círculo, ¿y si sale mal?, ¿y si me equivoco?,",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 400,
+        "y": 470,
+        "size": 70,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 410,
+        "size": 70,
+        "enter": "pop",
+        "delay": 0.4
+       },
+       {
+        "kind": "question",
+        "x": 680,
+        "y": 470,
+        "size": 70,
+        "enter": "pop",
+        "delay": 0.8
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "ya no estás resolviendo nada. Estás rumiando.",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "clock",
+        "x": 540,
+        "y": 470,
+        "size": 120,
+        "state": "spin",
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Rumiar",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Rumiar"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Pero la ciencia encontró algo que lo cambia todo: el problema no es pensar. Es pensar en abstracto, en el porqué. Pensar en concreto, en el cómo, sí te ayuda a resolver.",
+   "shots": [
+    {
+     "text": "Pero la ciencia encontró algo que lo cambia todo:",
+     "visual": {
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "glow",
+        "enter": "draw"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "el problema no es pensar. Es pensar en abstracto, en el porqué.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 380,
+       "path": "none"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 640,
+        "y": 480,
+        "size": 110,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "El porqué te atrapa",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "porqué"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pensar en concreto, en el cómo, sí te ayuda a resolver.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 560,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 790,
+        "y": 580,
+        "size": 140,
+        "state": "open",
+        "enter": "pop",
+        "delay": 0.4,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "El cómo te mueve",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "cómo"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando notes el bucle, cambia la pregunta. En vez de «¿por qué me pasa esto?», pregúntate: «¿cuál es el siguiente paso que puedo dar hoy?»",
+   "shots": [
+    {
+     "text": "Así que, cuando notes el bucle, cambia la pregunta.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 90,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En vez de «¿por qué me pasa esto?»,",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 430,
+        "size": 90,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "pregúntate: «¿cuál es el siguiente paso que puedo dar hoy?»",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 280,
+       "toX": 520,
+       "path": "rise"
+      },
+      "texts": [
+       {
+        "content": "¿Cuál es el siguiente paso?",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "siguiente paso"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Pensar es una herramienta. Pero el mapa no camina por ti.",
+   "shots": [
+    {
+     "text": "Pensar es una herramienta. Pero el mapa no camina por ti.",
+     "visual": {
+      "type": "closer",
+      "line": "El mapa no camina por ti.",
+      "emphasis": [
+       "camina"
+      ],
+      "source": "Wilson y Schooler, 1991 · Watkins, 2008"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Sobre qué decisión llevas demasiado tiempo pensando? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Sobre qué decisión llevas demasiado tiempo pensando?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Pensar más no siempre te hace decidir mejor 🧠 La ciencia descubrió qué tipo de pensamiento te atrapa… y cuál te saca del bucle.",
+  "hashtags": [
+   "#psicologia",
+   "#sobrepensar",
+   "#decisiones",
+   "#mente",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ },
+ "cameraStyle": "classic"
+}

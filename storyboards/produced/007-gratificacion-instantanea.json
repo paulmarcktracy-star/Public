@@ -1,0 +1,660 @@
+{
+ "id": "007-gratificacion-instantanea",
+ "title": "La gratificación instantánea: lo que el test del dulce no te contó",
+ "pillar": 2,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Watts, T. W., Duncan, G. J., & Quan, H. (2018). Revisiting the marshmallow test: A conceptual replication investigating links between early delay of gratification and later outcomes. Psychological Science, 29(7), 1159–1177.",
+   "doi": "10.1177/0956797618761661",
+   "supports": "Muestra mayor y diversa: al controlar el entorno familiar y habilidades tempranas, la relación con logros posteriores se reduce mucho."
+  },
+  {
+   "citation": "Kidd, C., Palmeri, H., & Aslin, R. N. (2013). Rational snacking: Young children's decision-making on the marshmallow task is moderated by beliefs about environmental reliability. Cognition, 126(1), 109–114.",
+   "doi": "10.1016/j.cognition.2012.08.004",
+   "supports": "Los niños esperaron mucho más cuando el adulto había cumplido antes una promesa."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Un niño que espera por un dulce no necesariamente tendrá más éxito en la vida.",
+   "shots": [
+    {
+     "text": "Un niño que espera por un dulce",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 420,
+       "scale": 0.7,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "donut",
+        "x": 640,
+        "y": 900,
+        "size": 90,
+        "enter": "none"
+       },
+       {
+        "kind": "clock",
+        "x": 640,
+        "y": 640,
+        "size": 100,
+        "state": "spin",
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Esperar por un dulce",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "dulce"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "no necesariamente tendrá más éxito en la vida.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 420,
+       "toX": 600,
+       "scale": 0.7,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "mountain",
+        "x": 820,
+        "y": 560,
+        "size": 140,
+        "enter": "pop",
+        "mark": "question",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Más éxito? No necesariamente",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Esperar es cuestión de fuerza de voluntad… o de algo más?",
+   "shots": [
+    {
+     "text": "¿Esperar es cuestión de fuerza de voluntad… o de algo más?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "scale": 0.7,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "dumbbell",
+        "x": 380,
+        "y": 560,
+        "size": 100,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 720,
+        "y": 520,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "Walter Mischel les ofreció a unos niños un dulce ahora, o dos si esperaban. Años después, los que esperaron parecían tener mejores resultados en la escuela. Y nació una idea: el autocontrol lo decide todo.",
+   "shots": [
+    {
+     "text": "Walter Mischel les ofreció a unos niños un dulce ahora, o dos si esperaban.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 360,
+       "scale": 0.7
+      },
+      "props": [
+       {
+        "kind": "donut",
+        "x": 620,
+        "y": 860,
+        "size": 80,
+        "enter": "pop"
+       },
+       {
+        "kind": "donut",
+        "x": 760,
+        "y": 860,
+        "size": 80,
+        "enter": "pop",
+        "delay": 1.2
+       },
+       {
+        "kind": "clock",
+        "x": 690,
+        "y": 620,
+        "size": 100,
+        "state": "spin",
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Años después, los que esperaron parecían tener mejores resultados en la escuela.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 560,
+       "scale": 0.85,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 800,
+        "y": 560,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y nació una idea: el autocontrol lo decide todo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "dumbbell",
+        "x": 540,
+        "y": 600,
+        "size": 170,
+        "enter": "draw",
+        "state": "glow"
+       }
+      ],
+      "texts": [
+       {
+        "content": "El autocontrol lo decide todo",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "Pero en 2018, un estudio más grande repitió la prueba.",
+   "shots": [
+    {
+     "text": "Pero en 2018, un estudio más grande repitió la prueba.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 330,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 460,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 620,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 750,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.55,
+        "opacity": 0.6,
+        "facing": 1
+       }
+      ],
+      "counters": [
+       {
+        "from": 1960,
+        "to": 2018,
+        "x": 540,
+        "y": 520,
+        "size": 110,
+        "seconds": 1.2
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "reveal",
+   "narration": "Al contar el entorno familiar, esa relación se hizo mucho más pequeña. Y otro experimento mostró algo todavía más revelador: los niños esperaban mucho más cuando el adulto, antes, había cumplido una promesa.",
+   "shots": [
+    {
+     "text": "Al contar el entorno familiar, esa relación se hizo mucho más pequeña.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "up",
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.4
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Mucho más pequeña",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "pequeña"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y otro experimento mostró algo todavía más revelador:",
+     "visual": {
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 600,
+        "size": 170,
+        "state": "glow",
+        "enter": "draw"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "los niños esperaban mucho más cuando el adulto, antes, había cumplido una promesa.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 360,
+       "scale": 0.7
+      },
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 640,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 500,
+        "y": 480,
+        "size": 110,
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Promesa cumplida",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "cumplida"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "mechanism",
+   "narration": "Esperar no es solo voluntad. Es confianza. Si el futuro no suele cumplir, agarrar lo de ahora tiene lógica.",
+   "shots": [
+    {
+     "text": "Esperar no es solo voluntad. Es confianza.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "No es solo voluntad",
+      "lines": [
+       "Es",
+       "confianza"
+      ],
+      "emphasis": [
+       "confianza"
+      ]
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Si el futuro no suele cumplir, agarrar lo de ahora tiene lógica.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 420,
+       "scale": 0.7,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "donut",
+        "x": 620,
+        "y": 880,
+        "size": 80,
+        "enter": "pop"
+       },
+       {
+        "kind": "bubble",
+        "x": 760,
+        "y": 520,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.5,
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Si te cuesta esperar, construye confianza contigo: hazte promesas pequeñas y cúmplelas. Cinco minutos cumplidos valen más que un plan perfecto abandonado.",
+   "shots": [
+    {
+     "text": "Si te cuesta esperar, construye confianza contigo: hazte promesas pequeñas y cúmplelas.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 780,
+        "y": 580,
+        "size": 140,
+        "state": "open",
+        "enter": "draw",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cinco minutos cumplidos valen más que un plan perfecto abandonado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 380,
+        "y": 640,
+        "size": 150,
+        "state": "open",
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.4
+       },
+       {
+        "kind": "book",
+        "x": 720,
+        "y": 640,
+        "size": 150,
+        "state": "dim",
+        "enter": "pop",
+        "delay": 0.4,
+        "mark": "cross",
+        "markAt": 0.7
+       }
+      ],
+      "texts": [
+       {
+        "content": "5 minutos cumplidos",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "No eres impaciente. Quizás solo aprendiste que el futuro no siempre llega.",
+   "shots": [
+    {
+     "text": "No eres impaciente. Quizás solo aprendiste que el futuro no siempre llega.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 560,
+       "scale": 0.85,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "donut",
+        "x": 800,
+        "y": 860,
+        "size": 90,
+        "enter": "pop",
+        "delay": 1.0,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "El futuro sí puede llegar",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "llegar"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "De niño, ¿te habrías comido el dulce o habrías esperado? Te leo en los comentarios.",
+   "shots": [
+    {
+     "text": "De niño, ¿te habrías comido el dulce o habrías esperado?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "scale": 0.7,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "donut",
+        "x": 720,
+        "y": 880,
+        "size": 80,
+        "enter": "pop"
+       },
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 520,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Te leo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Te leo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Esperar por un dulce predice tu éxito? 🍩 El famoso test se repitió con más niños… y la respuesta no es la que te contaron.",
+  "hashtags": [
+   "#psicologia",
+   "#autocontrol",
+   "#mitos",
+   "#crianza",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

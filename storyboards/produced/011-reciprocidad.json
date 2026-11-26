@@ -1,0 +1,613 @@
+{
+ "id": "011-reciprocidad",
+ "title": "La reciprocidad: por qué un favor pequeño te hace decir que sí",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Gouldner, A. W. (1960). The norm of reciprocity: A preliminary statement. American Sociological Review, 25(2), 161–178.",
+   "doi": "10.2307/2092623",
+   "supports": "La reciprocidad como norma presente en muchas culturas."
+  },
+  {
+   "citation": "Regan, D. T. (1971). Effects of a favor and liking on compliance. Journal of Experimental Social Psychology, 7(6), 627–639.",
+   "doi": "10.1016/0022-1031(71)90025-4",
+   "supports": "Tras recibir una gaseosa, los participantes compraron más boletos; con favor de por medio, el agrado casi no cambiaba la compra."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "¿Alguna vez aceptaste algo solo porque alguien te había hecho un favor?",
+   "shots": [
+    {
+     "text": "¿Alguna vez aceptaste algo solo porque alguien te había hecho un favor?",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "reach",
+       "x": 400,
+       "path": "flat",
+       "pathTo": 760
+      },
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 480,
+        "size": 100,
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Solo por un favor",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "favor"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué sentimos que hay que devolver un favor, aunque no lo hayamos pedido?",
+   "shots": [
+    {
+     "text": "¿Por qué sentimos que hay que devolver un favor, aunque no lo hayamos pedido?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 700,
+        "facing": -1,
+        "opacity": 0.8
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "El sociólogo Alvin Gouldner lo describió como una regla que aparece en muchas culturas: si alguien te da algo, le debes algo.",
+   "shots": [
+    {
+     "text": "El sociólogo Alvin Gouldner lo describió como una regla que aparece en muchas culturas:",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 220,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 380,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 540,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 700,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 860,
+        "scale": 0.72,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "si alguien te da algo, le debes algo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 230,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Te dan → debes",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "debes"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "En 1971, en un experimento, un desconocido le regalaba una gaseosa a un participante. Después le pedía que le comprara boletos para una rifa. Y quienes habían recibido la gaseosa compraron más boletos.",
+   "shots": [
+    {
+     "text": "En 1971, en un experimento, un desconocido le regalaba una gaseosa a un participante.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "phone",
+        "x": 540,
+        "y": 560,
+        "size": 60,
+        "enter": "pop",
+        "to": {
+         "x": 450,
+         "y": 560,
+         "at": 0.5
+        }
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Después le pedía que le comprara boletos para una rifa.",
+     "visual": {
+      "props": [
+       {
+        "kind": "tag",
+        "x": 540,
+        "y": 620,
+        "size": 160,
+        "label": "RIFA",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y quienes habían recibido la gaseosa compraron más boletos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "tag",
+        "x": 380,
+        "y": 640,
+        "size": 110,
+        "label": "RIFA",
+        "enter": "none"
+       },
+       {
+        "kind": "chart",
+        "x": 700,
+        "y": 600,
+        "size": 150,
+        "state": "up",
+        "enter": "draw",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Parece lógico: les caía bien. Pero no.",
+   "shots": [
+    {
+     "text": "Parece lógico: les caía bien. Pero no.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 440,
+        "size": 100,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Con el favor de por medio, que esa persona les cayera bien o mal casi no cambiaba lo que compraban. La deuda pesaba más que la simpatía.",
+   "shots": [
+    {
+     "text": "Con el favor de por medio, que esa persona les cayera bien o mal",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 700,
+        "facing": -1,
+        "opacity": 0.8
+       }
+      ],
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 550,
+        "y": 460,
+        "size": 110,
+        "state": "spin",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "casi no cambiaba lo que compraban.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 380,
+        "y": 560,
+        "size": 130,
+        "state": "spin",
+        "enter": "pop"
+       },
+       {
+        "kind": "tag",
+        "x": 720,
+        "y": 600,
+        "size": 120,
+        "label": "RIFA",
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "El agrado casi no importaba",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "La deuda pesaba más que la simpatía.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 250,
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.25
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Deuda",
+        "y": 540,
+        "size": 40,
+        "x": 420,
+        "family": "sans",
+        "accent": "reward"
+       },
+       {
+        "content": "Simpatía",
+        "y": 540,
+        "size": 40,
+        "x": 660,
+        "family": "sans"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando recibas algo «gratis» seguido de una petición, haz una pausa. Pregúntate: ¿lo haría si no me hubieran dado nada? Y úsala para bien: da primero, sin esperar nada.",
+   "shots": [
+    {
+     "text": "Así que, cuando recibas algo «gratis» seguido de una petición, haz una pausa.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "tag",
+        "x": 700,
+        "y": 560,
+        "size": 130,
+        "label": "GRATIS",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pregúntate: ¿lo haría si no me hubieran dado nada?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "¿Lo haría igual?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y úsala para bien: da primero, sin esperar nada.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 480,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 760,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "La reciprocidad construyó la confianza entre humanos. Asegúrate de usarla tú… y de que no te usen a ti.",
+   "shots": [
+    {
+     "text": "La reciprocidad construyó la confianza entre humanos.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 440,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 640,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 780,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": -1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Asegúrate de usarla tú… y de que no te usen a ti.",
+     "visual": {
+      "type": "closer",
+      "line": "Úsala tú. Que no te usen a ti.",
+      "emphasis": [
+       "tú"
+      ],
+      "source": "Gouldner, 1960 · Regan, 1971"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Cuál es el favor más pequeño que te hizo sentir en deuda? Cuéntame en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Cuál es el favor más pequeño que te hizo sentir en deuda?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Un favor pequeño puede hacerte decir que sí a algo que no querías 🎁 Y no es porque te caiga bien.",
+  "hashtags": [
+   "#psicologia",
+   "#persuasion",
+   "#relaciones",
+   "#ventas",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

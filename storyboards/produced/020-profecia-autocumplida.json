@@ -1,0 +1,527 @@
+{
+ "id": "020-profecia-autocumplida",
+ "title": "La profecía autocumplida: lo que esperas de alguien puede cambiarlo",
+ "pillar": 5,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Rosenthal, R., & Jacobson, L. (1968). Pygmalion in the classroom. The Urban Review, 3(1), 16–20.",
+   "doi": "10.1007/BF02322211",
+   "supports": "Profesores informados de que ciertos alumnos (elegidos al azar) «florecerían»: algunos mejoraron más."
+  },
+  {
+   "citation": "Jussim, L., & Harber, K. D. (2005). Teacher expectations and self-fulfilling prophecies: Knowns and unknowns, resolved and unresolved controversies. Personality and Social Psychology Review, 9(2), 131–155.",
+   "doi": "10.1207/s15327957pspr0902_3",
+   "supports": "Revisión: las expectativas influyen, pero el efecto suele ser pequeño; muchas expectativas son acertadas."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "La forma en que tratas a alguien puede terminar cambiando en quién se convierte.",
+   "shots": [
+    {
+     "text": "La forma en que tratas a alguien puede terminar cambiando en quién se convierte.",
+     "visual": {
+      "spotlight": {
+       "x": 640,
+       "snap": true
+      },
+      "figure": {
+       "pose": "point",
+       "x": 400,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 640,
+        "toX": 720,
+        "facing": 1,
+        "scale": 0.8,
+        "opacity": 0.9
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿De verdad creer en alguien lo vuelve mejor?",
+   "shots": [
+    {
+     "text": "¿De verdad creer en alguien lo vuelve mejor?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "scale": 0.8,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1968, a unos profesores les dijeron que ciertos alumnos iban a florecer este año. En realidad, los habían elegido al azar. Meses después, algunos de esos alumnos mejoraron más que el resto. Se hizo famoso como el efecto Pigmalión.",
+   "shots": [
+    {
+     "text": "En 1968, a unos profesores les dijeron que ciertos alumnos iban a florecer este año.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 360
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 580,
+        "scale": 0.65,
+        "opacity": 0.7,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 700,
+        "scale": 0.65,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 820,
+        "scale": 0.65,
+        "opacity": 0.7,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 700,
+        "y": 420,
+        "size": 80,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "En realidad, los habían elegido al azar.",
+     "visual": {
+      "props": [
+       {
+        "kind": "dice",
+        "x": 540,
+        "y": 620,
+        "size": 150,
+        "state": "spin",
+        "enter": "pop",
+        "label": "3"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Al azar",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "azar"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Meses después, algunos de esos alumnos mejoraron más que el resto.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 380,
+        "toX": 560,
+        "scale": 0.7,
+        "opacity": 1,
+        "path": "rise"
+       },
+       {
+        "pose": "stand",
+        "x": 760,
+        "scale": 0.65,
+        "opacity": 0.4,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.65,
+        "opacity": 0.4,
+        "facing": 1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Se hizo famoso como el efecto Pigmalión.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "El efecto",
+      "lines": [
+       "Pigmalión"
+      ],
+      "emphasis": [
+       "Pigmalión"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "Y la historia se contó como si fuera magia: cree en alguien y lo transformarás.",
+   "shots": [
+    {
+     "text": "Y la historia se contó como si fuera magia: cree en alguien y lo transformarás.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "scale": 0.8
+       }
+      ],
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 420,
+        "size": 120,
+        "state": "glow",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "reveal",
+   "narration": "Pero una revisión de décadas de estudios encontró que sí influye… aunque el efecto suele ser pequeño. Y muchas veces, lo que espera el profesor acierta porque se basa en información real.",
+   "shots": [
+    {
+     "text": "Pero una revisión de décadas de estudios encontró que sí influye…",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "up",
+        "enter": "draw",
+        "mark": "check",
+        "markAt": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "aunque el efecto suele ser pequeño.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "up",
+        "enter": "none",
+        "to": {
+         "state": "normal",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Pequeño",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Pequeño"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y muchas veces, lo que espera el profesor acierta porque se basa en información real.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 700,
+        "y": 600,
+        "size": 130,
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "demonstration",
+   "narration": "Cuando funciona, no es magia. Es el trato: más atención, más oportunidades, más respuestas.",
+   "shots": [
+    {
+     "text": "Cuando funciona, no es magia. Es el trato: más atención, más oportunidades, más respuestas.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 360
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 560,
+        "toX": 720,
+        "scale": 0.8,
+        "opacity": 1,
+        "path": "rise"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 460,
+        "y": 460,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.3
+       },
+       {
+        "kind": "checklist",
+        "x": 860,
+        "y": 520,
+        "size": 100,
+        "state": "open",
+        "enter": "pop",
+        "delay": 0.9,
+        "accent": "reward"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Si esperas algo de alguien, dale las condiciones para lograrlo. Y contigo igual: no basta con creer. Diseña tu entorno.",
+   "shots": [
+    {
+     "text": "Si esperas algo de alguien, dale las condiciones para lograrlo.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 380
+      },
+      "extras": [
+       {
+        "pose": "walk",
+        "x": 600,
+        "toX": 760,
+        "scale": 0.85,
+        "path": "flat"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y contigo igual: no basta con creer. Diseña tu entorno.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "door",
+        "x": 780,
+        "y": 600,
+        "size": 150,
+        "state": "open",
+        "enter": "draw"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Creer en alguien no es magia. Es darle oportunidades.",
+   "shots": [
+    {
+     "text": "Creer en alguien no es magia. Es darle oportunidades.",
+     "visual": {
+      "type": "closer",
+      "line": "Creer en alguien no es magia. Es darle oportunidades.",
+      "emphasis": [
+       "oportunidades"
+      ],
+      "source": "Rosenthal y Jacobson, 1968 · Jussim y Harber, 2005"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Alguien creyó en ti cuando tú no lo hacías? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Alguien creyó en ti cuando tú no lo hacías?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Lo que esperas de alguien puede cambiar en quién se convierte 🌱 Pero no funciona como en el mito: funciona a través del trato.",
+  "hashtags": [
+   "#psicologia",
+   "#educacion",
+   "#crecimientopersonal",
+   "#liderazgo",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

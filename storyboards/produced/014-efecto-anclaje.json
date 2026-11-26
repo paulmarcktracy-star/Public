@@ -1,0 +1,663 @@
+{
+ "id": "014-efecto-anclaje",
+ "title": "El efecto anclaje: el primer número que ves cambia tu decisión",
+ "pillar": 4,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Tversky, A., & Kahneman, D. (1974). Judgment under uncertainty: Heuristics and biases. Science, 185(4157), 1124–1131.",
+   "doi": "10.1126/science.185.4157.1124",
+   "supports": "Experimento de la ruleta (10 o 65) y estimación del porcentaje de países africanos en la ONU: el número al azar arrastra la respuesta."
+  },
+  {
+   "citation": "Klein, R. A., et al. (2014). Investigating variation in replicability: A \"Many Labs\" replication project. Social Psychology, 45(3), 142–152.",
+   "doi": "10.1027/1864-9335/a000178",
+   "supports": "El efecto anclaje se replicó con fuerza en laboratorios de varios países."
+  },
+  {
+   "citation": "Englich, B., Mussweiler, T., & Strack, F. (2006). Playing dice with criminal sentences: The influence of irrelevant anchors on experts' judicial decision making. Personality and Social Psychology Bulletin, 32(2), 188–200.",
+   "doi": "10.1177/0146167205282152",
+   "supports": "Jueces con experiencia: la condena propuesta en un caso ficticio se vio influida por el número de unos dados (cargados) que ellos mismos lanzaron."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "El primer precio que ves puede cambiar cuánto estás dispuesto a pagar.",
+   "shots": [
+    {
+     "text": "El primer precio que ves puede cambiar cuánto estás dispuesto a pagar.",
+     "visual": {
+      "spotlight": {
+       "x": 600,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 300,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "tag",
+        "x": 620,
+        "y": 560,
+        "size": 220,
+        "label": "$200",
+        "enter": "none"
+       },
+       {
+        "kind": "tag",
+        "x": 700,
+        "y": 800,
+        "size": 130,
+        "label": "$80",
+        "enter": "pop",
+        "delay": 1.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "El primer precio manda",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "primer"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿De verdad un número cualquiera puede mover tus decisiones?",
+   "shots": [
+    {
+     "text": "¿De verdad un número cualquiera puede mover tus decisiones?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 400,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 680,
+        "y": 520,
+        "size": 110,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Un número cualquiera?",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1974, Tversky y Kahneman giraron una ruleta arreglada. Solo podía caer en 10 o en 65. Después preguntaban qué porcentaje de países africanos estaba en la ONU. Quienes vieron el 65 respondían números mucho más altos. A eso se le llama efecto anclaje.",
+   "shots": [
+    {
+     "text": "En 1974, Tversky y Kahneman giraron una ruleta arreglada.",
+     "visual": {
+      "props": [
+       {
+        "kind": "wheel",
+        "x": 540,
+        "y": 620,
+        "size": 230,
+        "state": "spin",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Tversky y Kahneman · 1974",
+        "y": 330,
+        "size": 44,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Solo podía caer en 10 o en 65.",
+     "visual": {
+      "props": [
+       {
+        "kind": "wheel",
+        "x": 540,
+        "y": 600,
+        "size": 180,
+        "enter": "none"
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 10,
+        "x": 330,
+        "y": 860,
+        "size": 110,
+        "seconds": 0.5
+       },
+       {
+        "from": 0,
+        "to": 65,
+        "x": 750,
+        "y": 860,
+        "size": 110,
+        "seconds": 0.7,
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Después preguntaban qué porcentaje de países africanos estaba en la ONU.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 480,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Qué % de países africanos está en la ONU?",
+        "y": 330,
+        "size": 44,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Quienes vieron el 65 respondían números mucho más altos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 200,
+        "state": "up",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Vieron 65 → respondieron más",
+        "y": 330,
+        "size": 48,
+        "family": "sans",
+        "emphasis": [
+         "más"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "A eso se le llama efecto anclaje.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Se llama",
+      "lines": [
+       "Efecto",
+       "anclaje"
+      ],
+      "emphasis": [
+       "anclaje"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Y no fue casualidad: un gran proyecto con laboratorios de varios países lo volvió a encontrar.",
+   "shots": [
+    {
+     "text": "Y no fue casualidad: un gran proyecto con laboratorios de varios países lo volvió a encontrar.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "think",
+        "x": 220,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 380,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 540,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       },
+       {
+        "pose": "think",
+        "x": 700,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": 1
+       },
+       {
+        "pose": "think",
+        "x": 860,
+        "scale": 0.7,
+        "opacity": 0.55,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 480,
+        "size": 130,
+        "state": "up",
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Se repitió en varios países",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero eso le pasa a cualquiera… ¿o los expertos se salvan?",
+   "shots": [
+    {
+     "text": "Pero eso le pasa a cualquiera… ¿o los expertos se salvan?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "balance",
+        "x": 760,
+        "y": 560,
+        "size": 140,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Y los expertos?",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "expertos"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "En un estudio, jueces con experiencia leyeron un caso ficticio y antes lanzaron unos dados. Los dados estaban cargados. Y aun así, la condena que proponían se movía según el número que salía.",
+   "shots": [
+    {
+     "text": "En un estudio, jueces con experiencia leyeron un caso ficticio y antes lanzaron unos dados.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 360
+      },
+      "props": [
+       {
+        "kind": "dice",
+        "x": 640,
+        "y": 720,
+        "size": 120,
+        "state": "spin",
+        "enter": "pop",
+        "label": "9"
+       },
+       {
+        "kind": "balance",
+        "x": 820,
+        "y": 520,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "Jueces con experiencia",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Los dados estaban cargados.",
+     "visual": {
+      "props": [
+       {
+        "kind": "dice",
+        "x": 440,
+        "y": 640,
+        "size": 150,
+        "enter": "pop",
+        "label": "3"
+       },
+       {
+        "kind": "dice",
+        "x": 640,
+        "y": 640,
+        "size": 150,
+        "enter": "pop",
+        "delay": 0.3,
+        "label": "9"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Cargados",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Cargados"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y aun así, la condena que proponían se movía según el número que salía.",
+     "visual": {
+      "props": [
+       {
+        "kind": "dice",
+        "x": 360,
+        "y": 560,
+        "size": 110,
+        "enter": "none",
+        "label": "9"
+       },
+       {
+        "kind": "balance",
+        "x": 640,
+        "y": 700,
+        "size": 240,
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "El dado movió la condena",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "dado"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, antes de negociar un precio o un sueldo, escribe tu número primero. Y si puedes, sé tú quien dice la primera cifra.",
+   "shots": [
+    {
+     "text": "Así que, antes de negociar un precio o un sueldo, escribe tu número primero.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 360,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "tag",
+        "x": 720,
+        "y": 600,
+        "size": 170,
+        "label": "TU $",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Tu número, primero",
+        "y": 330,
+        "size": 54,
+        "family": "sans",
+        "emphasis": [
+         "primero"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y si puedes, sé tú quien dice la primera cifra.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 360
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 720,
+        "facing": -1,
+        "opacity": 0.8
+       }
+      ],
+      "props": [
+       {
+        "kind": "tag",
+        "x": 540,
+        "y": 500,
+        "size": 140,
+        "label": "$",
+        "enter": "pop",
+        "delay": 0.3,
+        "accent": "reward"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Tu mente nunca empieza desde cero. Empieza desde el primer número que alguien le pone enfrente.",
+   "shots": [
+    {
+     "text": "Tu mente nunca empieza desde cero. Empieza desde el primer número que alguien le pone enfrente.",
+     "visual": {
+      "type": "closer",
+      "line": "Tu mente nunca empieza desde cero.",
+      "emphasis": [
+       "cero"
+      ],
+      "source": "Tversky y Kahneman, 1974 · Englich et al., 2006"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Te ha pasado con un precio de «antes» tachado? Cuéntame en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Te ha pasado con un precio de «antes» tachado?",
+     "visual": {
+      "props": [
+       {
+        "kind": "tag",
+        "x": 540,
+        "y": 600,
+        "size": 180,
+        "label": "$̶9̶9̶",
+        "enter": "pop"
+       },
+       {
+        "kind": "bubble",
+        "x": 760,
+        "y": 460,
+        "size": 110,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "El primer precio que ves cambia lo que estás dispuesto a pagar 💸 Hasta a jueces expertos les pasa. Mira cómo protegerte la próxima vez que negocies.",
+  "hashtags": [
+   "#psicologia",
+   "#dinero",
+   "#negociacion",
+   "#sesgos",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

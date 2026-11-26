@@ -1,0 +1,566 @@
+{
+ "id": "017-falsos-recuerdos",
+ "title": "Los falsos recuerdos: tu memoria puede engañarte",
+ "pillar": 1,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Loftus, E. F., & Palmer, J. C. (1974). Reconstruction of automobile destruction: An example of the interaction between language and memory. Journal of Verbal Learning and Verbal Behavior, 13(5), 585–589.",
+   "doi": "10.1016/S0022-5371(74)80011-3",
+   "supports": "«Estrellaron» frente a «golpearon»: más velocidad estimada y más recuerdos de vidrios rotos inexistentes."
+  },
+  {
+   "citation": "Scoboria, A., Wade, K. A., Lindsay, D. S., et al. (2017). A mega-analysis of memory reports from eight peer-reviewed false memory implantation studies. Memory, 25(2), 146–163.",
+   "doi": "10.1080/09658211.2016.1260747",
+   "supports": "Ocho estudios, más de 400 participantes: alrededor del 30 % formó un recuerdo falso."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Puedes recordar con detalle algo que nunca te pasó.",
+   "shots": [
+    {
+     "text": "Puedes recordar con detalle algo que nunca te pasó.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 420,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 640,
+        "y": 440,
+        "size": 150,
+        "enter": "none",
+        "state": "glow"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Algo que nunca pasó",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "nunca"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Cómo puede engañarte tu memoria, si la sientes tan real?",
+   "shots": [
+    {
+     "text": "¿Cómo puede engañarte tu memoria, si la sientes tan real?",
+     "visual": {
+      "props": [
+       {
+        "kind": "brain",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "glow",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 400,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1974, Elizabeth Loftus le mostró a unas personas el video de un choque. Después preguntó a qué velocidad iban los autos cuando se «estrellaron»… o cuando se «golpearon». Con la palabra más fuerte, calcularon más velocidad.",
+   "shots": [
+    {
+     "text": "En 1974, Elizabeth Loftus le mostró a unas personas el video de un choque.",
+     "visual": {
+      "props": [
+       {
+        "kind": "phone",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Elizabeth Loftus · 1974",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Después preguntó a qué velocidad iban los autos cuando se «estrellaron»… o cuando se «golpearon».",
+     "visual": {
+      "texts": [
+       {
+        "content": "«Se estrellaron»",
+        "y": 560,
+        "size": 52,
+        "x": 540,
+        "family": "sans"
+       },
+       {
+        "content": "«Se golpearon»",
+        "y": 700,
+        "size": 44,
+        "x": 540,
+        "family": "sans",
+        "delay": 1.2
+       }
+      ],
+      "props": [
+       {
+        "kind": "clock",
+        "x": 540,
+        "y": 860,
+        "size": 90,
+        "state": "spin",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Con la palabra más fuerte, calcularon más velocidad.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "normal",
+        "enter": "pop",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Y una semana después, más personas recordaban vidrios rotos que nunca aparecieron. Recordar no es reproducir un video. Es reconstruir la escena cada vez.",
+   "shots": [
+    {
+     "text": "Y una semana después, más personas recordaban vidrios rotos que nunca aparecieron.",
+     "visual": {
+      "props": [
+       {
+        "kind": "phone",
+        "x": 540,
+        "y": 620,
+        "size": 160,
+        "enter": "pop",
+        "mark": "question",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Vidrios que no existían",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Recordar no es reproducir un video. Es reconstruir la escena cada vez.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "state": "open",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Reconstruimos",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Reconstruimos"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero, ¿se puede crear un recuerdo completo desde cero?",
+   "shots": [
+    {
+     "text": "Pero, ¿se puede crear un recuerdo completo desde cero?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Una revisión de ocho estudios juntó a más de cuatrocientas personas. A todas les sugirieron un recuerdo falso de su infancia. Y alrededor del 30 % terminó formando un recuerdo falso.",
+   "shots": [
+    {
+     "text": "Una revisión de ocho estudios juntó a más de cuatrocientas personas.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 330,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 460,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 620,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 750,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 880,
+        "scale": 0.6,
+        "opacity": 0.6,
+        "facing": 1
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 400,
+        "prefix": "+",
+        "x": 540,
+        "y": 460,
+        "size": 110,
+        "seconds": 1.2
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "A todas les sugirieron un recuerdo falso de su infancia.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 420,
+       "scale": 0.8
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 640,
+        "y": 460,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y alrededor del 30 % terminó formando un recuerdo falso.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 30,
+        "suffix": "%",
+        "x": 540,
+        "y": 580,
+        "size": 160,
+        "seconds": 1.0,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "formó un recuerdo falso",
+        "y": 740,
+        "size": 44,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando discutas sobre cómo pasó algo, recuerda: estar seguro no prueba que tengas razón. Si importa, busca registros: mensajes, fotos, notas.",
+   "shots": [
+    {
+     "text": "Así que, cuando discutas sobre cómo pasó algo, recuerda: estar seguro no prueba que tengas razón.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 440,
+        "size": 100,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Si importa, busca registros: mensajes, fotos, notas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "phone",
+        "x": 380,
+        "y": 620,
+        "size": 120,
+        "enter": "pop"
+       },
+       {
+        "kind": "book",
+        "x": 700,
+        "y": 620,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.4,
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Tu memoria no es un archivo. Es una historia que vuelves a contar… y a veces, a escribir.",
+   "shots": [
+    {
+     "text": "Tu memoria no es un archivo. Es una historia que vuelves a contar…",
+     "visual": {
+      "type": "closer",
+      "line": "Tu memoria no es un archivo. Es una historia que vuelves a contar.",
+      "emphasis": [
+       "historia"
+      ],
+      "source": "Loftus y Palmer, 1974 · Scoboria et al., 2017"
+     },
+     "sfx": "shimmer"
+    },
+    {
+     "text": "y a veces, a escribir.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 540,
+        "y": 620,
+        "size": 180,
+        "state": "open",
+        "enter": "draw",
+        "accent": "reward"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Alguna vez descubriste que un recuerdo tuyo no era como creías? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Alguna vez descubriste que un recuerdo tuyo no era como creías?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Puedes recordar con detalle algo que nunca te pasó 🧠 Casi un tercio de las personas lo hizo en estos estudios.",
+  "hashtags": [
+   "#psicologia",
+   "#memoria",
+   "#cerebro",
+   "#ciencia",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

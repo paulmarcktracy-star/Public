@@ -1,0 +1,550 @@
+{
+ "id": "010-efecto-halo",
+ "title": "El efecto halo: cómo una primera impresión lo cambia todo",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Willis, J., & Todorov, A. (2006). First impressions: Making up your mind after a 100-ms exposure to a face. Psychological Science, 17(7), 592–598.",
+   "doi": "10.1111/j.1467-9280.2006.01750.x",
+   "supports": "Una décima de segundo basta para formarse una impresión de una cara."
+  },
+  {
+   "citation": "Thorndike, E. L. (1920). A constant error in psychological ratings. Journal of Applied Psychology, 4(1), 25–29.",
+   "doi": "10.1037/h0071663",
+   "supports": "Calificaciones de oficiales sospechosamente uniformes: el efecto halo."
+  },
+  {
+   "citation": "Langlois, J. H., et al. (2000). Maxims or myths of beauty? A meta-analytic and theoretical review. Psychological Bulletin, 126(3), 390–423.",
+   "doi": "10.1037/0033-2909.126.3.390",
+   "supports": "Metaanálisis: a las personas atractivas se les atribuyen otras cualidades positivas."
+  },
+  {
+   "citation": "Nisbett, R. E., & Wilson, T. D. (1977). The halo effect: Evidence for unconscious alteration of judgments. Journal of Personality and Social Psychology, 35(4), 250–256.",
+   "doi": "10.1037/0022-3514.35.4.250",
+   "supports": "Profesor cálido vs frío: cambia la evaluación de apariencia, gestos y acento; los estudiantes negaron la influencia e incluso la invirtieron."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Te basta una décima de segundo para juzgar a alguien. Y ese juicio contamina todo lo demás.",
+   "shots": [
+    {
+     "text": "Te basta una décima de segundo para juzgar a alguien.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat"
+      },
+      "counters": [
+       {
+        "from": 0,
+        "to": 100,
+        "suffix": " ms",
+        "x": 540,
+        "y": 460,
+        "size": 90,
+        "seconds": 0.5
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Y ese juicio contamina todo lo demás.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 420,
+        "size": 110,
+        "state": "glow",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Contamina todo",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "todo"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué, si alguien nos cae bien, también nos parece más inteligente?",
+   "shots": [
+    {
+     "text": "¿Por qué, si alguien nos cae bien, también nos parece más inteligente?",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "brain",
+        "x": 760,
+        "y": 480,
+        "size": 100,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.5
+       },
+       {
+        "kind": "question",
+        "x": 340,
+        "y": 480,
+        "size": 70,
+        "enter": "pop",
+        "delay": 0.9
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1920, Edward Thorndike notó algo raro en cómo unos oficiales calificaban a sus soldados. Si uno parecía bueno en algo, lo calificaban bien en todo. Lo llamó efecto halo.",
+   "shots": [
+    {
+     "text": "En 1920, Edward Thorndike notó algo raro en cómo unos oficiales calificaban a sus soldados.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 240,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 390,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 540,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 690,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 840,
+        "scale": 0.7,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Thorndike · 1920",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Si uno parecía bueno en algo, lo calificaban bien en todo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "up",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Bueno en algo = bueno en todo",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Lo llamó efecto halo.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Lo llamó",
+      "lines": [
+       "Efecto",
+       "halo"
+      ],
+      "emphasis": [
+       "halo"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Y un metaanálisis encontró que a las personas atractivas también se les atribuyen otras virtudes.",
+   "shots": [
+    {
+     "text": "Y un metaanálisis encontró que a las personas atractivas también se les atribuyen otras virtudes.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 380,
+        "y": 480,
+        "size": 80,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.4
+       },
+       {
+        "kind": "book",
+        "x": 700,
+        "y": 480,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.8
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero lo más inquietante no es el sesgo.",
+   "shots": [
+    {
+     "text": "Pero lo más inquietante no es el sesgo.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "En 1977, unos estudiantes vieron a un profesor ser amable o frío. Con el profesor amable, hasta su acento les pareció más agradable. Y lo más fuerte: negaron que la simpatía hubiera influido. Creían que había sido al revés.",
+   "shots": [
+    {
+     "text": "En 1977, unos estudiantes vieron a un profesor ser amable o frío.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 380
+      },
+      "extras": [
+       {
+        "pose": "point",
+        "x": 720,
+        "facing": -1,
+        "opacity": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Amable",
+        "y": 560,
+        "size": 40,
+        "x": 380,
+        "family": "sans"
+       },
+       {
+        "content": "Frío",
+        "y": 560,
+        "size": 40,
+        "x": 720,
+        "family": "sans",
+        "accent": "red"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Con el profesor amable, hasta su acento les pareció más agradable.",
+     "visual": {
+      "figure": {
+       "pose": "point",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 480,
+        "size": 110,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y lo más fuerte: negaron que la simpatía hubiera influido. Creían que había sido al revés.",
+     "visual": {
+      "props": [
+       {
+        "kind": "balance",
+        "x": 540,
+        "y": 720,
+        "size": 230,
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 1.0,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "No lo notaron",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "No"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, antes de juzgar algo importante, como una entrevista o una cita, evalúa cada cualidad por separado, como si fueran personas distintas.",
+   "shots": [
+    {
+     "text": "Así que, antes de juzgar algo importante, como una entrevista o una cita,",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 720,
+        "facing": -1,
+        "opacity": 0.8
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "evalúa cada cualidad por separado, como si fueran personas distintas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 540,
+        "y": 640,
+        "size": 180,
+        "state": "open",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Una cualidad a la vez",
+        "y": 330,
+        "size": 50,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "La primera impresión no es una foto. Es un filtro.",
+   "shots": [
+    {
+     "text": "La primera impresión no es una foto. Es un filtro.",
+     "visual": {
+      "type": "closer",
+      "line": "La primera impresión no es una foto. Es un filtro.",
+      "emphasis": [
+       "filtro"
+      ],
+      "source": "Thorndike, 1920 · Nisbett y Wilson, 1977"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Alguna vez tu primera impresión de alguien estuvo totalmente equivocada? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Alguna vez tu primera impresión de alguien estuvo totalmente equivocada?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Te basta una décima de segundo para juzgar a alguien 👀 Y lo más inquietante es que no te das cuenta de cuánto te influye.",
+  "hashtags": [
+   "#psicologia",
+   "#primeraimpresion",
+   "#sesgos",
+   "#relaciones",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

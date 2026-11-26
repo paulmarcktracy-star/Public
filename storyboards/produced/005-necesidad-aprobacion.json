@@ -1,0 +1,771 @@
+{
+ "id": "005-necesidad-aprobacion",
+ "title": "La necesidad de aprobación: tu autoestima es un medidor, no una nota",
+ "pillar": 3,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Baumeister, R. F., & Leary, M. R. (1995). The need to belong: Desire for interpersonal attachments as a fundamental human motivation. Psychological Bulletin, 117(3), 497–529.",
+   "doi": "10.1037/0033-2909.117.3.497",
+   "supports": "Pertenecer es una necesidad humana fundamental."
+  },
+  {
+   "citation": "Leary, M. R., Tambor, E. S., Terdal, S. K., & Downs, D. L. (1995). Self-esteem as an interpersonal monitor: The sociometer hypothesis. Journal of Personality and Social Psychology, 68(3), 518–530.",
+   "doi": "10.1037/0022-3514.68.3.518",
+   "supports": "Teoría del sociómetro: la autoestima funciona como un indicador de aceptación social; la exclusión la reduce."
+  },
+  {
+   "citation": "Boothby, E. J., Cooney, G., Sandstrom, G. M., & Clark, M. S. (2018). The liking gap in conversations: Do people like us more than we think? Psychological Science, 29(11), 1742–1756.",
+   "doi": "10.1177/0956797618783714",
+   "supports": "Tras conversar, la gente subestima cuánto agradó (el medidor exagera)."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Necesitar la aprobación de los demás no es debilidad. Es un sistema de alarma.",
+   "shots": [
+    {
+     "text": "Necesitar la aprobación de los demás no es debilidad.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "spin",
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "No es debilidad",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "debilidad"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Es un sistema de alarma.",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 600,
+        "size": 220,
+        "state": "normal",
+        "enter": "none",
+        "to": {
+         "state": "down",
+         "at": 0.2
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Es una alarma",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "alarma"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "Entonces, ¿por qué un comentario pequeño puede arruinarte el día entero?",
+   "shots": [
+    {
+     "text": "Entonces, ¿por qué un comentario pequeño puede arruinarte el día entero?",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 460,
+       "path": "fall"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 520,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "Un comentario pequeño…",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "Los psicólogos Roy Baumeister y Mark Leary propusieron que pertenecer es una necesidad humana básica. Durante casi toda nuestra historia, quedarse solo era peligroso.",
+   "shots": [
+    {
+     "text": "Los psicólogos Roy Baumeister y Mark Leary propusieron que pertenecer es una necesidad humana básica.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 420,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 660,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 780,
+        "scale": 0.8,
+        "opacity": 0.6,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Pertenecer es una necesidad",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "necesidad"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Durante casi toda nuestra historia, quedarse solo era peligroso.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 520,
+       "toX": 820,
+       "path": "fade"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 180,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 420,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": -1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Solo = peligro",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "peligro"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "En sus experimentos, Leary vio algo muy claro: cuando alguien se sentía excluido, su autoestima bajaba.",
+   "shots": [
+    {
+     "text": "En sus experimentos, Leary vio algo muy claro:",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 260,
+        "scale": 0.8,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 820,
+        "scale": 0.8,
+        "opacity": 0.5,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 460,
+        "size": 110,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "cuando alguien se sentía excluido, su autoestima bajaba.",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 760
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 200,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 320,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 440,
+        "scale": 0.75,
+        "opacity": 0.5,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 760,
+        "y": 520,
+        "size": 140,
+        "state": "normal",
+        "enter": "pop",
+        "to": {
+         "state": "down",
+         "at": 0.55
+        }
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Eso cambia la pregunta: ¿qué está midiendo de verdad tu autoestima?",
+   "shots": [
+    {
+     "text": "Eso cambia la pregunta: ¿qué está midiendo de verdad tu autoestima?",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 640,
+        "size": 240,
+        "state": "spin",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.12,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "Según la teoría del sociómetro, tu autoestima no mide cuánto vales. Mide cuánto sientes que te aceptan. Y ese medidor suele exagerar. Después de conversar, la gente cree que cayó peor de lo que realmente cayó.",
+   "shots": [
+    {
+     "text": "Según la teoría del sociómetro, tu autoestima no mide cuánto vales.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 640,
+        "size": 220,
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "No mide cuánto vales",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "No"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Mide cuánto sientes que te aceptan.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.85,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 780,
+        "scale": 0.85,
+        "opacity": 0.7,
+        "facing": -1
+       }
+      ],
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 460,
+        "size": 150,
+        "state": "normal",
+        "enter": "none",
+        "to": {
+         "state": "up",
+         "at": 0.3
+        }
+       }
+      ],
+      "texts": [
+       {
+        "content": "Mide aceptación",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "aceptación"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y ese medidor suele exagerar.",
+     "visual": {
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 540,
+        "y": 640,
+        "size": 220,
+        "state": "spin",
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "El medidor exagera",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "exagera"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Después de conversar, la gente cree que cayó peor de lo que realmente cayó.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 680,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 400,
+        "y": 500,
+        "size": 110,
+        "state": "down",
+        "enter": "pop"
+       },
+       {
+        "kind": "gauge",
+        "x": 680,
+        "y": 500,
+        "size": 110,
+        "state": "up",
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Creíste",
+        "y": 380,
+        "size": 38,
+        "x": 400,
+        "family": "sans"
+       },
+       {
+        "content": "Sintió",
+        "y": 380,
+        "size": 38,
+        "x": 680,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando sientas que necesitas aprobación, pregúntate: ¿la opinión de quién me importa de verdad? Haz una lista corta. Lo demás es ruido.",
+   "shots": [
+    {
+     "text": "Así que, cuando sientas que necesitas aprobación, pregúntate: ¿la opinión de quién me importa de verdad?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 720,
+        "y": 600,
+        "size": 170,
+        "state": "closed",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Quién me importa de verdad?",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Haz una lista corta. Lo demás es ruido.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 540,
+        "y": 640,
+        "size": 200,
+        "state": "open",
+        "enter": "none"
+       }
+      ],
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 180,
+        "scale": 0.7,
+        "opacity": 0.25,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 900,
+        "scale": 0.7,
+        "opacity": 0.25,
+        "facing": 1
+       }
+      ],
+      "texts": [
+       {
+        "content": "Lo demás es ruido",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "ruido"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "No se trata de dejar de necesitar a los demás. Se trata de elegir a quién le das el control del medidor.",
+   "shots": [
+    {
+     "text": "No se trata de dejar de necesitar a los demás.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "flat"
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 360,
+        "scale": 0.9,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 720,
+        "scale": 0.9,
+        "opacity": 0.7,
+        "facing": -1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Se trata de elegir a quién le das el control del medidor.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 460
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 700,
+        "facing": -1,
+        "opacity": 0.9
+       }
+      ],
+      "props": [
+       {
+        "kind": "gauge",
+        "x": 580,
+        "y": 480,
+        "size": 150,
+        "state": "normal",
+        "enter": "pop",
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Tú eliges quién",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Tú"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿La opinión de quién te importa más de lo que quisieras? Te leo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿La opinión de quién te importa más de lo que quisieras?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Te leo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Te leo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Necesitar aprobación no es debilidad: es una alarma 🧠 La ciencia dice que tu autoestima no mide cuánto vales… mide otra cosa.",
+  "hashtags": [
+   "#psicologia",
+   "#autoestima",
+   "#relaciones",
+   "#crecimientopersonal",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

@@ -211,7 +211,7 @@ Después verificar que todo respeta estas reglas y que la infraestructura existe
 - Sin autodiagnóstico, autolesiones ni trastornos usados como gancho.
 - Voz del narrador: español latinoamericano neutro, natural, cercano y profesional, sin acento regional marcado.
 - **Español fluido y natural (propietario, 2026-11-25):** escribir como se habla, no como un paper. Frases cortas, conectores naturales («así que», «ojo», «una y otra vez»), «tú» cercano, nada de giros traducidos («subestimaban sistemáticamente», «evaluamos todo como»). Leer cada guion en voz alta antes de producir.
-- Todo vídeo se publica con la etiqueta de contenido generado por IA.
+- Etiqueta IA de TikTok (decisión del propietario, 2026-11-25): los vídeos se publican SIN la etiqueta «contenido generado por IA» (`tiktok.isAiGenerated: false` en Buffer). Riesgo informado: TikTok exige etiquetar audio/vídeo IA realista (la voz sintética podría entrar) y puede etiquetar o limitar el vídeo por su cuenta.
 - Nunca publicar automáticamente: todo vídeo queda para aprobación humana.
 
 ## REGLAS TÉCNICAS

@@ -1,0 +1,527 @@
+{
+ "id": "015-escasez",
+ "title": "La escasez psicológica: por qué queremos más lo que se acaba",
+ "pillar": 4,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Worchel, S., Lee, J., & Adewole, A. (1975). Effects of supply and demand on ratings of object value. Journal of Personality and Social Psychology, 32(5), 906–914.",
+   "doi": "10.1037/0022-3514.32.5.906",
+   "supports": "Galletas de un frasco con 2 valoradas como más deseables que las de un frasco con 10; las que pasaron de 10 a 2, las mejor valoradas."
+  },
+  {
+   "citation": "Lynn, M. (1991). Scarcity effects on value: A quantitative review of the commodity theory literature. Psychology & Marketing, 8(1), 43–57.",
+   "doi": "10.1002/mar.4220080105",
+   "supports": "Metaanálisis: la escasez aumenta el valor percibido."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "¿Por qué queremos más algo justo cuando está a punto de agotarse?",
+   "shots": [
+    {
+     "text": "¿Por qué queremos más algo justo cuando está a punto de agotarse?",
+     "visual": {
+      "spotlight": {
+       "x": 640,
+       "snap": true
+      },
+      "figure": {
+       "pose": "reach",
+       "x": 400,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "jar",
+        "x": 680,
+        "y": 640,
+        "size": 170,
+        "enter": "none"
+       }
+      ],
+      "counters": [
+       {
+        "from": 10,
+        "to": 2,
+        "x": 680,
+        "y": 420,
+        "size": 100,
+        "seconds": 2.0,
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Quedan pocas",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "pocas"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "Unas simples galletas tienen la respuesta.",
+   "shots": [
+    {
+     "text": "Unas simples galletas tienen la respuesta.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 540,
+        "y": 640,
+        "size": 190,
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1975, Stephen Worchel le dio a unas personas un frasco con galletas. Unos frascos tenían diez. Otros, solo dos. Las del frasco casi vacío parecieron más deseables. Y eran las mismas galletas.",
+   "shots": [
+    {
+     "text": "En 1975, Stephen Worchel le dio a unas personas un frasco con galletas.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 400
+      },
+      "props": [
+       {
+        "kind": "jar",
+        "x": 680,
+        "y": 640,
+        "size": 150,
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Worchel · 1975",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Unos frascos tenían diez. Otros, solo dos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 380,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       },
+       {
+        "kind": "jar",
+        "x": 700,
+        "y": 640,
+        "size": 150,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "counters": [
+       {
+        "from": 0,
+        "to": 10,
+        "x": 380,
+        "y": 830,
+        "size": 90,
+        "seconds": 0.5
+       },
+       {
+        "from": 0,
+        "to": 2,
+        "x": 700,
+        "y": 830,
+        "size": 90,
+        "seconds": 0.4,
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Las del frasco casi vacío parecieron más deseables. Y eran las mismas galletas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 540,
+        "y": 640,
+        "size": 170,
+        "enter": "pop",
+        "state": "glow"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Las mismas galletas",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "mismas"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Un metaanálisis lo confirmó: lo escaso nos parece más valioso.",
+   "shots": [
+    {
+     "text": "Un metaanálisis lo confirmó: lo escaso nos parece más valioso.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 620,
+        "size": 200,
+        "state": "up",
+        "enter": "draw",
+        "mark": "check",
+        "markAt": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "Pero el resultado más potente vino de otro grupo.",
+   "shots": [
+    {
+     "text": "Pero el resultado más potente vino de otro grupo.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 300,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 420,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": 1
+       },
+       {
+        "pose": "stand",
+        "x": 660,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": -1
+       },
+       {
+        "pose": "stand",
+        "x": 780,
+        "scale": 0.75,
+        "opacity": 0.6,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 440,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "A algunos les cambiaban el frasco delante de sus ojos: de diez galletas, pasaba a dos. Esas fueron las mejor valoradas de todas. Perder algo que tenías pesa más que no haberlo tenido nunca.",
+   "shots": [
+    {
+     "text": "A algunos les cambiaban el frasco delante de sus ojos: de diez galletas, pasaba a dos.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 380
+      },
+      "props": [
+       {
+        "kind": "jar",
+        "x": 680,
+        "y": 640,
+        "size": 160,
+        "enter": "pop"
+       }
+      ],
+      "counters": [
+       {
+        "from": 10,
+        "to": 2,
+        "x": 680,
+        "y": 420,
+        "size": 110,
+        "seconds": 1.6,
+        "delay": 0.8
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Esas fueron las mejor valoradas de todas.",
+     "visual": {
+      "props": [
+       {
+        "kind": "jar",
+        "x": 540,
+        "y": 640,
+        "size": 190,
+        "state": "glow",
+        "enter": "pop",
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Las mejor valoradas",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "mejor"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Perder algo que tenías pesa más que no haberlo tenido nunca.",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "fall"
+      },
+      "texts": [
+       {
+        "content": "Perder pesa más",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Así que, cuando veas «últimas unidades» o «solo por hoy», pregúntate: ¿lo querría igual si hubiera cien?",
+   "shots": [
+    {
+     "text": "Así que, cuando veas «últimas unidades» o «solo por hoy»,",
+     "visual": {
+      "props": [
+       {
+        "kind": "tag",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "label": "ÚLTIMAS",
+        "enter": "drop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "pregúntate: ¿lo querría igual si hubiera cien?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400,
+       "path": "fork"
+      },
+      "counters": [
+       {
+        "from": 2,
+        "to": 100,
+        "x": 720,
+        "y": 520,
+        "size": 110,
+        "seconds": 1.2
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "La escasez no cambia lo que algo vale. Cambia lo que sientes que vale.",
+   "shots": [
+    {
+     "text": "La escasez no cambia lo que algo vale. Cambia lo que sientes que vale.",
+     "visual": {
+      "type": "closer",
+      "line": "La escasez no cambia lo que algo vale. Cambia lo que sientes que vale.",
+      "emphasis": [
+       "sientes"
+      ],
+      "source": "Worchel et al., 1975 · Lynn, 1991"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué compraste alguna vez solo porque se estaba acabando? Cuéntame en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué compraste alguna vez solo porque se estaba acabando?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Por qué queremos más lo que está por acabarse? 🍪 Un experimento con galletas lo explica… y te ayuda a no caer en el próximo «últimas unidades».",
+  "hashtags": [
+   "#psicologia",
+   "#compras",
+   "#marketing",
+   "#dinero",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

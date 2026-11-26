@@ -1,0 +1,497 @@
+{
+ "id": "018-ilusion-frecuencia",
+ "title": "La ilusión de frecuencia: por qué ahora lo ves en todas partes",
+ "pillar": 1,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Zwicky, A. (2006). Why are we so illuded? Language Log (origen del término «frequency illusion»); resumen.",
+   "url": "https://en.wikipedia.org/wiki/Frequency_illusion",
+   "supports": "El término ilusión de frecuencia, popularizado por Arnold Zwicky."
+  },
+  {
+   "citation": "Simons, D. J., & Chabris, C. F. (1999). Gorillas in our midst: Sustained inattentional blindness for dynamic events. Perception, 28(9), 1059–1074.",
+   "doi": "10.1068/p281059",
+   "supports": "Cerca de la mitad no vio a la persona disfrazada de gorila mientras contaba pases."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Aprendes una palabra nueva y, de pronto, está en todas partes. No es una señal.",
+   "shots": [
+    {
+     "text": "Aprendes una palabra nueva y, de pronto, está en todas partes.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 340,
+        "y": 460,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.4
+       },
+       {
+        "kind": "bubble",
+        "x": 740,
+        "y": 420,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.8
+       },
+       {
+        "kind": "bubble",
+        "x": 560,
+        "y": 340,
+        "size": 80,
+        "enter": "pop",
+        "delay": 1.2
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "No es una señal.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540
+      },
+      "texts": [
+       {
+        "content": "No es una señal",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "No"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Por qué algo que nunca veías, de repente aparece en todos lados?",
+   "shots": [
+    {
+     "text": "¿Por qué algo que nunca veías, de repente aparece en todos lados?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 720,
+        "y": 460,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.4
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "Se llama ilusión de frecuencia. El lingüista Arnold Zwicky le puso nombre. No es que aparezca más. Es que ahora lo notas.",
+   "shots": [
+    {
+     "text": "Se llama ilusión de frecuencia. El lingüista Arnold Zwicky le puso nombre.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Se llama",
+      "lines": [
+       "Ilusión de",
+       "frecuencia"
+      ],
+      "emphasis": [
+       "frecuencia"
+      ]
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "No es que aparezca más. Es que ahora lo notas.",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 540,
+        "y": 420,
+        "size": 100,
+        "state": "glow",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "demonstration",
+   "narration": "Tu atención funciona como un foco: ilumina lo que le parece importante y deja todo lo demás a oscuras.",
+   "shots": [
+    {
+     "text": "Tu atención funciona como un foco:",
+     "visual": {
+      "spotlight": {
+       "x": 400
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 400
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 760,
+        "facing": -1,
+        "opacity": 0.25
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "ilumina lo que le parece importante y deja todo lo demás a oscuras.",
+     "visual": {
+      "spotlight": {
+       "x": 760
+      },
+      "figure": {
+       "pose": "stand",
+       "x": 400,
+       "opacity": 0.25
+      },
+      "extras": [
+       {
+        "pose": "stand",
+        "x": 760,
+        "facing": -1,
+        "opacity": 1
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "retention",
+   "narration": "¿Y qué tan oscuro es ese «todo lo demás»?",
+   "shots": [
+    {
+     "text": "¿Y qué tan oscuro es ese «todo lo demás»?",
+     "visual": {
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 560,
+        "size": 110,
+        "enter": "pop"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.1,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "reveal",
+   "narration": "En un experimento famoso, unas personas contaban pases de pelota en un video. A mitad de la escena, cruzaba alguien disfrazado de gorila. Cerca de la mitad no lo vio.",
+   "shots": [
+    {
+     "text": "En un experimento famoso, unas personas contaban pases de pelota en un video.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 300,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": -1
+       },
+       {
+        "pose": "reach",
+        "x": 420,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": 1
+       },
+       {
+        "pose": "reach",
+        "x": 660,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": -1
+       },
+       {
+        "pose": "reach",
+        "x": 780,
+        "scale": 0.8,
+        "opacity": 0.7,
+        "facing": 1
+       }
+      ],
+      "props": [
+       {
+        "kind": "donut",
+        "x": 540,
+        "y": 520,
+        "size": 50,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "A mitad de la escena, cruzaba alguien disfrazado de gorila.",
+     "visual": {
+      "extras": [
+       {
+        "pose": "reach",
+        "x": 300,
+        "scale": 0.8,
+        "opacity": 0.5,
+        "facing": -1
+       },
+       {
+        "pose": "reach",
+        "x": 780,
+        "scale": 0.8,
+        "opacity": 0.5,
+        "facing": 1
+       },
+       {
+        "pose": "walk",
+        "x": 200,
+        "toX": 880,
+        "scale": 0.95,
+        "opacity": 0.9
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cerca de la mitad no lo vio.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 50,
+        "suffix": "%",
+        "x": 540,
+        "y": 580,
+        "size": 160,
+        "seconds": 0.9,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "no lo vio",
+        "y": 740,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Y cuando por fin lo notas, cada nueva aparición se siente como una prueba. Así que elige con cuidado qué quieres notar.",
+   "shots": [
+    {
+     "text": "Y cuando por fin lo notas, cada nueva aparición se siente como una prueba.",
+     "visual": {
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 380,
+        "y": 560,
+        "size": 100,
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.3
+       },
+       {
+        "kind": "bubble",
+        "x": 700,
+        "y": 560,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.6,
+        "mark": "check",
+        "markAt": 0.7
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Así que elige con cuidado qué quieres notar.",
+     "visual": {
+      "spotlight": {
+       "x": 540
+      },
+      "figure": {
+       "pose": "walk",
+       "x": 340,
+       "toX": 540,
+       "path": "rise"
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "El mundo no cambió. Cambió lo que decides ver.",
+   "shots": [
+    {
+     "text": "El mundo no cambió. Cambió lo que decides ver.",
+     "visual": {
+      "type": "closer",
+      "line": "El mundo no cambió. Cambió lo que decides ver.",
+      "emphasis": [
+       "ver"
+      ],
+      "source": "Simons y Chabris, 1999"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué empezaste a ver en todos lados después de descubrirlo? Cuéntame en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué empezaste a ver en todos lados después de descubrirlo?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntame en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntame",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Aprendes algo nuevo y de pronto lo ves en todas partes 👀 No es una señal: es tu atención. Y el experimento del gorila lo demuestra.",
+  "hashtags": [
+   "#psicologia",
+   "#atencion",
+   "#cerebro",
+   "#curiosidades",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}

@@ -1,0 +1,630 @@
+{
+ "id": "002-sesgo-confirmacion",
+ "title": "El sesgo de confirmación: tu cerebro busca tener razón",
+ "pillar": 1,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Wason, P. C. (1960). On the failure to eliminate hypotheses in a conceptual task. Quarterly Journal of Experimental Psychology, 12(3), 129–140.",
+   "doi": "10.1080/17470216008416717",
+   "supports": "Tarea 2-4-6: la mayoría prueba secuencias que confirman su hipótesis y casi nadie intenta refutarla."
+  },
+  {
+   "citation": "Hart, W., Albarracín, D., Eagly, A. H., Brechan, I., Lindberg, M. J., & Merrill, L. (2009). Feeling validated versus being correct: A meta-analysis of selective exposure to information. Psychological Bulletin, 135(4), 555–588.",
+   "doi": "10.1037/a0015701",
+   "supports": "Metaanálisis: preferimos información que confirma lo que ya pensamos."
+  },
+  {
+   "citation": "Stanovich, K. E., West, R. F., & Toplak, M. E. (2013). Myside bias, rational thinking, and intelligence. Current Directions in Psychological Science, 22(4), 259–264.",
+   "doi": "10.1177/0963721413480174",
+   "supports": "El sesgo de 'mi lado' es poco dependiente de la inteligencia."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Crees que buscas la verdad. Tu cerebro busca tener razón.",
+   "shots": [
+    {
+     "text": "Crees que buscas la verdad.",
+     "visual": {
+      "spotlight": {
+       "x": 540,
+       "snap": true
+      },
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "fork"
+      },
+      "texts": [
+       {
+        "content": "Buscas la verdad…",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Tu cerebro busca tener razón.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "brain",
+        "x": 540,
+        "y": 470,
+        "size": 140,
+        "state": "glow",
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Tu cerebro busca tener razón",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "razón"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "¿Y si la persona más fácil de engañar fueras tú?",
+   "shots": [
+    {
+     "text": "¿Y si la persona más fácil de engañar fueras tú?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 420,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Y si fueras tú?",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "tú"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1960, Peter Wason le mostró a la gente tres números: 2, 4 y 6. Tenían que adivinar la regla, probando otras secuencias. Casi todos probaron números que confirmaban su idea, como 8, 10 y 12. Casi nadie intentó demostrar que estaba equivocado.",
+   "shots": [
+    {
+     "text": "En 1960, Peter Wason le mostró a la gente tres números: 2, 4 y 6.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 2,
+        "x": 360,
+        "y": 620,
+        "size": 140,
+        "seconds": 0.4
+       },
+       {
+        "from": 0,
+        "to": 4,
+        "x": 540,
+        "y": 620,
+        "size": 140,
+        "seconds": 0.4,
+        "delay": 0.5
+       },
+       {
+        "from": 0,
+        "to": 6,
+        "x": 720,
+        "y": 620,
+        "size": 140,
+        "seconds": 0.4,
+        "delay": 1.0
+       }
+      ],
+      "texts": [
+       {
+        "content": "Peter Wason · 1960",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Tenían que adivinar la regla, probando otras secuencias.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 540
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 460,
+        "size": 90,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Cuál es la regla?",
+        "y": 330,
+        "size": 54,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Casi todos probaron números que confirmaban su idea, como 8, 10 y 12.",
+     "visual": {
+      "counters": [
+       {
+        "from": 0,
+        "to": 8,
+        "x": 360,
+        "y": 620,
+        "size": 120,
+        "seconds": 0.4
+       },
+       {
+        "from": 0,
+        "to": 10,
+        "x": 540,
+        "y": 620,
+        "size": 120,
+        "seconds": 0.4,
+        "delay": 0.4
+       },
+       {
+        "from": 0,
+        "to": 12,
+        "x": 720,
+        "y": 620,
+        "size": 120,
+        "seconds": 0.4,
+        "delay": 0.8
+       }
+      ],
+      "texts": [
+       {
+        "content": "Confirmar, confirmar, confirmar",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Casi nadie intentó demostrar que estaba equivocado.",
+     "visual": {
+      "figure": {
+       "pose": "stand",
+       "x": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 760,
+        "y": 520,
+        "size": 80,
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.5
+       }
+      ],
+      "texts": [
+       {
+        "content": "Nadie buscó el error",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "error"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "¿La regla? Simplemente, números que van subiendo.",
+   "shots": [
+    {
+     "text": "¿La regla? Simplemente, números que van subiendo.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 200,
+        "state": "up",
+        "enter": "draw"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Solo: números que suben",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "suben"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "demonstration",
+   "narration": "En la vida pasa igual. Una revisión de muchos estudios encontró que preferimos la información que nos da la razón.",
+   "shots": [
+    {
+     "text": "En la vida pasa igual.",
+     "visual": {
+      "figure": {
+       "pose": "phone",
+       "x": 540,
+       "holding": "phone"
+      },
+      "props": [
+       {
+        "kind": "phone",
+        "x": 760,
+        "y": 600,
+        "size": 130,
+        "state": "typing",
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Una revisión de muchos estudios encontró que preferimos la información que nos da la razón.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 360,
+        "y": 640,
+        "size": 130,
+        "enter": "pop",
+        "mark": "check",
+        "markAt": 0.5
+       },
+       {
+        "kind": "book",
+        "x": 720,
+        "y": 640,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3,
+        "state": "dim"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Elegimos lo que nos da la razón",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "retention",
+   "narration": "Entonces, ¿la solución es ser más inteligente?",
+   "shots": [
+    {
+     "text": "Entonces, ¿la solución es ser más inteligente?",
+     "visual": {
+      "props": [
+       {
+        "kind": "brain",
+        "x": 540,
+        "y": 600,
+        "size": 200,
+        "state": "glow",
+        "enter": "pop"
+       },
+       {
+        "kind": "question",
+        "x": 540,
+        "y": 400,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.5
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "reveal",
+   "narration": "No. Las investigaciones muestran que ser más inteligente no te protege de este sesgo.",
+   "shots": [
+    {
+     "text": "No. Las investigaciones muestran que ser más inteligente no te protege de este sesgo.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 540,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "brain",
+        "x": 760,
+        "y": 480,
+        "size": 120,
+        "state": "glow",
+        "enter": "pop",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "La inteligencia no te protege",
+        "y": 330,
+        "size": 48,
+        "family": "sans",
+        "emphasis": [
+         "no"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "action",
+   "narration": "Hazte una sola pregunta: ¿qué tendría que ver para cambiar de opinión? Y después, búscalo a propósito.",
+   "shots": [
+    {
+     "text": "Hazte una sola pregunta: ¿qué tendría que ver para cambiar de opinión?",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 400,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "question",
+        "x": 620,
+        "y": 460,
+        "size": 90,
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Qué me haría cambiar de opinión?",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y después, búscalo a propósito.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 560,
+       "path": "fork"
+      },
+      "props": [
+       {
+        "kind": "lightbulb",
+        "x": 800,
+        "y": 500,
+        "size": 110,
+        "state": "glow",
+        "enter": "pop",
+        "delay": 0.4,
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Búscalo a propósito",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "a propósito"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "closer",
+   "narration": "Tener razón se siente bien. Descubrir que no la tienes te hace más sabio.",
+   "shots": [
+    {
+     "text": "Tener razón se siente bien. Descubrir que no la tienes te hace más sabio.",
+     "visual": {
+      "type": "closer",
+      "line": "Tener razón se siente bien. Corregirte te hace sabio.",
+      "emphasis": [
+       "sabio"
+      ],
+      "source": "Wason, 1960 · Hart et al., 2009"
+     },
+     "sfx": "shimmer"
+    }
+   ]
+  },
+  {
+   "id": "J",
+   "beat": "cta",
+   "narration": "¿Qué opinión cambiaste en los últimos años? Te leo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué opinión cambiaste en los últimos años?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Te leo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Te leo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "Crees que buscas la verdad, pero tu cerebro busca tener razón 🧠 Prueba el reto 2-4-6 antes de ver la respuesta.",
+  "hashtags": [
+   "#psicologia",
+   "#sesgos",
+   "#pensamientocritico",
+   "#mente",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ },
+ "cameraStyle": "classic"
+}

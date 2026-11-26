@@ -1,0 +1,661 @@
+{
+ "id": "016-efecto-zeigarnik",
+ "title": "El efecto Zeigarnik: lo que dejas a medias no ocupa tu mente por la razón que crees",
+ "pillar": 1,
+ "format": "secondPerson",
+ "evidenceLevel": "solid",
+ "music": "meaningful",
+ "sources": [
+  {
+   "citation": "Ghibellini, R., & Meier, B. (2025). Interruption, recall and resumption: A meta-analysis of the Zeigarnik and Ovsiankina effects. Humanities and Social Sciences Communications, 12.",
+   "doi": "10.1057/s41599-025-05000-w",
+   "supports": "Casi un siglo de estudios: no hay una ventaja general de memoria para tareas interrumpidas (Zeigarnik); sí una tendencia general a retomarlas (Ovsiankina)."
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "beat": "hook",
+   "narration": "Lo que dejas sin terminar puede seguir ocupando tu mente. Pero no por la razón que crees.",
+   "shots": [
+    {
+     "text": "Lo que dejas sin terminar puede seguir ocupando tu mente.",
+     "visual": {
+      "spotlight": {
+       "x": 600,
+       "snap": true
+      },
+      "figure": {
+       "pose": "think",
+       "x": 380,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 660,
+        "y": 640,
+        "size": 200,
+        "state": "normal",
+        "enter": "none"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Lo que dejas a medias",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "a medias"
+        ]
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.08,
+       "x": 540,
+       "y": 760,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "impact"
+    },
+    {
+     "text": "Pero no por la razón que crees.",
+     "visual": {
+      "figure": {
+       "pose": "think",
+       "x": 380,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 660,
+        "y": 640,
+        "size": 200,
+        "enter": "none",
+        "mark": "question",
+        "markAt": 0.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "No por lo que crees",
+        "y": 330,
+        "size": 56,
+        "family": "sans",
+        "emphasis": [
+         "No"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "beat": "question",
+   "narration": "Entonces, ¿por qué lo pendiente no te deja tranquilo?",
+   "shots": [
+    {
+     "text": "Entonces, ¿por qué lo pendiente no te deja tranquilo?",
+     "visual": {
+      "figure": {
+       "pose": "slump",
+       "x": 540,
+       "path": "flat"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 700,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       },
+       {
+        "kind": "question",
+        "x": 700,
+        "y": 360,
+        "size": 80,
+        "enter": "pop",
+        "delay": 0.8
+       }
+      ],
+      "texts": [
+       {
+        "content": "¿Por qué no te suelta?",
+        "y": 330,
+        "size": 56,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "beat": "mechanism",
+   "narration": "En 1927, la psicóloga Bluma Zeigarnik interrumpía a personas mientras hacían tareas pequeñas. Después, parecían recordar mejor las tareas que no habían terminado. Así nació el famoso efecto Zeigarnik.",
+   "shots": [
+    {
+     "text": "En 1927, la psicóloga Bluma Zeigarnik interrumpía a personas mientras hacían tareas pequeñas.",
+     "visual": {
+      "figure": {
+       "pose": "reach",
+       "x": 320
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 640,
+        "y": 620,
+        "size": 180,
+        "enter": "draw"
+       },
+       {
+        "kind": "clock",
+        "x": 860,
+        "y": 460,
+        "size": 100,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Bluma Zeigarnik · 1927",
+        "y": 330,
+        "size": 46,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Después, parecían recordar mejor las tareas que no habían terminado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 400,
+        "y": 640,
+        "size": 170,
+        "state": "open",
+        "enter": "pop"
+       },
+       {
+        "kind": "checklist",
+        "x": 700,
+        "y": 640,
+        "size": 170,
+        "state": "normal",
+        "enter": "pop",
+        "delay": 0.3,
+        "accent": "white"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Terminadas",
+        "y": 800,
+        "size": 34,
+        "x": 400,
+        "family": "sans"
+       },
+       {
+        "content": "A medias",
+        "y": 800,
+        "size": 34,
+        "x": 700,
+        "family": "sans"
+       },
+       {
+        "content": "¿Se recuerda mejor lo pendiente?",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Así nació el famoso efecto Zeigarnik.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Así nació",
+      "lines": [
+       "El efecto",
+       "Zeigarnik"
+      ],
+      "emphasis": [
+       "Zeigarnik"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "beat": "retention",
+   "narration": "Seguro lo has visto en libros y en videos. Pero cuando otros científicos intentaron repetirlo, no siempre funcionó.",
+   "shots": [
+    {
+     "text": "Seguro lo has visto en libros y en videos.",
+     "visual": {
+      "props": [
+       {
+        "kind": "book",
+        "x": 300,
+        "y": 640,
+        "size": 130,
+        "enter": "pop"
+       },
+       {
+        "kind": "phone",
+        "x": 540,
+        "y": 640,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       },
+       {
+        "kind": "lightbulb",
+        "x": 780,
+        "y": 640,
+        "size": 120,
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Pero cuando otros científicos intentaron repetirlo, no siempre funcionó.",
+     "visual": {
+      "props": [
+       {
+        "kind": "chart",
+        "x": 540,
+        "y": 640,
+        "size": 200,
+        "state": "down",
+        "enter": "draw",
+        "mark": "cross",
+        "markAt": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "No siempre se repetía",
+        "y": 330,
+        "size": 52,
+        "family": "sans",
+        "emphasis": [
+         "No siempre"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "beat": "reveal",
+   "narration": "En 2025, un metaanálisis revisó casi cien años de estudios. Y no encontró que recordemos mejor lo inacabado. Encontró otra cosa: una tendencia clara a volver a lo que quedó a medias. Se llama efecto Ovsiankina, por una colega de Zeigarnik.",
+   "shots": [
+    {
+     "text": "En 2025, un metaanálisis revisó casi cien años de estudios.",
+     "visual": {
+      "counters": [
+       {
+        "from": 1927,
+        "to": 2025,
+        "x": 540,
+        "y": 600,
+        "size": 130,
+        "seconds": 1.4
+       }
+      ],
+      "texts": [
+       {
+        "content": "casi un siglo de estudios",
+        "y": 740,
+        "size": 40,
+        "family": "sans"
+       },
+       {
+        "content": "Metaanálisis · 2025",
+        "y": 330,
+        "size": 48,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Y no encontró que recordemos mejor lo inacabado.",
+     "visual": {
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 540,
+        "y": 640,
+        "size": 190,
+        "enter": "none",
+        "mark": "cross",
+        "markAt": 0.35
+       }
+      ],
+      "texts": [
+       {
+        "content": "Mito",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "Mito"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Encontró otra cosa: una tendencia clara a volver a lo que quedó a medias.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 260,
+       "toX": 560,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 790,
+        "y": 600,
+        "size": 150,
+        "enter": "pop",
+        "accent": "reward"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Volvemos a lo pendiente",
+        "y": 330,
+        "size": 50,
+        "family": "sans",
+        "emphasis": [
+         "Volvemos"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Se llama efecto Ovsiankina, por una colega de Zeigarnik.",
+     "visual": {
+      "type": "kineticTitle",
+      "kicker": "Se llama",
+      "lines": [
+       "Efecto",
+       "Ovsiankina"
+      ],
+      "emphasis": [
+       "Ovsiankina"
+      ]
+     },
+     "sfx": "impact"
+    }
+   ]
+  },
+  {
+   "id": "F",
+   "beat": "demonstration",
+   "narration": "O sea, lo pendiente no se queda en tu memoria. Te empuja a regresar.",
+   "shots": [
+    {
+     "text": "O sea, lo pendiente no se queda en tu memoria. Te empuja a regresar.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 520,
+       "path": "flat",
+       "pathTo": 900
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 760,
+        "y": 600,
+        "size": 150,
+        "enter": "none"
+       }
+      ],
+      "camera": {
+       "fromZoom": 1.0,
+       "toZoom": 1.06,
+       "x": 600,
+       "y": 780,
+       "panX": 0
+      },
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "G",
+   "beat": "action",
+   "narration": "Úsalo a tu favor: cuando termines de trabajar hoy, no cierres al final de algo. Déjalo a mitad de una idea que sepas continuar.",
+   "shots": [
+    {
+     "text": "Úsalo a tu favor: cuando termines de trabajar hoy, no cierres al final de algo.",
+     "visual": {
+      "figure": {
+       "pose": "phone",
+       "x": 420,
+       "holding": "phone"
+      },
+      "props": [
+       {
+        "kind": "book",
+        "x": 720,
+        "y": 620,
+        "size": 140,
+        "state": "open",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "No cierres al final",
+        "y": 330,
+        "size": 52,
+        "family": "sans"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Déjalo a mitad de una idea que sepas continuar.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 300,
+       "toX": 470,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 720,
+        "y": 600,
+        "size": 150,
+        "state": "normal",
+        "enter": "pop"
+       }
+      ],
+      "texts": [
+       {
+        "content": "Déjalo a mitad",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "a mitad"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "H",
+   "beat": "closer",
+   "narration": "Tu mente no guarda una lista de lo que dejaste a medias. Pero sí tiene ganas de volver.",
+   "shots": [
+    {
+     "text": "Tu mente no guarda una lista de lo que dejaste a medias.",
+     "visual": {
+      "type": "closer",
+      "line": "Tu mente no guarda lo pendiente.",
+      "emphasis": [
+       "pendiente"
+      ],
+      "source": "Ghibellini y Meier, 2025"
+     },
+     "sfx": "shimmer"
+    },
+    {
+     "text": "Pero sí tiene ganas de volver.",
+     "visual": {
+      "figure": {
+       "pose": "walk",
+       "x": 320,
+       "toX": 560,
+       "path": "rise"
+      },
+      "props": [
+       {
+        "kind": "checklist",
+        "x": 780,
+        "y": 580,
+        "size": 140,
+        "state": "open",
+        "enter": "pop",
+        "delay": 0.6
+       }
+      ],
+      "texts": [
+       {
+        "content": "Ganas de volver",
+        "y": 330,
+        "size": 72,
+        "emphasis": [
+         "volver"
+        ]
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  },
+  {
+   "id": "I",
+   "beat": "cta",
+   "narration": "¿Qué dejaste a medias que no te deja tranquilo? Cuéntamelo en los comentarios.",
+   "shots": [
+    {
+     "text": "¿Qué dejaste a medias que no te deja tranquilo?",
+     "visual": {
+      "figure": {
+       "pose": "lookUp",
+       "x": 540,
+       "path": "fade"
+      },
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 720,
+        "y": 500,
+        "size": 130,
+        "enter": "pop",
+        "delay": 0.3
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    },
+    {
+     "text": "Cuéntamelo en los comentarios.",
+     "visual": {
+      "texts": [
+       {
+        "content": "Cuéntamelo",
+        "y": 330,
+        "size": 60,
+        "family": "sans"
+       }
+      ],
+      "props": [
+       {
+        "kind": "bubble",
+        "x": 540,
+        "y": 640,
+        "size": 150,
+        "enter": "pop"
+       }
+      ],
+      "type": "stage"
+     },
+     "sfx": "none"
+    }
+   ]
+  }
+ ],
+ "social": {
+  "caption": "¿Recordamos mejor lo que dejamos a medias? 🧠 Casi cien años de estudios dicen otra cosa… y la respuesta real es más útil.",
+  "hashtags": [
+   "#psicologia",
+   "#productividad",
+   "#procrastinacion",
+   "#mitos",
+   "#aprendeentiktok"
+  ],
+  "aiLabel": true
+ }
+}
